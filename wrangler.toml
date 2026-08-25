@@ -3,6 +3,10 @@ main = "worker.ts"
 compatibility_date = "2026-08-25"
 workers_dev = true
 
+[[routes]]
+pattern = "atriveo.com/*"
+zone_id = "c4980d58a81dc8f85af72261d9d92cf5"
+
 [assets]
 directory = "./dist"
 binding = "ASSETS"
