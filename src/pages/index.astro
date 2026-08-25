@@ -133,6 +133,25 @@ const catalogSchema = createProjectCatalogSchema(projects);
     </div>
   </section>
 
+  <section class="section-shell section-block catalog-preview">
+    <div class="section-heading align-end">
+      <div>
+        <p class="eyebrow">The wider system</p>
+        <h2>One studio. Many surfaces.</h2>
+      </div>
+      <a class="arrow-link" href="/projects">View all projects <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="compact-project-grid">
+      {projects.map((project) => (
+        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}`}>
+          <span class="compact-monogram">{project.monogram}</span>
+          <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
+          <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <section class="activity-section section-shell section-block">
     <div class="activity-intro">
       <p class="eyebrow">Shipping log</p>
