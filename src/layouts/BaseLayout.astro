@@ -24,10 +24,12 @@ const seoHead = createAtriveoHead({ title, description, canonical: canonical.toS
 const structuredData = createAtriveoJsonLd(pageSchemas);
 const path = Astro.url.pathname;
 const navItems = [
+  { href: "/", label: "Hub" },
   { href: "/projects", label: "Projects" },
   { href: "/open-source", label: "Open source" },
   { href: "/about", label: "About" },
 ];
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
 ---
 
 <!doctype html>
@@ -44,18 +46,41 @@ const navItems = [
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-frame">
       <header class="site-header">
-        <a class="wordmark" href="/" aria-label="Atriveo home">Atriveo<span>.</span></a>
-        <nav aria-label="Primary navigation">
+        <a class="brand-lockup" href="/" aria-label="Atriveo home">
+          <span class="brand-mark" aria-hidden="true">A<i></i></span>
+          <span class="brand-copy"><strong>Atriveo</strong><small>Builder hub</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <a class:list={["nav-link", path.startsWith(item.href) && "is-active"]} href={item.href}>
+            <a class:list={["nav-link", isActive(item.href) && "is-active"]} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
               {item.label}
             </a>
           ))}
         </nav>
         <a class="header-action" href="/projects">
-          Explore the hub
-          <span aria-hidden="true">→</span>
+          Browse builds
+          <span class="action-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M3.5 8h9M9 4.5 12.5 8 9 11.5" /></svg>
+          </span>
         </a>
+        <details class="mobile-nav">
+          <summary aria-label="Open navigation">
+            <span>Menu</span>
+            <i aria-hidden="true"></i>
+          </summary>
+          <div class="mobile-nav-panel">
+            <nav aria-label="Mobile navigation">
+              {navItems.map((item, index) => (
+                <a class:list={["mobile-nav-link", isActive(item.href) && "is-active"]} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
+                  <small>{String(index + 1).padStart(2, "0")}</small>
+                  <span>{item.label}</span>
+                  <i aria-hidden="true">→</i>
+                </a>
+              ))}
+            </nav>
+            <a class="mobile-nav-action" href="/projects">Browse all builds <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
       </header>
 
       <main id="main-content">
