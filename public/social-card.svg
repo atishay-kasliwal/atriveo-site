@@ -11,17 +11,17 @@
   </g>
   <g font-family="Arial, Helvetica, sans-serif">
     <text x="82" y="105" font-size="34" font-weight="700" letter-spacing="-1" fill="#111827">Atriveo<tspan fill="#2f6bff">.</tspan></text>
-    <text x="82" y="254" font-size="76" font-weight="700" letter-spacing="-4" fill="#111827">Useful systems,</text>
-    <text x="82" y="340" font-size="76" font-weight="700" font-style="italic" letter-spacing="-4" fill="#2f6bff">built in public.</text>
-    <text x="86" y="414" font-size="24" fill="#536078">Focused products for careers, research, creativity, health,</text>
-    <text x="86" y="448" font-size="24" fill="#536078">and personal intelligence.</text>
+    <text x="82" y="254" font-size="76" font-weight="700" letter-spacing="-4" fill="#111827">Everything being built,</text>
+    <text x="82" y="340" font-size="76" font-weight="700" font-style="italic" letter-spacing="-4" fill="#2f6bff">under one roof.</text>
+    <text x="86" y="414" font-size="24" fill="#536078">Live products, open-source experiments, public activity,</text>
+    <text x="86" y="448" font-size="24" fill="#536078">and the work connecting them.</text>
     <rect x="82" y="505" width="286" height="54" rx="27" fill="#111827"/>
     <text x="113" y="540" font-size="20" font-weight="700" letter-spacing="1" fill="#ffffff">ATRIVEO.COM  →</text>
     <rect x="846" y="315" width="96" height="96" rx="26" fill="#111827"/>
     <text x="874" y="378" font-size="46" font-weight="700" fill="#ffffff">A</text>
     <rect x="1060" y="438" width="92" height="92" rx="25" fill="#2f6bff"/>
-    <text x="1080" y="495" font-size="30" font-weight="700" fill="#ffffff">TR</text>
+    <text x="1072" y="495" font-size="25" font-weight="700" fill="#ffffff">LIVE</text>
     <rect x="642" y="475" width="92" height="92" rx="25" fill="#7565e8"/>
-    <text x="660" y="532" font-size="30" font-weight="700" fill="#ffffff">CX</text>
+    <text x="658" y="532" font-size="30" font-weight="700" fill="#ffffff">OSS</text>
   </g>
 </svg>

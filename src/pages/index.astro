@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import ProjectVisual from "../components/ProjectVisual.astro";
 import { featuredProjects, projects } from "../data/projects";
 import githubData from "../data/github.generated.json";
 import { createProjectCatalogSchema } from "../lib/seo";
@@ -16,15 +15,15 @@ const catalogSchema = createProjectCatalogSchema(projects);
 <BaseLayout pageSchemas={[catalogSchema]}>
   <section class="hero section-shell">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-mark"></span> Independent product ecosystem</p>
-      <h1>Useful systems,<br /><em>built in public.</em></h1>
+      <p class="eyebrow"><span class="eyebrow-mark"></span> Independent builder hub</p>
+      <h1>Everything being built,<br /><em>under one roof.</em></h1>
       <p class="hero-lede">
-        Atriveo turns complicated, fragmented workflows into focused products—for careers, research,
-        creativity, health, and personal intelligence.
+        Atriveo is the public home for everything Atishay Kasliwal builds—live products, open-source
+        experiments, useful ideas, and the work connecting them.
       </p>
       <div class="hero-actions">
-        <a class="button button-primary" href="/projects">Explore projects <span aria-hidden="true">→</span></a>
-        <a class="button button-secondary" href="https://github.com/atishay-kasliwal">View GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button button-primary" href="/projects">Explore the whole hub <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="https://github.com/atishay-kasliwal">Follow the builds <span aria-hidden="true">↗</span></a>
       </div>
       <dl class="hero-stats">
         <div><dt>{projects.length}</dt><dd>Curated projects</dd></div>
@@ -34,7 +33,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
     </div>
     <div class="ecosystem-map" aria-label="Atriveo project ecosystem illustration">
       <div class="map-heading">
-        <span>ATRIVEO / SYSTEM MAP</span>
+        <span>ATRIVEO / BUILD MAP</span>
         <span class="map-live"><i></i> ACTIVE</span>
       </div>
       <div class="map-stage">
@@ -73,10 +72,10 @@ const catalogSchema = createProjectCatalogSchema(projects);
   <section class="section-shell section-block featured-section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Selected work</p>
-        <h2>Products with a point of view.</h2>
+        <p class="eyebrow">Across the hub</p>
+        <h2>A cross-section of the work.</h2>
       </div>
-      <p>Each project begins with a workflow worth making clearer—not with a feature checklist.</p>
+      <p>A rotating mix of live products, open experiments, and useful systems across different domains.</p>
     </div>
     <div class="featured-grid">
       {featuredProjects.map((project) => <ProjectCard project={project} featured />)}
@@ -143,10 +142,10 @@ const catalogSchema = createProjectCatalogSchema(projects);
 
   <section class="section-shell final-cta">
     <div>
-      <p class="eyebrow">Start somewhere useful</p>
-      <h2>Your job search,<br />finally in one place.</h2>
+      <p class="eyebrow">The whole hub</p>
+      <h2>Every project,<br />from first commit to live product.</h2>
     </div>
-    <a class="button button-inverse" href="https://tracker.atriveo.com">Open Atriveo Tracker <span aria-hidden="true">↗</span></a>
-    <ProjectVisual project={featuredProjects[0]} />
+    <a class="button button-inverse" href="/projects">Browse everything <span aria-hidden="true">→</span></a>
+    <div class="hub-constellation" aria-hidden="true"><span>A</span><i></i><i></i><i></i></div>
   </section>
 </BaseLayout>

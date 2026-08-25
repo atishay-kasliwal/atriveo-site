@@ -19,7 +19,7 @@ const atriveoOrganization = organization({
   name: "Atriveo",
   legalName: "Atriveo",
   description:
-    "An independent product ecosystem creating focused software for careers, research, creativity, health, and personal intelligence.",
+    "The public hub for products, open-source experiments, and everything Atishay Kasliwal is building.",
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/favicon.svg`,
   sameAs: ["https://github.com/atishay-kasliwal"],
@@ -35,9 +35,9 @@ const atriveoOrganization = organization({
 const atriveoWebsite = webSite({
   "@id": `${SITE_URL}/#website`,
   name: "Atriveo",
-  alternateName: "Atriveo Product Ecosystem",
+  alternateName: "Atriveo Builder Hub",
   description:
-    "Live products, open-source projects, and public engineering activity from the Atriveo ecosystem.",
+    "A public index of live products, open-source experiments, public activity, and ongoing engineering work.",
   url: `${SITE_URL}/`,
   publisher: atriveoOrganization,
   inLanguage: "en-US",

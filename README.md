@@ -1,6 +1,6 @@
 # Atriveo Site
 
-The public home of the Atriveo product ecosystem.
+The public hub for everything Atishay Kasliwal is building.
 
 ## Commands
 
