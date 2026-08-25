@@ -73,31 +73,63 @@ const catalogSchema = createProjectCatalogSchema(projects);
     <div class="section-heading">
       <div>
         <p class="eyebrow">Across the hub</p>
-        <h2>A cross-section of the work.</h2>
+        <h2>Every build, in rotation.</h2>
       </div>
-      <p>A rotating mix of live products, open experiments, and useful systems across different domains.</p>
+      <p>Move through every live product, open experiment, and useful system across the Atriveo hub.</p>
     </div>
-    <div class="featured-grid">
-      {featuredProjects.map((project) => <ProjectCard project={project} featured />)}
-    </div>
-  </section>
 
-  <section class="section-shell section-block catalog-preview">
-    <div class="section-heading align-end">
-      <div>
-        <p class="eyebrow">The wider system</p>
-        <h2>One studio. Many surfaces.</h2>
+    <div
+      class="project-carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="All Atriveo projects"
+      data-project-carousel
+    >
+      <div class="carousel-toolbar">
+        <div class="carousel-signal">
+          <i aria-hidden="true"></i>
+          <span>All projects</span>
+          <strong>{String(projects.length).padStart(2, "0")}</strong>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-pause" type="button" data-carousel-toggle aria-label="Pause automatic rotation">
+            <span class="pause-icon" aria-hidden="true"><i></i><i></i></span>
+            <span data-carousel-toggle-label>Pause</span>
+          </button>
+          <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Show previous project">
+            <span aria-hidden="true">←</span>
+          </button>
+          <button class="carousel-arrow" type="button" data-carousel-next aria-label="Show next project">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
       </div>
-      <a class="arrow-link" href="/projects">View all projects <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="compact-project-grid">
-      {projects.filter((project) => !project.featured).slice(0, 6).map((project) => (
-        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}`}>
-          <span class="compact-monogram">{project.monogram}</span>
-          <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
-          <span aria-hidden="true">↗</span>
-        </a>
-      ))}
+
+      <div class="carousel-viewport" data-carousel-viewport tabindex="0">
+        <div class="carousel-track" data-carousel-track>
+          {projects.map((project, index) => (
+            <div
+              class="carousel-slide"
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${index + 1} of ${projects.length}: ${project.name}`}
+              data-carousel-slide
+            >
+              <ProjectCard project={project} featured />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="carousel-footer">
+        <p class="carousel-count" aria-live="polite">
+          Showing <strong data-carousel-range>01—03</strong> <span>/ {String(projects.length).padStart(2, "0")}</span>
+        </p>
+        <div class="carousel-progress" aria-hidden="true">
+          <i data-carousel-progress></i>
+        </div>
+        <a class="arrow-link" href="/projects">Open project index <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </section>
 
@@ -149,3 +181,131 @@ const catalogSchema = createProjectCatalogSchema(projects);
     <div class="hub-constellation" aria-hidden="true"><span>A</span><i></i><i></i><i></i></div>
   </section>
 </BaseLayout>
+
+<script>
+  const carousels = document.querySelectorAll<HTMLElement>("[data-project-carousel]");
+
+  carousels.forEach((carousel) => {
+    const viewport = carousel.querySelector<HTMLElement>("[data-carousel-viewport]");
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-carousel-slide]"));
+    const previous = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
+    const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
+    const toggle = carousel.querySelector<HTMLButtonElement>("[data-carousel-toggle]");
+    const toggleLabel = carousel.querySelector<HTMLElement>("[data-carousel-toggle-label]");
+    const range = carousel.querySelector<HTMLElement>("[data-carousel-range]");
+    const progress = carousel.querySelector<HTMLElement>("[data-carousel-progress]");
+
+    if (!viewport || !previous || !next || !toggle || !toggleLabel || !range || !progress || slides.length === 0) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = 0;
+    let timer: number | undefined;
+    let manuallyPaused = reduceMotion.matches;
+    let temporarilyPaused = false;
+    let scrollFrame = 0;
+
+    const visibleCount = () => {
+      if (window.matchMedia("(max-width: 760px)").matches) return 1;
+      if (window.matchMedia("(max-width: 1000px)").matches) return 2;
+      return 3;
+    };
+
+    const maximumIndex = () => Math.max(0, slides.length - visibleCount());
+    const padded = (value: number) => String(value).padStart(2, "0");
+
+    const updateInterface = () => {
+      const visible = visibleCount();
+      const end = Math.min(slides.length, index + visible);
+      range.textContent = visible === 1 ? padded(index + 1) : `${padded(index + 1)}—${padded(end)}`;
+
+      const thumbSize = (visible / slides.length) * 100;
+      const travel = 100 - thumbSize;
+      const offset = maximumIndex() === 0 ? 0 : (index / maximumIndex()) * travel;
+      progress.style.width = `${thumbSize}%`;
+      progress.style.transform = `translateX(${offset / (thumbSize / 100)}%)`;
+
+      carousel.dataset.paused = String(manuallyPaused);
+      toggleLabel.textContent = manuallyPaused ? "Play" : "Pause";
+      toggle.setAttribute("aria-label", manuallyPaused ? "Start automatic rotation" : "Pause automatic rotation");
+    };
+
+    const goTo = (nextIndex: number, behavior: ScrollBehavior = "smooth") => {
+      const max = maximumIndex();
+      index = nextIndex > max ? 0 : nextIndex < 0 ? max : nextIndex;
+      viewport.scrollTo({ left: slides[index].offsetLeft, behavior });
+      updateInterface();
+    };
+
+    const stopTimer = () => {
+      window.clearInterval(timer);
+      timer = undefined;
+    };
+
+    const startTimer = () => {
+      stopTimer();
+      if (manuallyPaused || temporarilyPaused || document.hidden) return;
+      timer = window.setInterval(() => goTo(index + 1), 5200);
+    };
+
+    previous.addEventListener("click", () => {
+      goTo(index - 1);
+      startTimer();
+    });
+
+    next.addEventListener("click", () => {
+      goTo(index + 1);
+      startTimer();
+    });
+
+    toggle.addEventListener("click", () => {
+      manuallyPaused = !manuallyPaused;
+      updateInterface();
+      startTimer();
+    });
+
+    carousel.addEventListener("mouseenter", () => {
+      temporarilyPaused = true;
+      stopTimer();
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+      temporarilyPaused = false;
+      startTimer();
+    });
+
+    carousel.addEventListener("focusin", () => {
+      temporarilyPaused = true;
+      stopTimer();
+    });
+
+    carousel.addEventListener("focusout", (event) => {
+      if (carousel.contains(event.relatedTarget as Node | null)) return;
+      temporarilyPaused = false;
+      startTimer();
+    });
+
+    viewport.addEventListener("scroll", () => {
+      window.cancelAnimationFrame(scrollFrame);
+      scrollFrame = window.requestAnimationFrame(() => {
+        const closest = slides.reduce((best, slide, slideIndex) =>
+          Math.abs(slide.offsetLeft - viewport.scrollLeft) < Math.abs(slides[best].offsetLeft - viewport.scrollLeft)
+            ? slideIndex
+            : best
+        , 0);
+        index = Math.min(closest, maximumIndex());
+        updateInterface();
+      });
+    }, { passive: true });
+
+    window.addEventListener("resize", () => goTo(Math.min(index, maximumIndex()), "auto"));
+    document.addEventListener("visibilitychange", startTimer);
+    reduceMotion.addEventListener("change", (event) => {
+      manuallyPaused = event.matches;
+      updateInterface();
+      startTimer();
+    });
+
+    updateInterface();
+    startTimer();
+  });
+</script>
