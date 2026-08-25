@@ -56,6 +56,13 @@ function summarizeEvent(event) {
 
 async function main() {
   try {
+    let existingData = null;
+    try {
+      existingData = JSON.parse(await readFile(outputPath, "utf8"));
+    } catch {
+      existingData = null;
+    }
+
     const [repoResults, eventResults] = await Promise.all([
       Promise.all(
         repositories.map(async (name) => {
@@ -77,10 +84,15 @@ async function main() {
     ]);
 
     const events = eventResults.map(summarizeEvent).filter(Boolean).slice(0, 8);
+    const sortedRepositories = repoResults.sort((a, b) => Date.parse(b.pushedAt) - Date.parse(a.pushedAt));
+    const publicSnapshot = { repositories: sortedRepositories, events };
+    const existingSnapshot = existingData
+      ? { repositories: existingData.repositories, events: existingData.events }
+      : null;
+    const snapshotChanged = JSON.stringify(publicSnapshot) !== JSON.stringify(existingSnapshot);
     const data = {
-      generatedAt: new Date().toISOString(),
-      repositories: repoResults.sort((a, b) => Date.parse(b.pushedAt) - Date.parse(a.pushedAt)),
-      events,
+      generatedAt: snapshotChanged || !existingData?.generatedAt ? new Date().toISOString() : existingData.generatedAt,
+      ...publicSnapshot,
     };
 
     await mkdir(dirname(outputPath), { recursive: true });

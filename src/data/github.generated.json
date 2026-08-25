@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-25T18:45:40.248Z",
+  "generatedAt": "2026-08-25T18:47:57.406Z",
   "repositories": [
     {
       "name": "Atriveo",
       "fullName": "atishay-kasliwal/Atriveo",
-      "description": "End-to-end system that automatically captures job applications through a Chrome extension, tracks them in a dashboard, and provides network insights through a social layer, all running on a serverless edge stack.",
+      "description": "Atriveo Tracker — application, referral, assessment, and follow-up intelligence with a Chrome extension.",
       "url": "https://github.com/atishay-kasliwal/Atriveo",
-      "homepage": "https://atriveo.com/",
+      "homepage": "https://tracker.atriveo.com",
       "language": "JavaScript",
       "stars": 1,
       "forks": 0,
-      "pushedAt": "2026-08-25T18:25:44Z"
+      "pushedAt": "2026-08-25T18:47:30Z"
     },
     {
       "name": "atriveo-app",
@@ -114,6 +114,14 @@
   ],
   "events": [
     {
+      "id": "18869443711",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-site",
+      "createdAt": "2026-08-25T18:45:48Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-site",
+      "label": "Pushed 1 changes"
+    },
+    {
       "id": "18869332250",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-site",
@@ -166,14 +174,6 @@
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
       "createdAt": "2026-08-25T09:49:06Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "18837588253",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-25T12:58:01Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     }
