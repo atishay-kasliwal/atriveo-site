@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import githubData from "../data/github.generated.json";
+
+const repositories = githubData.repositories;
+const totalStars = repositories.reduce((total, repository) => total + repository.stars, 0);
+const languages = new Set(repositories.map((repository) => repository.language).filter(Boolean)).size;
+const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" });
+---
+
+<BaseLayout
+  title="Open source — Atriveo"
+  description="Public Atriveo repositories, recent work, and the engineering ideas behind the products."
+>
+  <section class="page-hero open-source-hero section-shell">
+    <p class="eyebrow"><span class="eyebrow-mark"></span> Public work</p>
+    <h1>Source is part of<br /><em>the product.</em></h1>
+    <p>Inspect the implementation, reuse what helps, and follow the work as it moves.</p>
+    <a class="button button-primary" href="https://github.com/atishay-kasliwal">Open GitHub profile <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="oss-metrics section-shell">
+    <div><strong>{repositories.length || 10}</strong><span>Public project repositories</span></div>
+    <div><strong>{languages || 3}</strong><span>Primary languages</span></div>
+    <div><strong>{totalStars}</strong><span>Stars across this collection</span></div>
+  </section>
+
+  <section class="section-shell section-block repo-section">
+    <div class="section-heading">
+      <div><p class="eyebrow">Repository index</p><h2>Read the work directly.</h2></div>
+      {githubData.generatedAt && <p>Synced {dateFormat.format(new Date(githubData.generatedAt))}</p>}
+    </div>
+    <div class="repo-table">
+      {repositories.map((repository, index) => (
+        <a class="repo-row" href={repository.url}>
+          <span class="repo-number">{String(index + 1).padStart(2, "0")}</span>
+          <span class="repo-main"><strong>{repository.name}</strong><small>{repository.description || "Public Atriveo project"}</small></span>
+          <span class="repo-language"><i></i>{repository.language || "Mixed"}</span>
+          <span class="repo-date">{dateFormat.format(new Date(repository.pushedAt))}</span>
+          <span class="repo-arrow" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell section-block contribution-section">
+    <div class="section-heading">
+      <div><p class="eyebrow">Recent public activity</p><h2>What is moving now.</h2></div>
+      <p>Only public activity is shown here. Private repository metadata stays private.</p>
+    </div>
+    <div class="contribution-grid">
+      {githubData.events.slice(0, 6).map((event) => (
+        <a class="contribution-card" href={event.url}>
+          <span class="contribution-icon">{event.type === "PushEvent" ? "↗" : "◇"}</span>
+          <strong>{event.label}</strong>
+          <p>{event.repo.replace("atishay-kasliwal/", "")}</p>
+          <time datetime={event.createdAt}>{dateFormat.format(new Date(event.createdAt))}</time>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

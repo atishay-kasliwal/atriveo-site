@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectVisual from "../../components/ProjectVisual.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { projects, type Project } from "../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+type Props = { project: Project };
+const { project } = Astro.props;
+const related = projects.filter((candidate) => candidate.category === project.category && candidate.slug !== project.slug).slice(0, 2);
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: project.name,
+  description: project.shortDescription,
+  applicationCategory: project.category,
+  url: project.links.find((link) => link.kind === "live")?.href || `https://atriveo.com/projects/${project.slug}`,
+};
+---
+
+<BaseLayout title={`${project.name} — Atriveo`} description={project.shortDescription}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
+  <section class="project-detail-hero section-shell">
+    <div class="project-detail-copy">
+      <a class="back-link" href="/projects"><span aria-hidden="true">←</span> All projects</a>
+      <p class="eyebrow">{project.eyebrow}</p>
+      <h1>{project.name}</h1>
+      <p>{project.longDescription}</p>
+      <div class="hero-actions">
+        {project.links.map((link, index) => (
+          <a class:list={["button", index === 0 ? "button-primary" : "button-secondary"]} href={link.href}>
+            {link.label} <span aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+    <ProjectVisual project={project} large />
+  </section>
+
+  <section class="project-detail-body section-shell">
+    <div class="detail-block">
+      <p class="eyebrow">What it makes clearer</p>
+      <ol class="highlight-list">
+        {project.highlights.map((highlight, index) => (
+          <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{highlight}</strong></li>
+        ))}
+      </ol>
+    </div>
+    <aside class="project-facts">
+      <div><span>Status</span><strong>{project.stage}</strong></div>
+      <div><span>Area</span><strong>{project.category}</strong></div>
+      <div><span>Built with</span><p>{project.technologies.join(" · ")}</p></div>
+    </aside>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section-shell section-block related-projects">
+      <div class="section-heading"><div><p class="eyebrow">Keep exploring</p><h2>Related work.</h2></div></div>
+      <div class="project-grid">{related.map((candidate) => <ProjectCard project={candidate} />)}</div>
+    </section>
+  )}
+</BaseLayout>

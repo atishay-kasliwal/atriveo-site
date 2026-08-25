@@ -1,0 +1,19 @@
+---
+import type { Project } from "../data/projects";
+
+type Props = {
+  project: Project;
+  large?: boolean;
+};
+
+const { project, large = false } = Astro.props;
+---
+
+<div class:list={["project-visual", `accent-${project.accent}`, large && "is-large"]} aria-hidden="true">
+  <div class="visual-grid"></div>
+  <span class="visual-index">ATR / {project.monogram}</span>
+  <div class="visual-orbit orbit-one"></div>
+  <div class="visual-orbit orbit-two"></div>
+  <div class="visual-core">{project.monogram}</div>
+  <span class="visual-state">{project.stage}</span>
+</div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atriveo.com/sitemap-index.xml

@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ProjectVisual from "../components/ProjectVisual.astro";
+import { featuredProjects, projects } from "../data/projects";
+import githubData from "../data/github.generated.json";
+
+const liveCount = projects.filter((project) => project.links.some((link) => link.kind === "live")).length;
+const sourceCount = projects.filter((project) => project.links.some((link) => link.kind === "source")).length;
+const recentEvents = githubData.events.slice(0, 3);
+const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
+---
+
+<BaseLayout>
+  <section class="hero section-shell">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-mark"></span> Independent product ecosystem</p>
+      <h1>Useful systems,<br /><em>built in public.</em></h1>
+      <p class="hero-lede">
+        Atriveo turns complicated, fragmented workflows into focused products—for careers, research,
+        creativity, health, and personal intelligence.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/projects">Explore projects <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="https://github.com/atishay-kasliwal">View GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>{projects.length}</dt><dd>Curated projects</dd></div>
+        <div><dt>{liveCount}</dt><dd>Live products</dd></div>
+        <div><dt>{sourceCount}</dt><dd>Open repositories</dd></div>
+      </dl>
+    </div>
+    <div class="ecosystem-map" aria-label="Atriveo project ecosystem illustration">
+      <div class="map-heading">
+        <span>ATRIVEO / SYSTEM MAP</span>
+        <span class="map-live"><i></i> ACTIVE</span>
+      </div>
+      <div class="map-stage">
+        <div class="map-radar"></div>
+        {featuredProjects.map((project, index) => (
+          <a class={`map-node map-node-${index + 1}`} href={`/projects/${project.slug}`} aria-label={project.name}>
+            <span>{project.monogram}</span>
+            <small>{project.shortName}</small>
+          </a>
+        ))}
+        <a class="map-node map-node-4" href="/projects" aria-label="All Atriveo projects">
+          <span>+{projects.length - featuredProjects.length}</span>
+          <small>Explore</small>
+        </a>
+        <svg class="map-lines" viewBox="0 0 620 510" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M310 245 C240 170 175 145 92 110" />
+          <path d="M310 245 C405 165 475 155 548 100" />
+          <path d="M310 245 C230 320 165 360 100 412" />
+          <path d="M310 245 C400 320 470 360 540 420" />
+        </svg>
+        <div class="map-center"><span>A</span><small>Core</small></div>
+      </div>
+      <div class="map-footer">
+        <span>CAREER</span><span>INTELLIGENCE</span><span>RESEARCH</span><span>CREATIVE</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="signal-strip" aria-label="Atriveo areas">
+    <div>
+      <span>Career systems</span><i></i><span>Local intelligence</span><i></i><span>Grounded research</span><i></i>
+      <span>Creative utilities</span><i></i><span>Human performance</span>
+    </div>
+  </div>
+
+  <section class="section-shell section-block featured-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2>Products with a point of view.</h2>
+      </div>
+      <p>Each project begins with a workflow worth making clearer—not with a feature checklist.</p>
+    </div>
+    <div class="featured-grid">
+      {featuredProjects.map((project) => <ProjectCard project={project} featured />)}
+    </div>
+  </section>
+
+  <section class="section-shell section-block catalog-preview">
+    <div class="section-heading align-end">
+      <div>
+        <p class="eyebrow">The wider system</p>
+        <h2>One studio. Many surfaces.</h2>
+      </div>
+      <a class="arrow-link" href="/projects">View all projects <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="compact-project-grid">
+      {projects.filter((project) => !project.featured).slice(0, 6).map((project) => (
+        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}`}>
+          <span class="compact-monogram">{project.monogram}</span>
+          <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
+          <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="activity-section section-shell section-block">
+    <div class="activity-intro">
+      <p class="eyebrow">Shipping log</p>
+      <h2>Work stays visible.</h2>
+      <p>Public repositories, real releases, and the useful changes between them.</p>
+      <a class="arrow-link" href="/open-source">Explore open source <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="activity-list">
+      {recentEvents.length > 0 ? recentEvents.map((event) => (
+        <a href={event.url} class="activity-row">
+          <time datetime={event.createdAt}>{dateFormat.format(new Date(event.createdAt))}</time>
+          <span><strong>{event.label}</strong><small>{event.repo.replace("atishay-kasliwal/", "")}</small></span>
+          <i aria-hidden="true">↗</i>
+        </a>
+      )) : (
+        <>
+          <a href="https://github.com/atishay-kasliwal/Atriveo" class="activity-row">
+            <time>Now</time><span><strong>Atriveo Tracker</strong><small>Public source and release history</small></span><i>↗</i>
+          </a>
+          <a href="https://github.com/atishay-kasliwal/atriveo-cortex" class="activity-row">
+            <time>Now</time><span><strong>Atriveo Cortex</strong><small>Local-first intelligence experiments</small></span><i>↗</i>
+          </a>
+        </>
+      )}
+    </div>
+  </section>
+
+  <section class="section-shell manifesto-section section-block">
+    <p class="eyebrow">Operating principles</p>
+    <div class="manifesto-grid">
+      <h2>Build what clarifies.<br />Show how it works.</h2>
+      <ol>
+        <li><span>01</span><div><strong>Useful by default</strong><p>A product should reduce cognitive load the first time it opens.</p></div></li>
+        <li><span>02</span><div><strong>Evidence over theater</strong><p>Grounded outputs, visible logic, and honest product states.</p></div></li>
+        <li><span>03</span><div><strong>Open when possible</strong><p>Source is part of the product when sharing it makes the work stronger.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-shell final-cta">
+    <div>
+      <p class="eyebrow">Start somewhere useful</p>
+      <h2>Your job search,<br />finally in one place.</h2>
+    </div>
+    <a class="button button-inverse" href="https://tracker.atriveo.com">Open Atriveo Tracker <span aria-hidden="true">↗</span></a>
+    <ProjectVisual project={featuredProjects[0]} />
+  </section>
+</BaseLayout>

@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { categories, projects } from "../../data/projects";
+---
+
+<BaseLayout
+  title="Projects — Atriveo"
+  description="Explore live Atriveo products and open-source projects across careers, intelligence, research, health, and creativity."
+>
+  <section class="page-hero section-shell">
+    <p class="eyebrow"><span class="eyebrow-mark"></span> Project index / {String(projects.length).padStart(2, "0")}</p>
+    <h1>Tools for work that<br /><em>deserves more clarity.</em></h1>
+    <p>Browse the complete public Atriveo catalog. Open the live product, inspect the source, or do both.</p>
+  </section>
+
+  <section class="section-shell project-directory">
+    <div class="filter-bar" aria-label="Project filters">
+      <div class="filter-buttons" role="group" aria-label="Filter by category">
+        <button class="filter-button is-active" type="button" data-filter="All">All <span>{projects.length}</span></button>
+        {categories.map((category) => (
+          <button class="filter-button" type="button" data-filter={category}>
+            {category} <span>{projects.filter((project) => project.category === category).length}</span>
+          </button>
+        ))}
+      </div>
+      <label class="project-search">
+        <span class="sr-only">Search projects</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+        <input type="search" placeholder="Search projects" data-project-search />
+      </label>
+    </div>
+
+    <p class="result-count" aria-live="polite" data-result-count>{projects.length} projects</p>
+    <div class="project-grid directory-grid" data-project-grid>
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+    <div class="empty-state" data-empty-state hidden>
+      <strong>No projects match that view.</strong>
+      <p>Try another category or clear the search.</p>
+    </div>
+  </section>
+
+  <script>
+    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-filter]"));
+    const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-project-card]"));
+    const search = document.querySelector<HTMLInputElement>("[data-project-search]");
+    const count = document.querySelector<HTMLElement>("[data-result-count]");
+    const empty = document.querySelector<HTMLElement>("[data-empty-state]");
+    let activeFilter = "All";
+
+    function updateProjects() {
+      const query = search?.value.trim().toLowerCase() || "";
+      let visible = 0;
+      cards.forEach((card) => {
+        const matchesCategory = activeFilter === "All" || card.dataset.category === activeFilter;
+        const matchesSearch = !query || card.dataset.search?.includes(query);
+        const show = matchesCategory && matchesSearch;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      if (count) count.textContent = `${visible} project${visible === 1 ? "" : "s"}`;
+      if (empty) empty.hidden = visible !== 0;
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter || "All";
+        buttons.forEach((candidate) => candidate.classList.toggle("is-active", candidate === button));
+        updateProjects();
+      });
+    });
+    search?.addEventListener("input", updateProjects);
+  </script>
+</BaseLayout>

@@ -1,0 +1,181 @@
+{
+  "generatedAt": "2026-08-25T18:41:56.538Z",
+  "repositories": [
+    {
+      "name": "Atriveo",
+      "fullName": "atishay-kasliwal/Atriveo",
+      "description": "End-to-end system that automatically captures job applications through a Chrome extension, tracks them in a dashboard, and provides network insights through a social layer, all running on a serverless edge stack.",
+      "url": "https://github.com/atishay-kasliwal/Atriveo",
+      "homepage": "https://atriveo.com/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-08-25T18:25:44Z"
+    },
+    {
+      "name": "atriveo-app",
+      "fullName": "atishay-kasliwal/atriveo-app",
+      "description": "A full-stack application that automatically captures job applications through a Chrome extension, tracks them in a centralized dashboard, and provides insights to improve your job search.",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "homepage": "https://atriveo.com/",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-08-25T18:11:38Z"
+    },
+    {
+      "name": "atriveo-reel",
+      "fullName": "atishay-kasliwal/atriveo-reel",
+      "description": "Paste two videos, pick two moments, get a vertical comparison reel. Self-hosted on a Mac behind a Cloudflare Tunnel.",
+      "url": "https://github.com/atishay-kasliwal/atriveo-reel",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-08-24T22:19:59Z"
+    },
+    {
+      "name": "atriveo-patent",
+      "fullName": "atishay-kasliwal/atriveo-patent",
+      "description": "Patent Atriveo — turns patent PDFs into grounded summaries and presentation decks",
+      "url": "https://github.com/atishay-kasliwal/atriveo-patent",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-08-24T15:35:33Z"
+    },
+    {
+      "name": "audiobook-atriveo",
+      "fullName": "atishay-kasliwal/audiobook-atriveo",
+      "description": null,
+      "url": "https://github.com/atishay-kasliwal/audiobook-atriveo",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-08-13T17:28:23Z"
+    },
+    {
+      "name": "grants-gov-ai-finder",
+      "fullName": "atishay-kasliwal/grants-gov-ai-finder",
+      "description": null,
+      "url": "https://github.com/atishay-kasliwal/grants-gov-ai-finder",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-08-13T02:48:32Z"
+    },
+    {
+      "name": "atriveo-cortex",
+      "fullName": "atishay-kasliwal/atriveo-cortex",
+      "description": "AI Working Memory on ScreenPipe — local-first extraction of projects, commitments, and ideas",
+      "url": "https://github.com/atishay-kasliwal/atriveo-cortex",
+      "homepage": "https://cortex.atriveo.com",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-07-01T20:38:04Z"
+    },
+    {
+      "name": "atriveo-knowledge",
+      "fullName": "atishay-kasliwal/atriveo-knowledge",
+      "description": null,
+      "url": "https://github.com/atishay-kasliwal/atriveo-knowledge",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-07-01T16:26:53Z"
+    },
+    {
+      "name": "Atriveo-JD-Extractor",
+      "fullName": "atishay-kasliwal/Atriveo-JD-Extractor",
+      "description": "Automates your job search from scraping to tailored resumes. Pulls jobs from LinkedIn, Greenhouse and Lever every hour, scores them against your skills, and uses a local LLM to tailor a one-page PDF resume for each role. No API costs, no data leaving your machine. Use the hosted UI at application.atriveo.com or run everything locally.",
+      "url": "https://github.com/atishay-kasliwal/Atriveo-JD-Extractor",
+      "homepage": "https://application.atriveo.com",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-06-25T01:18:25Z"
+    },
+    {
+      "name": "cortex-bio",
+      "fullName": "atishay-kasliwal/cortex-bio",
+      "description": "Open-source wearable intelligence platform for cognitive readiness, performance forecasting, and human optimization.",
+      "url": "https://github.com/atishay-kasliwal/cortex-bio",
+      "homepage": "https://bio.atriveo.com/",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-06-19T19:29:25Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "18868250135",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/Atriveo",
+      "createdAt": "2026-08-25T18:25:30Z",
+      "url": "https://github.com/atishay-kasliwal/Atriveo",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18867609036",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/Atriveo",
+      "createdAt": "2026-08-25T18:25:44Z",
+      "url": "https://github.com/atishay-kasliwal/Atriveo",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18857927100",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-app",
+      "createdAt": "2026-08-25T16:06:50Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18851513688",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-app",
+      "createdAt": "2026-08-25T15:03:55Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18845697828",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-app",
+      "createdAt": "2026-08-25T10:51:53Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18837631124",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-app",
+      "createdAt": "2026-08-25T09:49:06Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18837588253",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-app",
+      "createdAt": "2026-08-25T12:58:01Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "label": "Pushed 1 changes"
+    },
+    {
+      "id": "18832086689",
+      "type": "PushEvent",
+      "repo": "atishay-kasliwal/atriveo-app",
+      "createdAt": "2026-08-25T11:55:17Z",
+      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "label": "Pushed 1 changes"
+    }
+  ]
+}
