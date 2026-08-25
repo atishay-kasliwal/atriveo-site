@@ -4,14 +4,16 @@ import ProjectCard from "../components/ProjectCard.astro";
 import ProjectVisual from "../components/ProjectVisual.astro";
 import { featuredProjects, projects } from "../data/projects";
 import githubData from "../data/github.generated.json";
+import { createProjectCatalogSchema } from "../lib/seo";
 
 const liveCount = projects.filter((project) => project.links.some((link) => link.kind === "live")).length;
 const sourceCount = projects.filter((project) => project.links.some((link) => link.kind === "source")).length;
 const recentEvents = githubData.events.slice(0, 3);
 const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
+const catalogSchema = createProjectCatalogSchema(projects);
 ---
 
-<BaseLayout>
+<BaseLayout pageSchemas={[catalogSchema]}>
   <section class="hero section-shell">
     <div class="hero-copy">
       <p class="eyebrow"><span class="eyebrow-mark"></span> Independent product ecosystem</p>

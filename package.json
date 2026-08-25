@@ -6,13 +6,17 @@
   "scripts": {
     "dev": "astro dev",
     "sync:github": "node scripts/sync-github.mjs",
-    "build": "npm run sync:github && astro build",
+    "build": "npm run sync:github && astro build && npm run audit:seo",
+    "audit:seo": "node scripts/audit-seo.mjs",
     "check": "astro check",
     "preview": "astro preview",
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
+    "@power-seo/audit": "^1.0.19",
+    "@power-seo/meta": "^1.0.19",
+    "@power-seo/schema": "^1.0.19",
     "astro": "^7.2.6"
   },
   "devDependencies": {

@@ -2,11 +2,15 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import { categories, projects } from "../../data/projects";
+import { createProjectCatalogSchema } from "../../lib/seo";
+
+const catalogSchema = createProjectCatalogSchema(projects);
 ---
 
 <BaseLayout
-  title="Projects — Atriveo"
-  description="Explore live Atriveo products and open-source projects across careers, intelligence, research, health, and creativity."
+  title="Atriveo Projects — Live Products and Open Source Tools"
+  description="Explore live Atriveo products and open-source projects for careers, intelligence, research, health, and creativity, with direct product and source links."
+  pageSchemas={[catalogSchema]}
 >
   <section class="page-hero section-shell">
     <p class="eyebrow"><span class="eyebrow-mark"></span> Project index / {String(projects.length).padStart(2, "0")}</p>
@@ -15,6 +19,7 @@ import { categories, projects } from "../../data/projects";
   </section>
 
   <section class="section-shell project-directory">
+    <h2 class="sr-only">Atriveo project catalog</h2>
     <div class="filter-bar" aria-label="Project filters">
       <div class="filter-buttons" role="group" aria-label="Filter by category">
         <button class="filter-button is-active" type="button" data-filter="All">All <span>{projects.length}</span></button>

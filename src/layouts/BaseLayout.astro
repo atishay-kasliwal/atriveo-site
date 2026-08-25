@@ -1,33 +1,33 @@
 ---
 import "../styles/global.css";
+import { createAtriveoHead, createAtriveoJsonLd, type SchemaObject } from "../lib/seo";
 
 type Props = {
   title?: string;
   description?: string;
   canonicalPath?: string;
+  noindex?: boolean;
+  pageSchemas?: SchemaObject[];
 };
 
 const {
-  title = "Atriveo — Useful systems, built in public",
+  title = "Atriveo — Useful Software Systems, Built in Public",
   description =
-    "Explore Atriveo products for careers, research, creativity, health, and personal intelligence.",
+    "Atriveo builds focused products for careers, research, creativity, health, and personal intelligence, with live tools and open-source code.",
   canonicalPath = Astro.url.pathname,
+  noindex = false,
+  pageSchemas = [],
 } = Astro.props;
 
 const canonical = new URL(canonicalPath, Astro.site || "https://atriveo.com");
+const seoHead = createAtriveoHead({ title, description, canonical: canonical.toString(), noindex });
+const structuredData = createAtriveoJsonLd(pageSchemas);
 const path = Astro.url.pathname;
 const navItems = [
   { href: "/projects", label: "Projects" },
   { href: "/open-source", label: "Open source" },
   { href: "/about", label: "About" },
 ];
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Atriveo",
-  url: "https://atriveo.com",
-  sameAs: ["https://github.com/atishay-kasliwal"],
-};
 ---
 
 <!doctype html>
@@ -36,19 +36,9 @@ const organizationSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#f5f7fb" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={canonical} />
+    <Fragment set:html={seoHead} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Atriveo" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script is:inline type="application/ld+json" set:html={structuredData} />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>

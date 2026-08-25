@@ -1,16 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import githubData from "../data/github.generated.json";
+import { itemList } from "@power-seo/schema";
 
 const repositories = githubData.repositories;
 const totalStars = repositories.reduce((total, repository) => total + repository.stars, 0);
 const languages = new Set(repositories.map((repository) => repository.language).filter(Boolean)).size;
 const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" });
+const repositorySchema = itemList({
+  numberOfItems: repositories.length,
+  itemListOrder: "https://schema.org/ItemListUnordered",
+  itemListElement: repositories.map((repository, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: repository.name,
+    url: repository.url,
+  })),
+});
 ---
 
 <BaseLayout
-  title="Open source — Atriveo"
-  description="Public Atriveo repositories, recent work, and the engineering ideas behind the products."
+  title="Atriveo Open Source — Public Repositories and Activity"
+  description="Explore Atriveo public repositories, recent GitHub activity, implementation details, and the open engineering work behind each available product."
+  pageSchemas={[repositorySchema]}
 >
   <section class="page-hero open-source-hero section-shell">
     <p class="eyebrow"><span class="eyebrow-mark"></span> Public work</p>

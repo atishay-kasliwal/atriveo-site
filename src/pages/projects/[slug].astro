@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectVisual from "../../components/ProjectVisual.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import { projects, type Project } from "../../data/projects";
+import { createProjectSchemas, getProjectSeoDescription, getProjectSeoTitle } from "../../lib/seo";
 
 export function getStaticPaths() {
   return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
@@ -11,18 +12,14 @@ export function getStaticPaths() {
 type Props = { project: Project };
 const { project } = Astro.props;
 const related = projects.filter((candidate) => candidate.category === project.category && candidate.slug !== project.slug).slice(0, 2);
-const softwareSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: project.name,
-  description: project.shortDescription,
-  applicationCategory: project.category,
-  url: project.links.find((link) => link.kind === "live")?.href || `https://atriveo.com/projects/${project.slug}`,
-};
+const pageSchemas = createProjectSchemas(project);
 ---
 
-<BaseLayout title={`${project.name} — Atriveo`} description={project.shortDescription}>
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
+<BaseLayout
+  title={getProjectSeoTitle(project)}
+  description={getProjectSeoDescription(project)}
+  pageSchemas={pageSchemas}
+>
   <section class="project-detail-hero section-shell">
     <div class="project-detail-copy">
       <a class="back-link" href="/projects"><span aria-hidden="true">←</span> All projects</a>
