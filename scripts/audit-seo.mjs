@@ -99,9 +99,12 @@ function createAuditInput(file, html) {
 }
 
 const files = (await findHtmlFiles(DIST_DIR.pathname)).filter((file) => !file.endsWith("/404.html"));
-const pages = await Promise.all(
-  files.map(async (file) => createAuditInput(file, await readFile(file, "utf8"))),
+const builtPages = await Promise.all(
+  files.map(async (file) => ({ file, html: await readFile(file, "utf8") })),
 );
+const forbiddenEmDash = String.fromCodePoint(0x2014);
+const emDashPages = builtPages.filter(({ html }) => html.includes(forbiddenEmDash));
+const pages = builtPages.map(({ file, html }) => createAuditInput(file, html));
 const pageResults = pages.map((page) => {
   const result = auditPage(page);
   const rules = result.rules.filter((rule) => rule.category !== "content");
@@ -120,12 +123,16 @@ for (const page of pageResults) {
   const warnings = warningRules.length;
   const pageErrors = page.rules.filter((rule) => rule.severity === "error").length;
   console.log(`  ${page.score}/100  ${page.url}  (${pageErrors} errors, ${warnings} warnings)`);
-  for (const rule of warningRules) console.log(`    WARN ${rule.title} — ${rule.description}`);
+  for (const rule of warningRules) console.log(`    WARN ${rule.title}: ${rule.description}`);
 }
 
-if (errors.length > 0 || score < SCORE_THRESHOLD) {
-  for (const { url, rule } of errors) console.error(`  ERROR ${url}: ${rule.title} — ${rule.description}`);
+if (emDashPages.length > 0) {
+  for (const { file } of emDashPages) console.error(`  ERROR ${pageUrl(file)}: em dash found in generated HTML`);
+}
+
+if (errors.length > 0 || score < SCORE_THRESHOLD || emDashPages.length > 0) {
+  for (const { url, rule } of errors) console.error(`  ERROR ${url}: ${rule.title}: ${rule.description}`);
   throw new Error(
-    `SEO audit failed: score ${score}/100 (minimum ${SCORE_THRESHOLD}) with ${errors.length} critical errors.`,
+    `SEO audit failed: score ${score}/100 (minimum ${SCORE_THRESHOLD}), ${errors.length} critical errors, and ${emDashPages.length} pages with forbidden punctuation.`,
   );
 }

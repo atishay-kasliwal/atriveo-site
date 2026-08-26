@@ -31,6 +31,11 @@ async function getJson(url) {
   return response.json();
 }
 
+function cleanPublicText(value) {
+  if (typeof value !== "string") return value;
+  return value.replace(/\s*\u2014\s*/g, ": ");
+}
+
 function summarizeEvent(event) {
   const repo = event.repo?.name || "";
   const base = {
@@ -70,7 +75,7 @@ async function main() {
           return {
             name: repo.name,
             fullName: repo.full_name,
-            description: repo.description,
+            description: cleanPublicText(repo.description),
             url: repo.html_url,
             homepage: repo.homepage,
             language: repo.language,

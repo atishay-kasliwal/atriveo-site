@@ -74,7 +74,7 @@ export function createAtriveoHead({ title, description, canonical, noindex = fal
           url: SOCIAL_IMAGE_URL,
           width: 1200,
           height: 630,
-          alt: "Atriveo — useful software systems built in public",
+          alt: "Atriveo, useful software systems built in public",
           type: "image/png",
         },
       ],
@@ -84,7 +84,7 @@ export function createAtriveoHead({ title, description, canonical, noindex = fal
       title,
       description,
       image: SOCIAL_IMAGE_URL,
-      imageAlt: "Atriveo — useful software systems built in public",
+      imageAlt: "Atriveo, useful software systems built in public",
     },
     additionalMetaTags: [{ name: "theme-color", content: "#f5f7fb" }],
   });
@@ -108,20 +108,20 @@ export function createProjectCatalogSchema(projects: Project[]) {
 }
 
 const projectTitles: Record<string, string> = {
-  tracker: "Atriveo Tracker — Job Search Application Management",
-  applications: "Atriveo Applications — Evidence-Based Job Discovery",
-  cortex: "Atriveo Cortex — Private Local-First Working Memory",
-  bio: "Atriveo Bio — Open Cognitive Readiness Intelligence",
-  "grant-scout": "Grant Scout — Public Funding Opportunity Research | Atriveo",
-  "h1b-tracker": "H-1B Sponsor Tracker — Career Research Tools | Atriveo",
-  patent: "Atriveo Patent — Grounded Patent Document Intelligence",
-  knowledge: "Atriveo Knowledge — Durable Working Memory Systems",
-  reel: "Atriveo Reel — Creative Video Automation Tools | Atriveo",
-  audiobook: "Atriveo Audiobook — Open Audio Production Workflow",
+  tracker: "Atriveo Tracker | Job Search Application Management",
+  applications: "Atriveo Applications | Evidence-Based Job Discovery",
+  cortex: "Atriveo Cortex | Private Local-First Working Memory",
+  bio: "Atriveo Bio | Open Cognitive Readiness Intelligence",
+  "grant-scout": "Grant Scout | Public Funding Opportunity Research | Atriveo",
+  "h1b-tracker": "H-1B Sponsor Tracker | Career Research Tools | Atriveo",
+  patent: "Atriveo Patent | Grounded Patent Document Intelligence",
+  knowledge: "Atriveo Knowledge | Durable Working Memory Systems",
+  reel: "Atriveo Reel | Creative Video Automation Tools | Atriveo",
+  audiobook: "Atriveo Audiobook | Open Audio Production Workflow",
 };
 
 export function getProjectSeoTitle(project: Project) {
-  return projectTitles[project.slug] || `${project.name} — ${project.eyebrow} | Atriveo`;
+  return projectTitles[project.slug] || `${project.name} | ${project.eyebrow} | Atriveo`;
 }
 
 export function getProjectSeoDescription(project: Project) {

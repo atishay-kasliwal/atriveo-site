@@ -18,8 +18,8 @@ const catalogSchema = createProjectCatalogSchema(projects);
       <p class="eyebrow"><span class="eyebrow-mark"></span> Independent builder hub</p>
       <h1>Everything being built,<br /><em>under one roof.</em></h1>
       <p class="hero-lede">
-        Atriveo is the public home for everything Atishay Kasliwal builds—live products, open-source
-        experiments, useful ideas, and the work connecting them.
+        Atriveo is the public home for everything Atishay Kasliwal builds, including live products,
+        open-source experiments, useful ideas, and the work connecting them.
       </p>
       <div class="hero-actions">
         <a class="button button-primary" href="/projects">Explore the whole hub <span aria-hidden="true">→</span></a>
@@ -123,7 +123,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
 
       <div class="carousel-footer">
         <p class="carousel-count" aria-live="polite">
-          Showing <strong data-carousel-range>01—03</strong> <span>/ {String(projects.length).padStart(2, "0")}</span>
+          Showing <strong data-carousel-range>01 to 03</strong> <span>/ {String(projects.length).padStart(2, "0")}</span>
         </p>
         <div class="carousel-progress" aria-hidden="true">
           <i data-carousel-progress></i>
@@ -235,7 +235,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
     const updateInterface = () => {
       const visible = visibleCount();
       const end = Math.min(slides.length, index + visible);
-      range.textContent = visible === 1 ? padded(index + 1) : `${padded(index + 1)}—${padded(end)}`;
+      range.textContent = visible === 1 ? padded(index + 1) : `${padded(index + 1)} to ${padded(end)}`;
 
       const thumbSize = (visible / slides.length) * 100;
       const travel = 100 - thumbSize;
