@@ -7,6 +7,10 @@ workers_dev = true
 pattern = "atriveo.com/*"
 zone_id = "c4980d58a81dc8f85af72261d9d92cf5"
 
+[[routes]]
+pattern = "www.atriveo.com/*"
+zone_id = "c4980d58a81dc8f85af72261d9d92cf5"
+
 [assets]
 directory = "./dist"
 binding = "ASSETS"

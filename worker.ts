@@ -5,6 +5,7 @@ interface Env {
 }
 
 const TRACKER_ORIGIN = "https://tracker.atriveo.com";
+const BRAND_ORIGIN = "https://atriveo.com";
 const TRACKER_PATH_PREFIXES = ["/dashboard", "/app", "/extension-install", "/header-test"];
 
 function shouldRedirectToTracker(url: URL): boolean {
@@ -34,6 +35,10 @@ export default {
 
     if (shouldRedirectToTracker(url)) {
       return Response.redirect(`${TRACKER_ORIGIN}${url.pathname}${url.search}`, 308);
+    }
+
+    if (url.hostname === "www.atriveo.com") {
+      return Response.redirect(`${BRAND_ORIGIN}${url.pathname}${url.search}`, 308);
     }
 
     return withSecurityHeaders(await env.ASSETS.fetch(request));
