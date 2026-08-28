@@ -32,31 +32,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "tracker",
-    name: "Atriveo Tracker",
-    shortName: "Tracker",
-    eyebrow: "Career operating system",
-    shortDescription:
-      "A calm command center for applications, referrals, assessments, follow-ups, and network signals.",
-    longDescription:
-      "Atriveo Tracker turns a scattered job search into one legible system. The web dashboard, Chrome extension, serverless API, and daily digest work together so applications are captured once and useful at every stage.",
-    category: "Career",
-    stage: "Live",
-    featured: false,
-    accent: "blue",
-    monogram: "TR",
-    technologies: ["React", "TypeScript", "Cloudflare", "PostgreSQL", "Chrome MV3"],
-    highlights: [
-      "One-click application capture across major ATS platforms",
-      "Application, referral, assessment, and follow-up workflows",
-      "Network signals, goals, analytics, and scheduled digests",
-    ],
-    links: [
-      { label: "Open tracker", href: "https://tracker.atriveo.com", kind: "live" },
-      { label: "View source", href: "https://github.com/atishay-kasliwal/Atriveo", kind: "source" },
-    ],
-  },
-  {
     slug: "applications",
     name: "Atriveo Applications",
     shortName: "Applications",

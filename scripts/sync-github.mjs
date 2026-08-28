@@ -6,7 +6,6 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(root, "src/data/github.generated.json");
 const owner = "atishay-kasliwal";
 const repositories = [
-  "Atriveo",
   "Atriveo-JD-Extractor",
   "atriveo-app",
   "atriveo-cortex",
@@ -17,6 +16,7 @@ const repositories = [
   "atriveo-reel",
   "audiobook-atriveo",
 ];
+const repositoryAllowlist = new Set(repositories.map((name) => `${owner}/${name}`.toLowerCase()));
 
 const headers = {
   Accept: "application/vnd.github+json",
@@ -88,7 +88,11 @@ async function main() {
       getJson(`https://api.github.com/users/${owner}/events/public?per_page=30`),
     ]);
 
-    const events = eventResults.map(summarizeEvent).filter(Boolean).slice(0, 8);
+    const events = eventResults
+      .filter((event) => repositoryAllowlist.has(String(event.repo?.name || "").toLowerCase()))
+      .map(summarizeEvent)
+      .filter(Boolean)
+      .slice(0, 8);
     const sortedRepositories = repoResults.sort((a, b) => Date.parse(b.pushedAt) - Date.parse(a.pushedAt));
     const publicSnapshot = { repositories: sortedRepositories, events };
     const existingSnapshot = existingData

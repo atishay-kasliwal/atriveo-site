@@ -108,7 +108,6 @@ export function createProjectCatalogSchema(projects: Project[]) {
 }
 
 const projectTitles: Record<string, string> = {
-  tracker: "Atriveo Tracker | Job Search Application Management",
   applications: "Atriveo Applications | Evidence-Based Job Discovery",
   cortex: "Atriveo Cortex | Private Local-First Working Memory",
   bio: "Atriveo Bio | Open Cognitive Readiness Intelligence",

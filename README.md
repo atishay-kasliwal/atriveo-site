@@ -17,4 +17,4 @@ The project catalog is curated in `src/data/projects.ts`. `npm run sync:github` 
 
 SEO metadata and structured data are generated with [`@power-seo/meta`](https://github.com/CyberCraftBD/power-seo) and [`@power-seo/schema`](https://github.com/CyberCraftBD/power-seo). Every production build runs a technical SEO gate with `@power-seo/audit` across all indexable pages.
 
-The Cloudflare Worker serves the static Astro build on `atriveo.com` and preserves legacy tracker routes by redirecting them to `tracker.atriveo.com`. `www.atriveo.com` remains on the tracker during the extension compatibility window.
+The Cloudflare Worker serves the static Astro build on `atriveo.com`, redirects `www.atriveo.com` to the canonical apex, and preserves legacy tracker routes by forwarding them to the separate `tracker.atriveo.com` product.

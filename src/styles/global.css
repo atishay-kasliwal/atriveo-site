@@ -191,6 +191,7 @@ img, svg { display: block; max-width: 100%; }
 .compact-project-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--line); }
 .compact-project { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1.2rem; min-height:100px; padding:1rem 1.25rem; border-bottom:1px solid var(--line); transition:background 160ms ease; }
 .compact-project:nth-child(odd) { border-right:1px solid var(--line); }
+.compact-project:last-child:nth-child(odd) { grid-column:1 / -1; border-right:0; }
 .compact-project:hover { background:white; }
 .compact-monogram { width:46px; height:46px; display:grid; place-items:center; color:white; background:var(--project-accent); font-size:.74rem; font-weight:820; }
 .compact-project div { display:grid; gap:.35rem; }.compact-project strong { font-size:.92rem; }.compact-project small { color:var(--muted); font-size:.68rem; }.compact-project > span:last-child { color:var(--project-accent); }
