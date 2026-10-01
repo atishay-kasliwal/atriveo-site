@@ -63,7 +63,67 @@ export const projects: Project[] = [
         href: "https://github.com/atishay-kasliwal/atriveo-app",
         kind: "related",
       },
+      {
+        label: "View pipeline source",
+        href: "https://github.com/atishay-kasliwal/job-pipeline",
+        kind: "related",
+      },
     ],
+  },
+  {
+    slug: "dock",
+    name: "Atriveo Dock",
+    shortName: "Dock",
+    eyebrow: "Native macOS job sidebar",
+    shortDescription:
+      "A desktop sidebar with a ranked live job feed, one-click tailored resumes, and an hourly scrape.",
+    longDescription:
+      "Atriveo Dock pins the job search to the edge of the screen. It shows a scored feed of fresh postings, builds a one-page resume for each one from your own accomplishment bank, tracks what you applied to, and refreshes itself every hour. It runs in demo mode right after install.",
+    category: "Career",
+    stage: "Open source",
+    featured: false,
+    accent: "blue",
+    monogram: "DK",
+    technologies: ["Tauri", "React", "TypeScript", "Rust"],
+    highlights: [
+      "Ranked feed of new postings, searchable with ⌘K",
+      "One-click tailored resumes and cover letters",
+      "Hourly auto-scrape with live progress",
+    ],
+    links: [
+      {
+        label: "View source",
+        href: "https://github.com/atishay-kasliwal/atriveo-job-dock",
+        kind: "source",
+      },
+      {
+        label: "Download for macOS",
+        href: "https://github.com/atishay-kasliwal/atriveo-job-dock/releases/latest",
+        kind: "related",
+      },
+    ],
+  },
+  {
+    slug: "playatriveo",
+    name: "Playatriveo",
+    shortName: "Playatriveo",
+    eyebrow: "Local application engine",
+    shortDescription:
+      "Fills employer application forms from your own profile and stops for review before anything is submitted.",
+    longDescription:
+      "Playatriveo takes a job with a finished tailored resume, opens the employer's application form, and fills it from your profile and answer bank. It never invents an answer, never bypasses CAPTCHA or MFA, and submits automatically only for form patterns you have already approved.",
+    category: "Career",
+    stage: "In development",
+    featured: false,
+    accent: "violet",
+    monogram: "PA",
+    technologies: ["Playwright", "TypeScript", "MongoDB"],
+    highlights: [
+      "Adapters for Greenhouse, Lever, Ashby, and Workday",
+      "Review mode by default, with trust earned per form",
+      "Kill switch and one application per posting",
+    ],
+    links: [],
   },
   {
     slug: "cortex",
@@ -171,6 +231,50 @@ export const projects: Project[] = [
     links: [
       { label: "Open H-1B Tracker", href: "https://atriveo-h1b.pages.dev", kind: "live" },
     ],
+  },
+  {
+    slug: "dance",
+    name: "Atriveo Dance",
+    shortName: "Dance",
+    eyebrow: "Choreography workspace",
+    shortDescription:
+      "Plan formations on a stage grid, time them to an edited music mix, and export the piece as video.",
+    longDescription:
+      "Atriveo Dance is a workspace for choreographers. Place dancers on a stage, build and reuse formations, time them to a multi-song mix with crossfades and trims, and export the result as a WAV or a video. Projects sync across devices with an account.",
+    category: "Creative",
+    stage: "Live",
+    featured: false,
+    accent: "rose",
+    monogram: "DA",
+    technologies: ["React", "TypeScript", "Cloudflare Workers", "Web Audio"],
+    highlights: [
+      "Drag-and-drop formations with presets and undo",
+      "Multi-song music editor synced to the timeline",
+      "Video and audio export in the browser",
+    ],
+    links: [{ label: "Open Dance", href: "https://dance.atriveo.com", kind: "live" }],
+  },
+  {
+    slug: "maps",
+    name: "Atriveo Maps",
+    shortName: "Maps",
+    eyebrow: "Map poster generator",
+    shortDescription:
+      "Turn an address into a set of themed map posters with the exact spot marked.",
+    longDescription:
+      "Atriveo Maps geocodes an address, renders it at a chosen radius in 17 colour themes, and places an emoji marker on the centre point. It wraps the open-source maptoposter renderer with geocoding and marker compositing.",
+    category: "Creative",
+    stage: "In development",
+    featured: false,
+    accent: "green",
+    monogram: "MP",
+    technologies: ["Python", "OpenStreetMap", "Matplotlib"],
+    highlights: [
+      "Address in, 17 themed posters out",
+      "True-distance radius around the point",
+      "Theme-coloured emoji marker",
+    ],
+    links: [],
   },
   {
     slug: "patent",

@@ -8,6 +8,8 @@ const owner = "atishay-kasliwal";
 const repositories = [
   "Atriveo-JD-Extractor",
   "atriveo-app",
+  "job-pipeline",
+  "atriveo-job-dock",
   "atriveo-cortex",
   "cortex-bio",
   "grants-gov-ai-finder",
