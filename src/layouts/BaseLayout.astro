@@ -41,6 +41,15 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
     <Fragment set:html={seoHead} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script is:inline type="application/ld+json" set:html={structuredData} />
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8LNKTSL8MF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-8LNKTSL8MF");
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
