@@ -25,9 +25,9 @@ const structuredData = createAtriveoJsonLd(pageSchemas);
 const path = Astro.url.pathname;
 const navItems = [
   { href: "/", label: "Hub" },
-  { href: "/projects", label: "Projects" },
-  { href: "/open-source", label: "Open source" },
-  { href: "/about", label: "About" },
+  { href: "/projects/", label: "Projects" },
+  { href: "/open-source/", label: "Open source" },
+  { href: "/about/", label: "About" },
 ];
 const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
 ---
@@ -57,7 +57,7 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
             </a>
           ))}
         </nav>
-        <a class="header-action" href="/projects">
+        <a class="header-action" href="/projects/">
           Browse builds
           <span class="action-icon" aria-hidden="true">
             <svg viewBox="0 0 16 16"><path d="M3.5 8h9M9 4.5 12.5 8 9 11.5" /></svg>
@@ -78,7 +78,7 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
                 </a>
               ))}
             </nav>
-            <a class="mobile-nav-action" href="/projects">Browse all builds <span aria-hidden="true">→</span></a>
+            <a class="mobile-nav-action" href="/projects/">Browse all builds <span aria-hidden="true">→</span></a>
           </div>
         </details>
       </header>
@@ -95,19 +95,19 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
         <div class="footer-links">
           <div>
             <span class="footer-label">Explore</span>
-            <a href="/projects">Projects</a>
-            <a href="/open-source">Open source</a>
-            <a href="/about">About</a>
+            <a href="/projects/">Projects</a>
+            <a href="/open-source/">Open source</a>
+            <a href="/about/">About</a>
           </div>
           <div>
             <span class="footer-label">Builds</span>
-            <a href="/projects">All projects</a>
+            <a href="/projects/">All projects</a>
             <a href="https://github.com/atishay-kasliwal">GitHub</a>
           </div>
           <div>
             <span class="footer-label">Legal</span>
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
           </div>
         </div>
         <div class="footer-bottom">

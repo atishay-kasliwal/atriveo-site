@@ -22,7 +22,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
         open-source experiments, useful ideas, and the work connecting them.
       </p>
       <div class="hero-actions">
-        <a class="button button-primary" href="/projects">Explore the whole hub <span aria-hidden="true">→</span></a>
+        <a class="button button-primary" href="/projects/">Explore the whole hub <span aria-hidden="true">→</span></a>
         <a class="button button-secondary" href="https://github.com/atishay-kasliwal">Follow the builds <span aria-hidden="true">↗</span></a>
       </div>
       <dl class="hero-stats">
@@ -39,12 +39,12 @@ const catalogSchema = createProjectCatalogSchema(projects);
       <div class="map-stage">
         <div class="map-radar"></div>
         {featuredProjects.map((project, index) => (
-          <a class={`map-node map-node-${index + 1}`} href={`/projects/${project.slug}`} aria-label={project.name}>
+          <a class={`map-node map-node-${index + 1}`} href={`/projects/${project.slug}/`} aria-label={project.name}>
             <span>{project.monogram}</span>
             <small>{project.shortName}</small>
           </a>
         ))}
-        <a class="map-node map-node-4" href="/projects" aria-label="All Atriveo projects">
+        <a class="map-node map-node-4" href="/projects/" aria-label="All Atriveo projects">
           <span>+{projects.length - featuredProjects.length}</span>
           <small>Explore</small>
         </a>
@@ -128,7 +128,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
         <div class="carousel-progress" aria-hidden="true">
           <i data-carousel-progress></i>
         </div>
-        <a class="arrow-link" href="/projects">Open project index <span aria-hidden="true">↗</span></a>
+        <a class="arrow-link" href="/projects/">Open project index <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
@@ -139,11 +139,11 @@ const catalogSchema = createProjectCatalogSchema(projects);
         <p class="eyebrow">The wider system</p>
         <h2>One studio. Many surfaces.</h2>
       </div>
-      <a class="arrow-link" href="/projects">View all projects <span aria-hidden="true">→</span></a>
+      <a class="arrow-link" href="/projects/">View all projects <span aria-hidden="true">→</span></a>
     </div>
     <div class="compact-project-grid">
       {projects.map((project) => (
-        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}`}>
+        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}/`}>
           <span class="compact-monogram">{project.monogram}</span>
           <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
           <span aria-hidden="true">↗</span>
@@ -157,7 +157,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
       <p class="eyebrow">Shipping log</p>
       <h2>Work stays visible.</h2>
       <p>Public repositories, real releases, and the useful changes between them.</p>
-      <a class="arrow-link" href="/open-source">Explore open source <span aria-hidden="true">→</span></a>
+      <a class="arrow-link" href="/open-source/">Explore open source <span aria-hidden="true">→</span></a>
     </div>
     <div class="activity-list">
       {recentEvents.length > 0 ? recentEvents.map((event) => (
@@ -196,7 +196,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
       <p class="eyebrow">The whole hub</p>
       <h2>Every project,<br />from first commit to live product.</h2>
     </div>
-    <a class="button button-inverse" href="/projects">Browse everything <span aria-hidden="true">→</span></a>
+    <a class="button button-inverse" href="/projects/">Browse everything <span aria-hidden="true">→</span></a>
     <div class="hub-constellation" aria-hidden="true"><span>A</span><i></i><i></i><i></i></div>
   </section>
 </BaseLayout>
