@@ -130,9 +130,58 @@ if (emDashPages.length > 0) {
   for (const { file } of emDashPages) console.error(`  ERROR ${pageUrl(file)}: em dash found in generated HTML`);
 }
 
-if (errors.length > 0 || score < SCORE_THRESHOLD || emDashPages.length > 0) {
+// Site-level checks the per-page audit does not cover.
+const siteErrors = [];
+const distPath = (url) => path.join(DIST_DIR.pathname, decodeURIComponent(new URL(url, SITE_URL).pathname));
+const fileExists = async (url) => readFile(distPath(url)).then(() => true, () => false);
+for (const { file, html } of builtPages) {
+  const url = pageUrl(file);
+  for (const image of tags(html, "img")) {
+    if (image.alt === undefined) siteErrors.push(`${url}: image without alt text (${image.src})`);
+    if (!image.width || !image.height) siteErrors.push(`${url}: image without width/height (${image.src})`);
+    if (image.src?.startsWith("/") && !(await fileExists(image.src))) siteErrors.push(`${url}: missing image ${image.src}`);
+  }
+  for (const video of tags(html, "video")) {
+    if (video.poster && !(await fileExists(video.poster))) siteErrors.push(`${url}: missing video poster ${video.poster}`);
+  }
+  for (const source of tags(html, "source")) {
+    if (source.src?.startsWith("/") && !(await fileExists(source.src))) siteErrors.push(`${url}: missing video ${source.src}`);
+  }
+  const ogImage = metaContent(html, "property", "og:image");
+  if (ogImage?.startsWith(SITE_URL) && !(await fileExists(ogImage))) siteErrors.push(`${url}: missing social image ${ogImage}`);
+}
+// Every project page must be one normal HTML link from the homepage and the catalog.
+const linkTargets = (pageFile) =>
+  new Set(
+    tags(builtPages.find(({ file }) => file.endsWith(pageFile)).html, "a")
+      .map((link) => link.href)
+      .filter(Boolean)
+      .map((href) => new URL(href, SITE_URL).pathname),
+  );
+const homeLinks = linkTargets(`${path.sep}dist${path.sep}index.html`);
+const catalogLinks = linkTargets(`${path.sep}projects${path.sep}index.html`);
+for (const { file } of builtPages) {
+  const pathname = new URL(pageUrl(file)).pathname;
+  if (!/^\/projects\/[^/]+\/$/.test(pathname)) continue;
+  if (!homeLinks.has(pathname)) siteErrors.push(`Homepage has no HTML link to ${pathname}`);
+  if (!catalogLinks.has(pathname)) siteErrors.push(`/projects/ has no HTML link to ${pathname}`);
+}
+// The sitemap lists exactly the indexable pages.
+const sitemapXml = await readFile(new URL("sitemap-0.xml", DIST_DIR), "utf8");
+const sitemapUrls = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
+const indexableUrls = new Set(pages.filter((page) => !/noindex/i.test(page.robots || "")).map((page) => page.url));
+for (const url of indexableUrls) if (!sitemapUrls.has(url)) siteErrors.push(`Sitemap is missing ${url}`);
+for (const url of sitemapUrls) if (!indexableUrls.has(url)) siteErrors.push(`Sitemap lists a non-indexable or missing page ${url}`);
+// The 404 page stays out of the index and names no canonical URL.
+const notFound = await readFile(new URL("404.html", DIST_DIR), "utf8");
+if (!/noindex/i.test(metaContent(notFound, "name", "robots") || "")) siteErrors.push("404 page must be noindex");
+if (tags(notFound, "link").some((tag) => tag.rel === "canonical")) siteErrors.push("404 page must not declare a canonical URL");
+for (const message of siteErrors) console.error(`  ERROR ${message}`);
+console.log(`Site checks: ${siteErrors.length} problems, ${sitemapUrls.size} sitemap URLs, ${indexableUrls.size} indexable pages`);
+
+if (errors.length > 0 || score < SCORE_THRESHOLD || emDashPages.length > 0 || siteErrors.length > 0) {
   for (const { url, rule } of errors) console.error(`  ERROR ${url}: ${rule.title}: ${rule.description}`);
   throw new Error(
-    `SEO audit failed: score ${score}/100 (minimum ${SCORE_THRESHOLD}), ${errors.length} critical errors, and ${emDashPages.length} pages with forbidden punctuation.`,
+    `SEO audit failed: score ${score}/100 (minimum ${SCORE_THRESHOLD}), ${errors.length} critical errors, ${emDashPages.length} pages with forbidden punctuation, and ${siteErrors.length} site-level problems.`,
   );
 }

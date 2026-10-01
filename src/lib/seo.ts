@@ -48,13 +48,27 @@ type SeoHeadOptions = {
   description: string;
   canonical: string;
   noindex?: boolean;
+  /** Absolute URL of a 1200×630 preview image; defaults to the brand card. */
+  socialImage?: string;
+  socialImageAlt?: string;
 };
 
-export function createAtriveoHead({ title, description, canonical, noindex = false }: SeoHeadOptions) {
+const DEFAULT_SOCIAL_IMAGE_ALT = "Atriveo, useful software systems built in public";
+
+export function createAtriveoHead({
+  title,
+  description,
+  canonical,
+  noindex = false,
+  socialImage = SOCIAL_IMAGE_URL,
+  socialImageAlt = DEFAULT_SOCIAL_IMAGE_ALT,
+}: SeoHeadOptions) {
+  const imageType = socialImage.endsWith(".jpg") ? "image/jpeg" : "image/png";
   return createHeadTags({
     title,
     description,
-    canonical,
+    // A noindex page (the 404) should not name a canonical URL.
+    canonical: noindex ? undefined : canonical,
     robots: {
       index: !noindex,
       follow: !noindex,
@@ -71,11 +85,11 @@ export function createAtriveoHead({ title, description, canonical, noindex = fal
       locale: "en_US",
       images: [
         {
-          url: SOCIAL_IMAGE_URL,
+          url: socialImage,
           width: 1200,
           height: 630,
-          alt: "Atriveo, useful software systems built in public",
-          type: "image/png",
+          alt: socialImageAlt,
+          type: imageType,
         },
       ],
     },
@@ -83,8 +97,8 @@ export function createAtriveoHead({ title, description, canonical, noindex = fal
       cardType: "summary_large_image",
       title,
       description,
-      image: SOCIAL_IMAGE_URL,
-      imageAlt: "Atriveo, useful software systems built in public",
+      image: socialImage,
+      imageAlt: socialImageAlt,
     },
     additionalMetaTags: [{ name: "theme-color", content: "#f5f7fb" }],
   });
@@ -117,6 +131,10 @@ const projectTitles: Record<string, string> = {
   knowledge: "Atriveo Knowledge | Durable Working Memory Systems",
   reel: "Atriveo Reel | Creative Video Automation Tools | Atriveo",
   audiobook: "Atriveo Audiobook | Open Audio Production Workflow",
+  dock: "Atriveo Dock | macOS Job Search Sidebar and Resume Builder",
+  playatriveo: "Playatriveo | Local Job Application Engine | Atriveo",
+  dance: "Atriveo Dance | Choreography and Formation Workspace",
+  maps: "Atriveo Maps | Address-Centred Map Poster Generator",
 };
 
 export function getProjectSeoTitle(project: Project) {
@@ -133,6 +151,7 @@ export function createProjectSchemas(project: Project): SchemaObject[] {
   const detailUrl = `${SITE_URL}/projects/${project.slug}/`;
   const liveUrl = project.links.find((link) => link.kind === "live")?.href;
   const externalUrls = project.links.map((link) => link.href);
+  const screenshots = project.media?.images.map((image) => `${SITE_URL}${image.src}`);
 
   return [
     softwareApp({
@@ -143,8 +162,8 @@ export function createProjectSchemas(project: Project): SchemaObject[] {
       applicationCategory: `${project.category}Application`,
       operatingSystem: liveUrl ? "Any web browser" : undefined,
       url: detailUrl,
-      downloadUrl: liveUrl,
       sameAs: externalUrls,
+      ...(screenshots?.length ? { image: screenshots[0], screenshot: screenshots } : {}),
     }),
     breadcrumbList([
       { name: "Atriveo", url: `${SITE_URL}/` },

@@ -1,0 +1,38 @@
+name: Build, SEO audit, Lighthouse CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run check
+
+      # The build runs the GitHub metadata sync and the SEO audit, which fails on
+      # missing metadata, broken media, unlinked project pages or sitemap drift.
+      - name: Build and audit
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lighthouse CI
+        run: npx --yes @lhci/cli@0.15.1 autorun
