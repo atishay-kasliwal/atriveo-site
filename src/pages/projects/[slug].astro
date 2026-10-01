@@ -13,12 +13,19 @@ type Props = { project: Project };
 const { project } = Astro.props;
 const related = projects.filter((candidate) => candidate.category === project.category && candidate.slug !== project.slug).slice(0, 2);
 const pageSchemas = createProjectSchemas(project);
+const media = project.media;
+const lead = media?.images[0];
+const gallery = media?.images.slice(1) ?? [];
+const isPortrait = (image: { width: number; height: number }) => image.height > image.width;
+const srcset = (image: NonNullable<typeof lead>) => `${image.small[0]} ${image.small[1]}w, ${image.src} ${image.width}w`;
 ---
 
 <BaseLayout
   title={getProjectSeoTitle(project)}
   description={getProjectSeoDescription(project)}
   pageSchemas={pageSchemas}
+  socialImage={project.media?.socialImage}
+  socialImageAlt={lead ? lead.alt : undefined}
 >
   <section class="project-detail-hero section-shell">
     <div class="project-detail-copy">
@@ -34,8 +41,66 @@ const pageSchemas = createProjectSchemas(project);
         ))}
       </div>
     </div>
-    <ProjectVisual project={project} large />
+    {lead ? (
+      <figure class:list={["project-shot", isPortrait(lead) && "is-portrait"]}>
+        <img
+          src={lead.src}
+          srcset={srcset(lead)}
+          sizes={isPortrait(lead) ? "(max-width: 760px) 70vw, 320px" : "(max-width: 1100px) 92vw, 46vw"}
+          width={lead.width}
+          height={lead.height}
+          alt={lead.alt}
+          fetchpriority="high"
+        />
+        <figcaption>{lead.caption}</figcaption>
+      </figure>
+    ) : (
+      <ProjectVisual project={project} large />
+    )}
   </section>
+
+  {media && (media.video || gallery.length > 0) && (
+    <section class="section-shell project-screens" aria-labelledby="screens-heading">
+      <div class="section-heading"><div><p class="eyebrow">In the product</p><h2 id="screens-heading">Screens.</h2></div></div>
+      {media.video && (
+        <figure class:list={["project-recording", isPortrait(media.video) && "is-portrait"]}>
+          <video
+            controls
+            muted
+            playsinline
+            preload="none"
+            poster={media.video.poster}
+            width={media.video.width}
+            height={media.video.height}
+            aria-label={`${project.name}: ${media.video.label}`}
+          >
+            <source src={media.video.src} type="video/mp4" />
+          </video>
+          <figcaption>{media.video.label}</figcaption>
+        </figure>
+      )}
+      {gallery.length > 0 && (
+        <div class:list={["screen-gallery", gallery.some(isPortrait) && "is-portrait"]}>
+          {gallery.map((image) => (
+            <figure>
+              <img
+                src={image.src}
+                srcset={srcset(image)}
+                sizes={isPortrait(image) ? "(max-width: 760px) 44vw, 240px" : "(max-width: 760px) 92vw, 44vw"}
+                width={image.width}
+                height={image.height}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>{image.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
+      {media.note && <p class="screens-note">{media.note}</p>}
+    </section>
+  )}
 
   <section class="project-detail-body section-shell">
     <div class="detail-block">

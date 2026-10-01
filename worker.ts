@@ -38,6 +38,11 @@ export default {
       return Response.redirect(`${TRACKER_ORIGIN}${url.pathname}${url.search}`, 308);
     }
 
+    // Crawlers often probe /sitemap.xml; the generated index lives at /sitemap-index.xml.
+    if (url.pathname === "/sitemap.xml") {
+      return Response.redirect(`${BRAND_ORIGIN}/sitemap-index.xml`, 301);
+    }
+
     if (url.hostname === "www.atriveo.com") {
       return Response.redirect(`${BRAND_ORIGIN}${url.pathname}${url.search}`, 308);
     }

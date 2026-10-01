@@ -13,6 +13,25 @@ export type ProjectLink = {
   kind: "live" | "source" | "related";
 };
 
+export type ProjectImage = {
+  src: string;
+  /** Smaller variant for the srcset; its width is the second number. */
+  small: [string, number];
+  width: number;
+  height: number;
+  alt: string;
+  caption: string;
+};
+
+export type ProjectMedia = {
+  images: ProjectImage[];
+  /** A short silent screen recording, played on request. */
+  video?: { src: string; poster: string; width: number; height: number; label: string };
+  /** 1200×630 crop of a real screenshot, used for link previews. */
+  socialImage: string;
+  note?: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -28,6 +47,7 @@ export type Project = {
   technologies: string[];
   highlights: string[];
   links: ProjectLink[];
+  media?: ProjectMedia;
 };
 
 export const projects: Project[] = [
@@ -69,6 +89,50 @@ export const projects: Project[] = [
         kind: "related",
       },
     ],
+    media: {
+      images: [
+        {
+          src: "/projects/applications/live-site.webp",
+          small: ["/projects/applications/live-site-720.webp", 720],
+          width: 1080,
+          height: 664,
+          alt: "Atriveo Applications pipeline drawn as a blueprint: scrape, score, review, tailor, compile, apply",
+          caption: "The pipeline, scrape to apply",
+        },
+        {
+          src: "/projects/applications/features.webp",
+          small: ["/projects/applications/features-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "Atriveo Applications features: multi-source job scraper, ranked live feed, LLM résumé tailoring, truth-first bullet bank, recon and pipeline tracking",
+          caption: "Features",
+        },
+        {
+          src: "/projects/applications/pipeline.webp",
+          small: ["/projects/applications/pipeline-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "From job posting to PDF résumé: four steps beside a terminal showing the pipeline status and scraper output",
+          caption: "From posting to PDF résumé",
+        },
+        {
+          src: "/projects/applications/deploy.webp",
+          small: ["/projects/applications/deploy-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "Three ways to run Atriveo Applications: Cloudflare Pages, Docker Compose, or OpenShift and Kubernetes",
+          caption: "Ways to run it",
+        },
+      ],
+      video: {
+        src: "/projects/applications/recording.mp4",
+        poster: "/projects/applications/recording-poster.webp",
+        width: 1080,
+        height: 664,
+        label: "Scroll through the live site",
+      },
+      socialImage: "/projects/applications/og.jpg",
+    },
   },
   {
     slug: "dock",
@@ -102,6 +166,66 @@ export const projects: Project[] = [
         kind: "related",
       },
     ],
+    media: {
+      images: [
+        {
+          src: "/projects/dock/feed.webp",
+          small: ["/projects/dock/feed-400.webp", 400],
+          width: 800,
+          height: 2148,
+          alt: "Atriveo Dock ranked job feed with tailored resumes building",
+          caption: "Ranked feed, resumes building",
+        },
+        {
+          src: "/projects/dock/scrape.webp",
+          small: ["/projects/dock/scrape-400.webp", 400],
+          width: 800,
+          height: 2148,
+          alt: "Atriveo Dock hourly scrape in progress, phase by phase",
+          caption: "Hourly scrape, phase by phase",
+        },
+        {
+          src: "/projects/dock/new-jobs.webp",
+          small: ["/projects/dock/new-jobs-400.webp", 400],
+          width: 800,
+          height: 2148,
+          alt: "Atriveo Dock new jobs with tailored resumes ready to download",
+          caption: "New jobs, resumes ready",
+        },
+        {
+          src: "/projects/dock/search.webp",
+          small: ["/projects/dock/search-400.webp", 400],
+          width: 800,
+          height: 2148,
+          alt: "Searching the Atriveo Dock job feed",
+          caption: "⌘K search",
+        },
+        {
+          src: "/projects/dock/create.webp",
+          small: ["/projects/dock/create-400.webp", 400],
+          width: 800,
+          height: 2148,
+          alt: "Building a resume in Atriveo Dock from a pasted job description",
+          caption: "Paste any job description",
+        },
+        {
+          src: "/projects/dock/settings.webp",
+          small: ["/projects/dock/settings-400.webp", 400],
+          width: 800,
+          height: 2148,
+          alt: "Atriveo Dock settings with backend connection, demo mode and resume identity",
+          caption: "Connection, demo mode, resume identity",
+        },
+      ],
+      video: {
+        src: "/projects/dock/recording.mp4",
+        poster: "/projects/dock/recording-poster.webp",
+        width: 800,
+        height: 2148,
+        label: "Demo: searching, building resumes, scraping",
+      },
+      socialImage: "/projects/dock/og.jpg",
+    },
   },
   {
     slug: "playatriveo",
@@ -153,6 +277,35 @@ export const projects: Project[] = [
         kind: "source",
       },
     ],
+    media: {
+      images: [
+        {
+          src: "/projects/cortex/overview.webp",
+          small: ["/projects/cortex/overview-720.webp", 720],
+          width: 1080,
+          height: 664,
+          alt: "Atriveo Cortex's “Your work, remembered.” screen at the front of a ribbon of past screens",
+          caption: "Overview",
+        },
+        {
+          src: "/projects/cortex/sign-in.webp",
+          small: ["/projects/cortex/sign-in-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "Atriveo Cortex sign-in page: “The memory layer for your work. Your work, remembered.”",
+          caption: "Sign-in",
+        },
+      ],
+      video: {
+        src: "/projects/cortex/recording.mp4",
+        poster: "/projects/cortex/recording-poster.webp",
+        width: 1280,
+        height: 786,
+        label: "Overview animation",
+      },
+      socialImage: "/projects/cortex/og.jpg",
+      note: "The dashboard shows private activity, so it is not pictured.",
+    },
   },
   {
     slug: "bio",
@@ -178,6 +331,50 @@ export const projects: Project[] = [
       { label: "Open Bio", href: "https://bio.atriveo.com", kind: "live" },
       { label: "View source", href: "https://github.com/atishay-kasliwal/cortex-bio", kind: "source" },
     ],
+    media: {
+      images: [
+        {
+          src: "/projects/bio/live-site.webp",
+          small: ["/projects/bio/live-site-720.webp", 720],
+          width: 1080,
+          height: 664,
+          alt: "Atriveo Bio's landing page split into floating layers: navigation, “Know when you'll perform at your best”, and the readiness card",
+          caption: "Live site",
+        },
+        {
+          src: "/projects/bio/features.webp",
+          small: ["/projects/bio/features-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "Atriveo Bio features: cognitive readiness, deep work forecasting, chronotype analysis, recovery, performance analytics and a developer API",
+          caption: "Features",
+        },
+        {
+          src: "/projects/bio/pipeline.webp",
+          small: ["/projects/bio/pipeline-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "Atriveo Bio pipeline: connect wearables, generate biometrics, predict performance, optimize work",
+          caption: "Pipeline",
+        },
+        {
+          src: "/projects/bio/api-docs.webp",
+          small: ["/projects/bio/api-docs-720.webp", 720],
+          width: 1440,
+          height: 885,
+          alt: "Atriveo Bio API reference, v1 public beta, with authentication and a readiness request example",
+          caption: "API docs",
+        },
+      ],
+      video: {
+        src: "/projects/bio/recording.mp4",
+        poster: "/projects/bio/recording-poster.webp",
+        width: 1080,
+        height: 664,
+        label: "Scroll through the live site",
+      },
+      socialImage: "/projects/bio/og.jpg",
+    },
   },
   {
     slug: "grant-scout",
@@ -355,6 +552,26 @@ export const projects: Project[] = [
     links: [
       { label: "View source", href: "https://github.com/atishay-kasliwal/atriveo-reel", kind: "source" },
     ],
+    media: {
+      images: [
+        {
+          src: "/projects/reel/overview.webp",
+          small: ["/projects/reel/overview-720.webp", 720],
+          width: 1280,
+          height: 786,
+          alt: "Atriveo Reel: two source clips, a caption band between them, and a 1080×1920 rendered reel",
+          caption: "Two clips, one vertical reel",
+        },
+      ],
+      video: {
+        src: "/projects/reel/recording.mp4",
+        poster: "/projects/reel/recording-poster.webp",
+        width: 1280,
+        height: 786,
+        label: "Overview animation",
+      },
+      socialImage: "/projects/reel/og.jpg",
+    },
   },
   {
     slug: "audiobook",

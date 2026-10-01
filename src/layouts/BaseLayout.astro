@@ -8,6 +8,8 @@ type Props = {
   canonicalPath?: string;
   noindex?: boolean;
   pageSchemas?: SchemaObject[];
+  socialImage?: string;
+  socialImageAlt?: string;
 };
 
 const {
@@ -17,10 +19,19 @@ const {
   canonicalPath = Astro.url.pathname,
   noindex = false,
   pageSchemas = [],
+  socialImage,
+  socialImageAlt,
 } = Astro.props;
 
 const canonical = new URL(canonicalPath, Astro.site || "https://atriveo.com");
-const seoHead = createAtriveoHead({ title, description, canonical: canonical.toString(), noindex });
+const seoHead = createAtriveoHead({
+  title,
+  description,
+  canonical: canonical.toString(),
+  noindex,
+  socialImage: socialImage ? new URL(socialImage, Astro.site || "https://atriveo.com").toString() : undefined,
+  socialImageAlt,
+});
 const structuredData = createAtriveoJsonLd(pageSchemas);
 const path = Astro.url.pathname;
 const navItems = [
