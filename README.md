@@ -5,9 +5,9 @@ The public hub for everything Atishay Kasliwal is building.
 Atria is listed as **Early access** on the homepage, in the Health project
 directory, and at `/projects/atria/`, with its owner-confirmed Best Use of Tiger
 Data win, links to the waitlist and synthetic demo, and real landing screenshots.
-Its source is included in the public repository sync. The waitlist link uses the
-working Cloudflare preview until `atria.atriveo.com` has been activated; update
-the catalog link after the custom domain responds successfully.
+Its source is included in the public repository sync. The waitlist link points to the live public domain,
+`https://atria.atriveo.com`. Atria runs in the Atriveo domain’s Cloudflare account
+with a fresh waitlist, as requested by the owner.
 
 The shared palette uses dark slate text, stronger secondary labels, and deeper
 blue controls on intentional light surfaces. Project initials use darker accent

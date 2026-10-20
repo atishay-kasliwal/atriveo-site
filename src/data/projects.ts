@@ -74,7 +74,7 @@ export const projects: Project[] = [
     links: [
       {
         label: "Join early access",
-        href: "https://atria-landing.s6-backend-spike.workers.dev",
+        href: "https://atria.atriveo.com",
         kind: "live",
       },
       {
