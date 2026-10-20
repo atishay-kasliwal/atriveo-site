@@ -5,6 +5,7 @@
       "url": [
         "http://localhost/",
         "http://localhost/projects/",
+        "http://localhost/projects/atria/",
         "http://localhost/projects/bio/",
         "http://localhost/projects/dock/",
         "http://localhost/projects/grant-scout/"
