@@ -6,6 +6,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(root, "src/data/github.generated.json");
 const owner = "atishay-kasliwal";
 const repositories = [
+  "Atriaa",
   "Atriveo-JD-Extractor",
   "atriveo-app",
   "job-pipeline",

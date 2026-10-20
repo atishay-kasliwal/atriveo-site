@@ -31,7 +31,7 @@ const sourceLink = project.links.find((link) => link.kind === "source");
       {project.technologies.slice(0, featured ? 4 : 3).map((technology) => <span>{technology}</span>)}
     </div>
     <div class="project-actions">
-      {liveLink && <a class="text-link primary-link" href={liveLink.href}>Open live <span aria-hidden="true">↗</span></a>}
+      {liveLink && <a class="text-link primary-link" href={liveLink.href}>{project.stage === "Early access" ? "Join early access" : "Open live"} <span aria-hidden="true">↗</span></a>}
       {sourceLink && <a class="text-link" href={sourceLink.href}>Source <span aria-hidden="true">↗</span></a>}
       {!liveLink && !sourceLink && <a class="text-link" href={`/projects/${project.slug}/`}>Read details <span aria-hidden="true">→</span></a>}
     </div>

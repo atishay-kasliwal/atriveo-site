@@ -5,7 +5,7 @@ export type ProjectCategory =
   | "Creative"
   | "Health";
 
-export type ProjectStage = "Live" | "Open source" | "In development";
+export type ProjectStage = "Live" | "Early access" | "Open source" | "In development";
 
 export type ProjectLink = {
   label: string;
@@ -51,6 +51,58 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "atria",
+    name: "Atria",
+    shortName: "Atria",
+    eyebrow: "Emergency department reassessment",
+    shortDescription:
+      "Bring patient updates and changing readings together so nurses can see who needs another look while they wait.",
+    longDescription:
+      "Atria is an emergency department waiting-room monitoring and reassessment prototype. It brings patient check-ins and repeat readings together, flags changes, and keeps priority decisions with the care team. It won Best Use of Tiger Data at MLH's Hacktoberfest Hacks @ All Things Open. The early-access waitlist is open; the product demo uses synthetic patients and is not a medical device.",
+    category: "Health",
+    stage: "Early access",
+    featured: false,
+    accent: "blue",
+    monogram: "AT",
+    technologies: ["Next.js", "Python", "Tiger Data", "Cloudflare"],
+    highlights: [
+      "Patient check-ins and repeat readings in one reassessment workflow",
+      "Changing readings flagged for a nurse to review; people set priority",
+      "Winner: Best Use of Tiger Data at MLH Hacktoberfest Hacks @ All Things Open",
+    ],
+    links: [
+      {
+        label: "Join early access",
+        href: "https://atria.atriveo.com",
+        kind: "live",
+      },
+      {
+        label: "Try the synthetic demo",
+        href: "https://atria-er.vercel.app",
+        kind: "related",
+      },
+      {
+        label: "View source",
+        href: "https://github.com/atishay-kasliwal/Atriaa",
+        kind: "source",
+      },
+    ],
+    media: {
+      images: [
+        {
+          src: "/projects/atria/landing.png",
+          small: ["/projects/atria/landing-720.png", 720],
+          width: 1080,
+          height: 720,
+          alt: "Atria early-access landing page with the headline The wait shouldn’t be a blind spot, its Tiger Data award, and early-access links",
+          caption: "The early-access landing page",
+        },
+      ],
+      socialImage: "/projects/atria/og.png",
+      note: "The landing page is live. The separate clinical prototype uses synthetic patients; no patient records are pictured here.",
+    },
+  },
   {
     slug: "applications",
     name: "Atriveo Applications",

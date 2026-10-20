@@ -5,7 +5,7 @@ import { featuredProjects, projects } from "../data/projects";
 import githubData from "../data/github.generated.json";
 import { createProjectCatalogSchema } from "../lib/seo";
 
-const liveCount = projects.filter((project) => project.links.some((link) => link.kind === "live")).length;
+const liveCount = projects.filter((project) => project.stage === "Live" && project.links.some((link) => link.kind === "live")).length;
 const sourceCount = projects.filter((project) => project.links.some((link) => link.kind === "source")).length;
 const recentEvents = githubData.events.slice(0, 3);
 const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });

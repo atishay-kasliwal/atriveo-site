@@ -1,16 +1,49 @@
 {
-  "generatedAt": "2026-08-28T20:09:29.408Z",
+  "generatedAt": "2026-10-20T01:10:08.815Z",
   "repositories": [
+    {
+      "name": "Atriaa",
+      "fullName": "atishay-kasliwal/Atriaa",
+      "description": "Real time multi agent hospital intelligence and attention prioritization command center.",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-20T01:02:21Z"
+    },
     {
       "name": "atriveo-app",
       "fullName": "atishay-kasliwal/atriveo-app",
       "description": "A full-stack application that automatically captures job applications through a Chrome extension, tracks them in a centralized dashboard, and provides insights to improve your job search.",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "homepage": "https://atriveo.com/",
-      "language": "TypeScript",
-      "stars": 1,
+      "language": "JavaScript",
+      "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-08-28T19:31:58Z"
+      "pushedAt": "2026-10-19T17:40:49Z"
+    },
+    {
+      "name": "job-pipeline",
+      "fullName": "atishay-kasliwal/job-pipeline",
+      "description": "LinkedIn job aggregation, filtering & ranking pipeline for SWE roles: built on JobSpy",
+      "url": "https://github.com/atishay-kasliwal/job-pipeline",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-08T16:44:08Z"
+    },
+    {
+      "name": "atriveo-job-dock",
+      "fullName": "atishay-kasliwal/atriveo-job-dock",
+      "description": "Open-source macOS job search sidebar: a ranked live job feed, one-click tailored resumes and cover letters, and hourly auto-scraping. Built with Tauri 2, React and Rust. Universal DMG with a built-in demo mode.",
+      "url": "https://github.com/atishay-kasliwal/atriveo-job-dock",
+      "homepage": "https://atriveo.com",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-01T14:34:22Z"
     },
     {
       "name": "atriveo-reel",
@@ -103,66 +136,66 @@
   ],
   "events": [
     {
-      "id": "19224914027",
+      "id": "17662862889",
+      "type": "PullRequestEvent",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-20T01:02:39Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
+      "label": "Opened a pull request"
+    },
+    {
+      "id": "24577365324",
+      "type": "CreateEvent",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-20T01:02:22Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
+      "label": "Created branch"
+    },
+    {
+      "id": "17658175054",
+      "type": "PullRequestEvent",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-19T19:05:16Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
+      "label": "Merged a pull request"
+    },
+    {
+      "id": "24555869333",
       "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T20:05:19Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-19T19:21:40Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19222233544",
+      "id": "24554854087",
       "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T19:31:59Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-19T19:05:15Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19217614403",
+      "id": "24552121532",
       "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T18:21:47Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-19T18:23:38Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19216764630",
+      "id": "24552037076",
       "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T18:17:14Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
+      "repo": "atishay-kasliwal/Atriaa",
+      "createdAt": "2026-10-19T18:22:32Z",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19215830161",
+      "id": "24549167131",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T16:16:30Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "19195664929",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T14:16:00Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "19192291294",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T13:18:34Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "19189560120",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T11:14:28Z",
+      "createdAt": "2026-10-19T17:40:50Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     }
