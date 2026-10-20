@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T20:09:29.408Z",
+  "generatedAt": "2026-10-20T12:03:21.567Z",
   "repositories": [
     {
       "name": "atriveo-app",
@@ -7,10 +7,32 @@
       "description": "A full-stack application that automatically captures job applications through a Chrome extension, tracks them in a centralized dashboard, and provides insights to improve your job search.",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "homepage": "https://atriveo.com/",
-      "language": "TypeScript",
-      "stars": 1,
+      "language": "JavaScript",
+      "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-08-28T19:31:58Z"
+      "pushedAt": "2026-10-19T17:40:49Z"
+    },
+    {
+      "name": "job-pipeline",
+      "fullName": "atishay-kasliwal/job-pipeline",
+      "description": "LinkedIn job aggregation, filtering & ranking pipeline for SWE roles: built on JobSpy",
+      "url": "https://github.com/atishay-kasliwal/job-pipeline",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-08T16:44:08Z"
+    },
+    {
+      "name": "atriveo-job-dock",
+      "fullName": "atishay-kasliwal/atriveo-job-dock",
+      "description": "Open-source macOS job search sidebar: a ranked live job feed, one-click tailored resumes and cover letters, and hourly auto-scraping. Built with Tauri 2, React and Rust. Universal DMG with a built-in demo mode.",
+      "url": "https://github.com/atishay-kasliwal/atriveo-job-dock",
+      "homepage": "https://atriveo.com",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-01T14:34:22Z"
     },
     {
       "name": "atriveo-reel",
@@ -103,66 +125,66 @@
   ],
   "events": [
     {
-      "id": "19224914027",
+      "id": "24549167131",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T20:05:19Z",
+      "createdAt": "2026-10-19T17:40:50Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19222233544",
+      "id": "24520414339",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T19:31:59Z",
+      "createdAt": "2026-10-17T17:27:34Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19217614403",
+      "id": "24452616670",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T18:21:47Z",
+      "createdAt": "2026-10-18T18:16:33Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19216764630",
+      "id": "24413468983",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T18:17:14Z",
+      "createdAt": "2026-10-17T14:21:06Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19215830161",
+      "id": "24334229086",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T16:16:30Z",
+      "createdAt": "2026-10-16T18:58:09Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19195664929",
+      "id": "24309421477",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T14:16:00Z",
+      "createdAt": "2026-10-16T15:28:31Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19192291294",
+      "id": "24219817785",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-27T13:18:34Z",
+      "createdAt": "2026-10-15T15:00:13Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     },
     {
-      "id": "19189560120",
+      "id": "24210989597",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-08-28T11:14:28Z",
+      "createdAt": "2026-10-15T20:00:04Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     }

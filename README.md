@@ -20,3 +20,20 @@ SEO metadata and structured data are generated with [`@power-seo/meta`](https://
 The Cloudflare Worker serves the static Astro build on `atriveo.com`, redirects `www.atriveo.com` to the canonical apex, and preserves legacy tracker routes by forwarding them to the separate `tracker.atriveo.com` product.
 
 `npm run build` fails when a page loses its metadata, an image loses its alt text or dimensions, a media file is missing, a project page is not linked from the homepage and `/projects/`, or the sitemap drifts from the indexable pages. Pull requests also run Lighthouse CI (`.lighthouserc.json`).
+
+## Medscan landing page
+
+`medscan/` is a separate static Astro site on `medscan.atriveo.com`, deployed as the
+`atriveo-medscan` Cloudflare Worker. The main hub catalog links to it through the
+Medscan entry in `src/data/projects.ts`. The existing hosted patient app remains separate.
+
+```bash
+npm run check:medscan
+npm run build:medscan
+npm run deploy:medscan
+```
+
+The landing page uses the supplied Medscan mark, self-hosted Inter, GSAP and Lenis.
+Content is in `medscan/src/pages/` and shared public links in `medscan/src/data/site.ts`.
+It contains no identity settings, patient records or client credentials. Source repository
+links are omitted because the Medscan application repository is private.

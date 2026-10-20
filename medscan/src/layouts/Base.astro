@@ -1,0 +1,31 @@
+---
+import '../styles/site.css';
+import {site} from '../data/site';
+const {title='Medscan | Make sense of the whole picture', description=site.description, noindex=false}=Astro.props;
+const canonical=new URL(Astro.url.pathname,site.url);
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><title>{title}</title>
+{!noindex && <link rel="canonical" href={canonical}/>}{noindex && <meta name="robots" content="noindex,nofollow"/>}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/><link rel="preload" href="/fonts/inter-400-normal.woff2" as="font" type="font/woff2" crossorigin/><meta name="theme-color" content="#00594f"/>
+<meta property="og:type" content="website"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:image" content="https://medscan.atriveo.com/og.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="Medscan: connected records, clearer answers"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content="https://medscan.atriveo.com/og.png"/>
+<script is:inline type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@type':'SoftwareApplication',name:'Medscan',url:site.url,applicationCategory:'HealthApplication',operatingSystem:'Web',description:site.description})}/>
+</head><body><a class="skip" href="#main">Skip to content</a><header class="header wrap"><a class="brand" href="/" aria-label="Medscan home"><img src="/mark.png" width="35" height="35" alt=""/>medscan<span class="brand-dot">.</span></a><nav aria-label="Main navigation"><a href="/#how">How it works</a><a href="/about/">The project</a></nav><a class="button small" href={site.app}>Open demo <span aria-hidden="true">↗</span></a></header><main id="main" tabindex="-1"><slot/></main><footer class="wrap footer"><a class="brand" href="/">medscan.</a><p>A clearer picture starts with a connection.</p><div><a href="https://atriveo.com/projects/medscan/">An Atriveo project ↗</a><a href={site.source}>Project details ↗</a><a href="/about/">About this proof of concept</a></div><small>Synthetic data only. Not a production healthcare system or medical advice.</small></footer>
+<script>
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
+gsap.registerPlugin(ScrollTrigger);
+const media=gsap.matchMedia();
+media.add('(prefers-reduced-motion: no-preference)',()=>{
+ const lenis=new Lenis({anchors:true,autoRaf:false});
+ const tick=(time:number)=>lenis.raf(time*1000); gsap.ticker.add(tick);lenis.on('scroll',ScrollTrigger.update);
+ const ctx=gsap.context(()=>{
+ gsap.from('.hero-title .line',{y:45,opacity:0,stagger:.11,duration:.85,ease:'power3.out'});
+ gsap.from('.record-sheet',{y:22,rotate:0,opacity:0,duration:1,ease:'power3.out',stagger:.12});
+ gsap.fromTo('.thread-path',{strokeDashoffset:700},{strokeDashoffset:0,duration:2,ease:'power2.out',delay:.3});
+ gsap.to('.connect-dot',{opacity:.3,duration:1.8,repeat:-1,yoyo:true,ease:'power2.inOut'});
+ gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach(el=>gsap.from(el,{y:25,opacity:0,duration:.7,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}}));
+ });
+ return ()=>{ctx.revert();lenis.destroy();gsap.ticker.remove(tick);};
+});
+</script></body></html>
