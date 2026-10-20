@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/hub-refresh.css";
 import { createAtriveoHead, createAtriveoJsonLd, type SchemaObject } from "../lib/seo";
 
 type Props = {
@@ -68,7 +69,7 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
       <header class="site-header">
         <a class="brand-lockup" href="/" aria-label="Atriveo home">
           <span class="brand-mark" aria-hidden="true">A<i></i></span>
-          <span class="brand-copy"><strong>Atriveo</strong><small>Builder hub</small></span>
+          <span class="brand-copy"><strong>Atriveo<span class="brand-period">.</span></strong><small>Builder hub</small></span>
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { featuredProjects, projects } from "../data/projects";
+import { categories, projects } from "../data/projects";
 import githubData from "../data/github.generated.json";
 import { createProjectCatalogSchema } from "../lib/seo";
 
@@ -10,6 +10,8 @@ const sourceCount = projects.filter((project) => project.links.some((link) => li
 const recentEvents = githubData.events.slice(0, 3);
 const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
 const catalogSchema = createProjectCatalogSchema(projects);
+const boardProjects = ["medscan", "cortex", "grant-scout", "dance", "bio", "applications"].map((slug) => projects.find((project) => project.slug === slug)!);
+const selectedProjects = ["applications", "cortex", "bio", "reel"].map((slug) => projects.find((project) => project.slug === slug)!);
 ---
 
 <BaseLayout pageSchemas={[catalogSchema]}>
@@ -31,34 +33,19 @@ const catalogSchema = createProjectCatalogSchema(projects);
         <div><dt>{sourceCount}</dt><dd>Open repositories</dd></div>
       </dl>
     </div>
-    <div class="ecosystem-map" aria-label="Atriveo project ecosystem illustration">
-      <div class="map-heading">
-        <span>ATRIVEO / BUILD MAP</span>
-        <span class="map-live"><i></i> ACTIVE</span>
-      </div>
-      <div class="map-stage">
-        <div class="map-radar"></div>
-        {featuredProjects.map((project, index) => (
-          <a class={`map-node map-node-${index + 1}`} href={`/projects/${project.slug}/`} aria-label={project.name}>
-            <span>{project.monogram}</span>
-            <small>{project.shortName}</small>
+    <div class="build-board" aria-label="Explore the Atriveo ecosystem">
+      <div class="build-board-top"><span><i></i> The Atriveo ecosystem</span><span>{String(projects.length).padStart(2, "0")} projects ↗</span></div>
+      <p class="build-board-title">Different ideas.<br />One place to explore.</p>
+      <div class="build-board-grid">
+        {boardProjects.map((project) => (
+          <a class="build-tile" href={`/projects/${project.slug}/`}>
+            <span class={`build-tile-icon accent-${project.accent}`}>{project.monogram}</span>
+            <span class="build-tile-copy"><strong>{project.shortName}</strong><small>{project.category}</small></span>
+            <span class="build-tile-arrow" aria-hidden="true">↗</span>
           </a>
         ))}
-        <a class="map-node map-node-4" href="/projects/" aria-label="All Atriveo projects">
-          <span>+{projects.length - featuredProjects.length}</span>
-          <small>Explore</small>
-        </a>
-        <svg class="map-lines" viewBox="0 0 620 510" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M310 245 C240 170 175 145 92 110" />
-          <path d="M310 245 C405 165 475 155 548 100" />
-          <path d="M310 245 C230 320 165 360 100 412" />
-          <path d="M310 245 C400 320 470 360 540 420" />
-        </svg>
-        <div class="map-center"><span>A</span><small>Core</small></div>
       </div>
-      <div class="map-footer">
-        <span>CAREER</span><span>INTELLIGENCE</span><span>RESEARCH</span><span>CREATIVE</span>
-      </div>
+      <a class="build-board-footer" href="/projects/"><span>And {projects.length - boardProjects.length} more builds to discover</span><span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -69,67 +56,13 @@ const catalogSchema = createProjectCatalogSchema(projects);
     </div>
   </div>
 
-  <section class="section-shell section-block featured-section">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Across the hub</p>
-        <h2>Every build, in rotation.</h2>
-      </div>
-      <p>Move through every live product, open experiment, and useful system across the Atriveo hub.</p>
+  <section class="section-shell section-block featured-section" aria-labelledby="selected-heading">
+    <div class="section-heading align-end">
+      <div><p class="eyebrow">A look inside</p><h2 id="selected-heading">Real projects.<br />Different possibilities.</h2></div>
+      <a class="arrow-link" href="/projects/">Explore all {projects.length} projects <span aria-hidden="true">↗</span></a>
     </div>
-
-    <div
-      class="project-carousel"
-      role="region"
-      aria-roledescription="carousel"
-      aria-label="All Atriveo projects"
-      data-project-carousel
-    >
-      <div class="carousel-toolbar">
-        <div class="carousel-signal">
-          <i aria-hidden="true"></i>
-          <span>All projects</span>
-          <strong>{String(projects.length).padStart(2, "0")}</strong>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-pause" type="button" data-carousel-toggle aria-label="Pause automatic rotation">
-            <span class="pause-icon" aria-hidden="true"><i></i><i></i></span>
-            <span data-carousel-toggle-label>Pause</span>
-          </button>
-          <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Show previous project">
-            <span aria-hidden="true">←</span>
-          </button>
-          <button class="carousel-arrow" type="button" data-carousel-next aria-label="Show next project">
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="carousel-viewport" data-carousel-viewport tabindex="0">
-        <div class="carousel-track" data-carousel-track>
-          {projects.map((project, index) => (
-            <div
-              class="carousel-slide"
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${index + 1} of ${projects.length}: ${project.name}`}
-              data-carousel-slide
-            >
-              <ProjectCard project={project} featured />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div class="carousel-footer">
-        <p class="carousel-count" aria-live="polite">
-          Showing <strong data-carousel-range>01 to 03</strong> <span>/ {String(projects.length).padStart(2, "0")}</span>
-        </p>
-        <div class="carousel-progress" aria-hidden="true">
-          <i data-carousel-progress></i>
-        </div>
-        <a class="arrow-link" href="/projects/">Open project index <span aria-hidden="true">↗</span></a>
-      </div>
+    <div class="selected-project-grid">
+      {selectedProjects.map((project) => <ProjectCard project={project} featured />)}
     </div>
   </section>
 
@@ -137,13 +70,18 @@ const catalogSchema = createProjectCatalogSchema(projects);
     <div class="section-heading align-end">
       <div>
         <p class="eyebrow">The wider system</p>
-        <h2>One studio. Many surfaces.</h2>
+        <h2>The whole ecosystem.</h2>
       </div>
       <a class="arrow-link" href="/projects/">View all projects <span aria-hidden="true">→</span></a>
     </div>
+    <div class="hub-filters" role="group" aria-label="Filter projects by category">
+      <button type="button" class="hub-filter is-active" data-hub-filter="All" aria-pressed="true">All builds <span>{projects.length}</span></button>
+      {categories.map((category) => <button type="button" class="hub-filter" data-hub-filter={category} aria-pressed="false">{category} <span>{projects.filter((project) => project.category === category).length}</span></button>)}
+    </div>
+    <p class="sr-only" aria-live="polite" data-hub-count>{projects.length} projects</p>
     <div class="compact-project-grid">
       {projects.map((project) => (
-        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}/`}>
+        <a class={`compact-project accent-${project.accent}`} data-hub-category={project.category} href={`/projects/${project.slug}/`}>
           <span class="compact-monogram">{project.monogram}</span>
           <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
           <span aria-hidden="true">↗</span>
@@ -163,7 +101,7 @@ const catalogSchema = createProjectCatalogSchema(projects);
       {recentEvents.length > 0 ? recentEvents.map((event) => (
         <a href={event.url} class="activity-row">
           <time datetime={event.createdAt}>{dateFormat.format(new Date(event.createdAt))}</time>
-          <span><strong>{event.label}</strong><small>{event.repo.replace("atishay-kasliwal/", "")}</small></span>
+          <span><strong>{event.label.replace(/\b1 changes\b/g, "1 change")}</strong><small>{event.repo.replace("atishay-kasliwal/", "")}</small></span>
           <i aria-hidden="true">↗</i>
         </a>
       )) : (
@@ -202,129 +140,25 @@ const catalogSchema = createProjectCatalogSchema(projects);
 </BaseLayout>
 
 <script>
-  const carousels = document.querySelectorAll<HTMLElement>("[data-project-carousel]");
-
-  carousels.forEach((carousel) => {
-    const viewport = carousel.querySelector<HTMLElement>("[data-carousel-viewport]");
-    const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-carousel-slide]"));
-    const previous = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
-    const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
-    const toggle = carousel.querySelector<HTMLButtonElement>("[data-carousel-toggle]");
-    const toggleLabel = carousel.querySelector<HTMLElement>("[data-carousel-toggle-label]");
-    const range = carousel.querySelector<HTMLElement>("[data-carousel-range]");
-    const progress = carousel.querySelector<HTMLElement>("[data-carousel-progress]");
-
-    if (!viewport || !previous || !next || !toggle || !toggleLabel || !range || !progress || slides.length === 0) return;
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let index = 0;
-    let timer: number | undefined;
-    let manuallyPaused = reduceMotion.matches;
-    let temporarilyPaused = false;
-    let scrollFrame = 0;
-
-    const visibleCount = () => {
-      if (window.matchMedia("(max-width: 760px)").matches) return 1;
-      if (window.matchMedia("(max-width: 1000px)").matches) return 2;
-      return 3;
-    };
-
-    const maximumIndex = () => Math.max(0, slides.length - visibleCount());
-    const padded = (value: number) => String(value).padStart(2, "0");
-
-    const updateInterface = () => {
-      const visible = visibleCount();
-      const end = Math.min(slides.length, index + visible);
-      range.textContent = visible === 1 ? padded(index + 1) : `${padded(index + 1)} to ${padded(end)}`;
-
-      const thumbSize = (visible / slides.length) * 100;
-      const travel = 100 - thumbSize;
-      const offset = maximumIndex() === 0 ? 0 : (index / maximumIndex()) * travel;
-      progress.style.width = `${thumbSize}%`;
-      progress.style.transform = `translateX(${offset / (thumbSize / 100)}%)`;
-
-      carousel.dataset.paused = String(manuallyPaused);
-      toggleLabel.textContent = manuallyPaused ? "Play" : "Pause";
-      toggle.setAttribute("aria-label", manuallyPaused ? "Start automatic rotation" : "Pause automatic rotation");
-    };
-
-    const goTo = (nextIndex: number, behavior: ScrollBehavior = "smooth") => {
-      const max = maximumIndex();
-      index = nextIndex > max ? 0 : nextIndex < 0 ? max : nextIndex;
-      viewport.scrollTo({ left: slides[index].offsetLeft, behavior });
-      updateInterface();
-    };
-
-    const stopTimer = () => {
-      window.clearInterval(timer);
-      timer = undefined;
-    };
-
-    const startTimer = () => {
-      stopTimer();
-      if (manuallyPaused || temporarilyPaused || document.hidden) return;
-      timer = window.setInterval(() => goTo(index + 1), 5200);
-    };
-
-    previous.addEventListener("click", () => {
-      goTo(index - 1);
-      startTimer();
+  import { gsap } from "gsap";
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reducedMotion.matches) {
+    gsap.from(".build-board", { y: 14, duration: 0.65, ease: "power2.out", clearProps: "transform" });
+    gsap.from(".build-tile", { y: 8, duration: 0.45, stagger: 0.045, ease: "power2.out", clearProps: "transform" });
+  }
+  const filters = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-hub-filter]"));
+  const projectLinks = Array.from(document.querySelectorAll<HTMLElement>("[data-hub-category]"));
+  const count = document.querySelector<HTMLElement>("[data-hub-count]");
+  filters.forEach((button) => button.addEventListener("click", () => {
+    const category = button.dataset.hubFilter;
+    filters.forEach((filter) => {
+      const active = filter === button;
+      filter.classList.toggle("is-active", active);
+      filter.setAttribute("aria-pressed", String(active));
     });
-
-    next.addEventListener("click", () => {
-      goTo(index + 1);
-      startTimer();
-    });
-
-    toggle.addEventListener("click", () => {
-      manuallyPaused = !manuallyPaused;
-      updateInterface();
-      startTimer();
-    });
-
-    carousel.addEventListener("mouseenter", () => {
-      temporarilyPaused = true;
-      stopTimer();
-    });
-
-    carousel.addEventListener("mouseleave", () => {
-      temporarilyPaused = false;
-      startTimer();
-    });
-
-    carousel.addEventListener("focusin", () => {
-      temporarilyPaused = true;
-      stopTimer();
-    });
-
-    carousel.addEventListener("focusout", (event) => {
-      if (carousel.contains(event.relatedTarget as Node | null)) return;
-      temporarilyPaused = false;
-      startTimer();
-    });
-
-    viewport.addEventListener("scroll", () => {
-      window.cancelAnimationFrame(scrollFrame);
-      scrollFrame = window.requestAnimationFrame(() => {
-        const closest = slides.reduce((best, slide, slideIndex) =>
-          Math.abs(slide.offsetLeft - viewport.scrollLeft) < Math.abs(slides[best].offsetLeft - viewport.scrollLeft)
-            ? slideIndex
-            : best
-        , 0);
-        index = Math.min(closest, maximumIndex());
-        updateInterface();
-      });
-    }, { passive: true });
-
-    window.addEventListener("resize", () => goTo(Math.min(index, maximumIndex()), "auto"));
-    document.addEventListener("visibilitychange", startTimer);
-    reduceMotion.addEventListener("change", (event) => {
-      manuallyPaused = event.matches;
-      updateInterface();
-      startTimer();
-    });
-
-    updateInterface();
-    startTimer();
-  });
+    projectLinks.forEach((project) => { project.hidden = category !== "All" && project.dataset.hubCategory !== category; });
+    const visible = projectLinks.filter((project) => !project.hidden);
+    if (count) count.textContent = `${visible.length} ${category === "All" ? "" : category + " "}projects`;
+    if (!reducedMotion.matches) gsap.fromTo(visible, { opacity: 0.65, y: 4 }, { opacity: 1, y: 0, duration: 0.2, stagger: 0.015, clearProps: "opacity,transform" });
+  }));
 </script>

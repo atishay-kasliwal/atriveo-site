@@ -64,7 +64,7 @@ const repositorySchema = itemList({
       {githubData.events.slice(0, 6).map((event) => (
         <a class="contribution-card" href={event.url}>
           <span class="contribution-icon">{event.type === "PushEvent" ? "↗" : "◇"}</span>
-          <strong>{event.label}</strong>
+          <strong>{event.label.replace(/\b1 changes\b/g, "1 change")}</strong>
           <p>{event.repo.replace("atishay-kasliwal/", "")}</p>
           <time datetime={event.createdAt}>{dateFormat.format(new Date(event.createdAt))}</time>
         </a>
