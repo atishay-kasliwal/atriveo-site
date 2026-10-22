@@ -73,7 +73,7 @@ export function createAmbientMotion({rooms,canvas,initialStates,onFrame=()=>{}})
     if(!context)return;
     const size=resizeCanvas();if(!size)return;
     const {width,height}=size,v=viewport();context.clearRect(0,0,width,height);
-    context.save();context.globalCompositeOperation='source-over';context.filter='blur(1px)';
+    context.save();context.globalCompositeOperation='source-over';
     for(const room of v.rooms){
       const current=states.get(room.id),start=baseline.get(room.id);if(!current||!start)continue;
       const xWorld=-19.35+room.slot[0]*4.3,yWorld=room.slot[1]*3.44+1.61;
