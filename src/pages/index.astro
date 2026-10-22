@@ -1,330 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import { featuredProjects, projects } from "../data/projects";
-import githubData from "../data/github.generated.json";
-import { createProjectCatalogSchema } from "../lib/seo";
-
-const liveCount = projects.filter((project) => project.links.some((link) => link.kind === "live")).length;
-const sourceCount = projects.filter((project) => project.links.some((link) => link.kind === "source")).length;
-const recentEvents = githubData.events.slice(0, 3);
-const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
-const catalogSchema = createProjectCatalogSchema(projects);
+import LivingBuilding from "../components/LivingBuilding.astro";
+import ProjectDirectory from "../components/ProjectDirectory.astro";
+import { projects, categories } from '../data/projects';
+const selected = ['cortex', 'applications'].map(slug => projects.find(p => p.slug === slug)!);
 ---
-
-<BaseLayout pageSchemas={[catalogSchema]}>
-  <section class="hero section-shell">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-mark"></span> Independent builder hub</p>
-      <h1>Everything being built,<br /><em>under one roof.</em></h1>
-      <p class="hero-lede">
-        Atriveo is the public home for everything Atishay Kasliwal builds, including live products,
-        open-source experiments, useful ideas, and the work connecting them.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="/projects/">Explore the whole hub <span aria-hidden="true">→</span></a>
-        <a class="button button-secondary" href="https://github.com/atishay-kasliwal">Follow the builds <span aria-hidden="true">↗</span></a>
-      </div>
-      <dl class="hero-stats">
-        <div><dt>{projects.length}</dt><dd>Curated projects</dd></div>
-        <div><dt>{liveCount}</dt><dd>Live products</dd></div>
-        <div><dt>{sourceCount}</dt><dd>Open repositories</dd></div>
-      </dl>
+<BaseLayout immersiveHeader>
+  <LivingBuilding />
+  <section class="night-introduction section-shell" aria-labelledby="intro-heading">
+    <div class="night-section-label"><span class="night-window" aria-hidden="true"></span>Atriveo, beyond the windows</div>
+    <div class="night-intro-grid">
+      <h2 id="intro-heading">Different ideas.<br />One place to <span>build.</span></h2>
+      <div class="night-intro-copy"><p>Atriveo is the home for everything I’m building. Tools for finding work, making sense of information, and following an idea somewhere useful.</p><p>Some are live. Some are open source. All start with something that could work a little better.</p><a class="night-inline-link" href="/about/">Meet the builder <span aria-hidden="true">↗</span></a>
+      <dl class="night-counts"><div><dt>{String(projects.length).padStart(2, '0')}</dt><dd>builds under one roof</dd></div><div><dt>{String(categories.length).padStart(2, '0')}</dt><dd>areas of curiosity</dd></div></dl></div>
     </div>
-    <div class="ecosystem-map" aria-label="Atriveo project ecosystem illustration">
-      <div class="map-heading">
-        <span>ATRIVEO / BUILD MAP</span>
-        <span class="map-live"><i></i> ACTIVE</span>
-      </div>
-      <div class="map-stage">
-        <div class="map-radar"></div>
-        {featuredProjects.map((project, index) => (
-          <a class={`map-node map-node-${index + 1}`} href={`/projects/${project.slug}/`} aria-label={project.name}>
-            <span>{project.monogram}</span>
-            <small>{project.shortName}</small>
-          </a>
-        ))}
-        <a class="map-node map-node-4" href="/projects/" aria-label="All Atriveo projects">
-          <span>+{projects.length - featuredProjects.length}</span>
-          <small>Explore</small>
+  </section>
+  <section class="night-selected section-shell" aria-labelledby="selected-heading">
+    <div class="night-section-heading"><div><span class="night-section-label">A closer look</span><h2 id="selected-heading">A few lights on.</h2></div><a class="night-inline-link" href="/projects/">Explore all builds <span aria-hidden="true">↗</span></a></div>
+    <div class="night-selected-grid">
+      {selected.map((project, index) => <article class="night-feature">
+        <a class="night-feature-image" href={`/projects/${project.slug}/`} aria-label={`Explore ${project.name}`}>
+          {project.media?.images[0] && <img src={project.media.images[0].small[0]} width={project.media.images[0].width} height={project.media.images[0].height} alt={project.media.images[0].alt} loading="lazy" decoding="async" />}
+          <span class="night-feature-open" aria-hidden="true">↗</span>
         </a>
-        <svg class="map-lines" viewBox="0 0 620 510" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M310 245 C240 170 175 145 92 110" />
-          <path d="M310 245 C405 165 475 155 548 100" />
-          <path d="M310 245 C230 320 165 360 100 412" />
-          <path d="M310 245 C400 320 470 360 540 420" />
-        </svg>
-        <div class="map-center"><span>A</span><small>Core</small></div>
-      </div>
-      <div class="map-footer">
-        <span>CAREER</span><span>INTELLIGENCE</span><span>RESEARCH</span><span>CREATIVE</span>
-      </div>
+        <div class="night-feature-meta"><span>{String(index + 1).padStart(2,'0')} / {project.category}</span><span class="night-build-state is-live"><i></i>{project.stage}</span></div>
+        <h3><a href={`/projects/${project.slug}/`}>{project.name}</a></h3><p>{project.shortDescription}</p>
+      </article>)}
     </div>
   </section>
-
-  <div class="signal-strip" aria-label="Atriveo areas">
-    <div>
-      <span>Career systems</span><i></i><span>Local intelligence</span><i></i><span>Grounded research</span><i></i>
-      <span>Creative utilities</span><i></i><span>Human performance</span>
-    </div>
-  </div>
-
-  <section class="section-shell section-block featured-section">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Across the hub</p>
-        <h2>Every build, in rotation.</h2>
-      </div>
-      <p>Move through every live product, open experiment, and useful system across the Atriveo hub.</p>
-    </div>
-
-    <div
-      class="project-carousel"
-      role="region"
-      aria-roledescription="carousel"
-      aria-label="All Atriveo projects"
-      data-project-carousel
-    >
-      <div class="carousel-toolbar">
-        <div class="carousel-signal">
-          <i aria-hidden="true"></i>
-          <span>All projects</span>
-          <strong>{String(projects.length).padStart(2, "0")}</strong>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-pause" type="button" data-carousel-toggle aria-label="Pause automatic rotation">
-            <span class="pause-icon" aria-hidden="true"><i></i><i></i></span>
-            <span data-carousel-toggle-label>Pause</span>
-          </button>
-          <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Show previous project">
-            <span aria-hidden="true">←</span>
-          </button>
-          <button class="carousel-arrow" type="button" data-carousel-next aria-label="Show next project">
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="carousel-viewport" data-carousel-viewport tabindex="0">
-        <div class="carousel-track" data-carousel-track>
-          {projects.map((project, index) => (
-            <div
-              class="carousel-slide"
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${index + 1} of ${projects.length}: ${project.name}`}
-              data-carousel-slide
-            >
-              <ProjectCard project={project} featured />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div class="carousel-footer">
-        <p class="carousel-count" aria-live="polite">
-          Showing <strong data-carousel-range>01 to 03</strong> <span>/ {String(projects.length).padStart(2, "0")}</span>
-        </p>
-        <div class="carousel-progress" aria-hidden="true">
-          <i data-carousel-progress></i>
-        </div>
-        <a class="arrow-link" href="/projects/">Open project index <span aria-hidden="true">↗</span></a>
-      </div>
-    </div>
+  <section class="night-catalog section-shell" id="builds" aria-labelledby="builds-heading">
+    <div class="night-section-heading"><div><span class="night-section-label">The complete collection</span><h2 id="builds-heading">Find your way in.</h2></div><p>Different problems. The same curiosity.<br />Pick something that speaks to yours.</p></div>
+    <ProjectDirectory />
   </section>
-
-  <section class="section-shell section-block catalog-preview">
-    <div class="section-heading align-end">
-      <div>
-        <p class="eyebrow">The wider system</p>
-        <h2>One studio. Many surfaces.</h2>
-      </div>
-      <a class="arrow-link" href="/projects/">View all projects <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="compact-project-grid">
-      {projects.map((project) => (
-        <a class={`compact-project accent-${project.accent}`} href={`/projects/${project.slug}/`}>
-          <span class="compact-monogram">{project.monogram}</span>
-          <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
-          <span aria-hidden="true">↗</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="activity-section section-shell section-block">
-    <div class="activity-intro">
-      <p class="eyebrow">Shipping log</p>
-      <h2>Work stays visible.</h2>
-      <p>Public repositories, real releases, and the useful changes between them.</p>
-      <a class="arrow-link" href="/open-source/">Explore open source <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="activity-list">
-      {recentEvents.length > 0 ? recentEvents.map((event) => (
-        <a href={event.url} class="activity-row">
-          <time datetime={event.createdAt}>{dateFormat.format(new Date(event.createdAt))}</time>
-          <span><strong>{event.label}</strong><small>{event.repo.replace("atishay-kasliwal/", "")}</small></span>
-          <i aria-hidden="true">↗</i>
-        </a>
-      )) : (
-        <>
-          <a href="https://github.com/atishay-kasliwal/Atriveo-JD-Extractor" class="activity-row">
-            <time>Now</time><span><strong>Atriveo Applications</strong><small>Public source and release history</small></span><i>↗</i>
-          </a>
-          <a href="https://github.com/atishay-kasliwal/atriveo-cortex" class="activity-row">
-            <time>Now</time><span><strong>Atriveo Cortex</strong><small>Local-first intelligence experiments</small></span><i>↗</i>
-          </a>
-        </>
-      )}
-    </div>
-  </section>
-
-  <section class="section-shell manifesto-section section-block">
-    <p class="eyebrow">Operating principles</p>
-    <div class="manifesto-grid">
-      <h2>Build what clarifies.<br />Show how it works.</h2>
-      <ol>
-        <li><span>01</span><div><strong>Useful by default</strong><p>A product should reduce cognitive load the first time it opens.</p></div></li>
-        <li><span>02</span><div><strong>Evidence over theater</strong><p>Grounded outputs, visible logic, and honest product states.</p></div></li>
-        <li><span>03</span><div><strong>Open when possible</strong><p>Source is part of the product when sharing it makes the work stronger.</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section-shell final-cta">
-    <div>
-      <p class="eyebrow">The whole hub</p>
-      <h2>Every project,<br />from first commit to live product.</h2>
-    </div>
-    <a class="button button-inverse" href="/projects/">Browse everything <span aria-hidden="true">→</span></a>
-    <div class="hub-constellation" aria-hidden="true"><span>A</span><i></i><i></i><i></i></div>
+  <section class="night-invitation section-shell" aria-labelledby="invitation-heading">
+    <span class="night-section-label"><span class="night-window" aria-hidden="true"></span>There’s room for you here</span>
+    <h2 id="invitation-heading">Good things grow<br />with the <span>door open.</span></h2>
+    <div class="night-invitation-bottom"><p>Read the code. Try a build. Bring a different perspective.<br />This is a place to make useful things, together.</p><a class="button button-primary" href="/open-source/">Come build with us <span aria-hidden="true">↗</span></a></div>
   </section>
 </BaseLayout>
-
-<script>
-  const carousels = document.querySelectorAll<HTMLElement>("[data-project-carousel]");
-
-  carousels.forEach((carousel) => {
-    const viewport = carousel.querySelector<HTMLElement>("[data-carousel-viewport]");
-    const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-carousel-slide]"));
-    const previous = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
-    const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
-    const toggle = carousel.querySelector<HTMLButtonElement>("[data-carousel-toggle]");
-    const toggleLabel = carousel.querySelector<HTMLElement>("[data-carousel-toggle-label]");
-    const range = carousel.querySelector<HTMLElement>("[data-carousel-range]");
-    const progress = carousel.querySelector<HTMLElement>("[data-carousel-progress]");
-
-    if (!viewport || !previous || !next || !toggle || !toggleLabel || !range || !progress || slides.length === 0) return;
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let index = 0;
-    let timer: number | undefined;
-    let manuallyPaused = reduceMotion.matches;
-    let temporarilyPaused = false;
-    let scrollFrame = 0;
-
-    const visibleCount = () => {
-      if (window.matchMedia("(max-width: 760px)").matches) return 1;
-      if (window.matchMedia("(max-width: 1000px)").matches) return 2;
-      return 3;
-    };
-
-    const maximumIndex = () => Math.max(0, slides.length - visibleCount());
-    const padded = (value: number) => String(value).padStart(2, "0");
-
-    const updateInterface = () => {
-      const visible = visibleCount();
-      const end = Math.min(slides.length, index + visible);
-      range.textContent = visible === 1 ? padded(index + 1) : `${padded(index + 1)} to ${padded(end)}`;
-
-      const thumbSize = (visible / slides.length) * 100;
-      const travel = 100 - thumbSize;
-      const offset = maximumIndex() === 0 ? 0 : (index / maximumIndex()) * travel;
-      progress.style.width = `${thumbSize}%`;
-      progress.style.transform = `translateX(${offset / (thumbSize / 100)}%)`;
-
-      carousel.dataset.paused = String(manuallyPaused);
-      toggleLabel.textContent = manuallyPaused ? "Play" : "Pause";
-      toggle.setAttribute("aria-label", manuallyPaused ? "Start automatic rotation" : "Pause automatic rotation");
-    };
-
-    const goTo = (nextIndex: number, behavior: ScrollBehavior = "smooth") => {
-      const max = maximumIndex();
-      index = nextIndex > max ? 0 : nextIndex < 0 ? max : nextIndex;
-      viewport.scrollTo({ left: slides[index].offsetLeft, behavior });
-      updateInterface();
-    };
-
-    const stopTimer = () => {
-      window.clearInterval(timer);
-      timer = undefined;
-    };
-
-    const startTimer = () => {
-      stopTimer();
-      if (manuallyPaused || temporarilyPaused || document.hidden) return;
-      timer = window.setInterval(() => goTo(index + 1), 5200);
-    };
-
-    previous.addEventListener("click", () => {
-      goTo(index - 1);
-      startTimer();
-    });
-
-    next.addEventListener("click", () => {
-      goTo(index + 1);
-      startTimer();
-    });
-
-    toggle.addEventListener("click", () => {
-      manuallyPaused = !manuallyPaused;
-      updateInterface();
-      startTimer();
-    });
-
-    carousel.addEventListener("mouseenter", () => {
-      temporarilyPaused = true;
-      stopTimer();
-    });
-
-    carousel.addEventListener("mouseleave", () => {
-      temporarilyPaused = false;
-      startTimer();
-    });
-
-    carousel.addEventListener("focusin", () => {
-      temporarilyPaused = true;
-      stopTimer();
-    });
-
-    carousel.addEventListener("focusout", (event) => {
-      if (carousel.contains(event.relatedTarget as Node | null)) return;
-      temporarilyPaused = false;
-      startTimer();
-    });
-
-    viewport.addEventListener("scroll", () => {
-      window.cancelAnimationFrame(scrollFrame);
-      scrollFrame = window.requestAnimationFrame(() => {
-        const closest = slides.reduce((best, slide, slideIndex) =>
-          Math.abs(slide.offsetLeft - viewport.scrollLeft) < Math.abs(slides[best].offsetLeft - viewport.scrollLeft)
-            ? slideIndex
-            : best
-        , 0);
-        index = Math.min(closest, maximumIndex());
-        updateInterface();
-      });
-    }, { passive: true });
-
-    window.addEventListener("resize", () => goTo(Math.min(index, maximumIndex()), "auto"));
-    document.addEventListener("visibilitychange", startTimer);
-    reduceMotion.addEventListener("change", (event) => {
-      manuallyPaused = event.matches;
-      updateInterface();
-      startTimer();
-    });
-
-    updateInterface();
-    startTimer();
-  });
-</script>

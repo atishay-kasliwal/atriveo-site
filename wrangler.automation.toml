@@ -9,3 +9,11 @@ binding = "ASSETS"
 html_handling = "auto-trailing-slash"
 not_found_handling = "404-page"
 run_worker_first = true
+
+[[durable_objects.bindings]]
+name = "BUILDINGS"
+class_name = "LivingBuilding"
+
+[[migrations]]
+tag = "living-building-v1"
+new_sqlite_classes = ["LivingBuilding"]

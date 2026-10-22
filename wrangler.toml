@@ -17,3 +17,12 @@ binding = "ASSETS"
 html_handling = "auto-trailing-slash"
 not_found_handling = "404-page"
 run_worker_first = true
+
+# Retain the Phase 7 class, named object, manifest and compatibility fingerprint.
+[[durable_objects.bindings]]
+name = "BUILDINGS"
+class_name = "LivingBuilding"
+
+[[migrations]]
+tag = "living-building-v1"
+new_sqlite_classes = ["LivingBuilding"]

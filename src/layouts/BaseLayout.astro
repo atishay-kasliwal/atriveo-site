@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import "../styles/hub-refresh.css";
+import "../styles/evening.css";
 import { createAtriveoHead, createAtriveoJsonLd, type SchemaObject } from "../lib/seo";
 
 type Props = {
@@ -10,6 +12,7 @@ type Props = {
   pageSchemas?: SchemaObject[];
   socialImage?: string;
   socialImageAlt?: string;
+  immersiveHeader?: boolean;
 };
 
 const {
@@ -21,6 +24,7 @@ const {
   pageSchemas = [],
   socialImage,
   socialImageAlt,
+  immersiveHeader = false,
 } = Astro.props;
 
 const canonical = new URL(canonicalPath, Astro.site || "https://atriveo.com");
@@ -40,6 +44,7 @@ const navItems = [
   { href: "/open-source/", label: "Open source" },
   { href: "/about/", label: "About" },
 ];
+const visibleNavItems = navItems.filter(item => item.href !== "/");
 const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
 ---
 
@@ -64,14 +69,14 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="site-frame">
+    <div class:list={["site-frame", immersiveHeader && "building-home"]}>
       <header class="site-header">
         <a class="brand-lockup" href="/" aria-label="Atriveo home">
           <span class="brand-mark" aria-hidden="true">A<i></i></span>
-          <span class="brand-copy"><strong>Atriveo</strong><small>Builder hub</small></span>
+          <span class="brand-copy"><strong>Atriveo<span class="brand-period">.</span></strong><small>Builder hub</small></span>
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
+          {visibleNavItems.map((item) => (
             <a class:list={["nav-link", isActive(item.href) && "is-active"]} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
               {item.label}
             </a>
@@ -90,7 +95,7 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
           </summary>
           <div class="mobile-nav-panel">
             <nav aria-label="Mobile navigation">
-              {navItems.map((item, index) => (
+              {visibleNavItems.map((item, index) => (
                 <a class:list={["mobile-nav-link", isActive(item.href) && "is-active"]} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
                   <small>{String(index + 1).padStart(2, "0")}</small>
                   <span>{item.label}</span>
@@ -103,14 +108,14 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
         </details>
       </header>
 
-      <main id="main-content">
+      <main id="main-content" tabindex="-1">
         <slot />
       </main>
 
       <footer class="site-footer">
         <div class="footer-wordmark">
           <a class="wordmark" href="/">Atriveo<span>.</span></a>
-          <p>Focused tools for complicated work.</p>
+          <p>A home for useful things.<br />Built by Atishay Kasliwal.</p>
         </div>
         <div class="footer-links">
           <div>
@@ -120,7 +125,7 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
             <a href="/about/">About</a>
           </div>
           <div>
-            <span class="footer-label">Builds</span>
+            <span class="footer-label">Elsewhere</span>
             <a href="/projects/">All projects</a>
             <a href="https://github.com/atishay-kasliwal">GitHub</a>
           </div>
@@ -132,9 +137,25 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
         </div>
         <div class="footer-bottom">
           <span>© {new Date().getFullYear()} Atriveo</span>
-          <span>New York · Built on the open web</span>
+          <a href="https://github.com/atishay-kasliwal">Built in the open <span aria-hidden="true">↗</span></a>
         </div>
       </footer>
     </div>
+    <script>
+      const menu = document.querySelector<HTMLDetailsElement>('.mobile-nav');
+      const closeMenu = () => { if (menu) menu.open = false; };
+      document.addEventListener('keydown', event => {
+        if (!menu?.open) return;
+        if (event.key === 'Escape') { closeMenu(); menu.querySelector('summary')?.focus(); }
+        if (event.key === 'Tab') {
+          const targets = Array.from(menu.querySelectorAll<HTMLElement>('summary, a[href]'));
+          const first = targets[0], last = targets[targets.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+        }
+      });
+      document.addEventListener('click', event => { if (menu?.open && !menu.contains(event.target as Node)) closeMenu(); });
+      window.addEventListener('pagehide', closeMenu);
+    </script>
   </body>
 </html>
