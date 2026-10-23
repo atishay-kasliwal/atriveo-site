@@ -42,7 +42,6 @@ export type Project = {
   category: ProjectCategory;
   stage: ProjectStage;
   featured: boolean;
-  accent: "blue" | "violet" | "cyan" | "green" | "amber" | "rose";
   monogram: string;
   technologies: string[];
   highlights: string[];
@@ -56,7 +55,7 @@ export const projects: Project[] = [
     eyebrow: "Connected health and billing context",
     shortDescription: "Connects synthetic health and billing records to QR-linked reports and sourced explanations.",
     longDescription: "Medscan is a proof of concept for joining fragmented health and billing records through their APIs. A signed report QR opens a summary and a conversation, with curated general explanations and permission-checked access to current records. Synthetic data only; not a production healthcare system.",
-    category: "Health", stage: "Live", featured: true, accent: "cyan", monogram: "MS",
+    category: "Health", stage: "Live", featured: true, monogram: "MS",
     technologies: ["FastAPI", "Postgres", "Neo4j", "Expo", "AWS Lambda"],
     highlights: ["Signed QR reports with saved summaries", "Sourced explanations for medical and billing terms", "Explicit patient permissions for private questions"],
     links: [
@@ -76,7 +75,6 @@ export const projects: Project[] = [
     category: "Career",
     stage: "Live",
     featured: false,
-    accent: "violet",
     monogram: "AP",
     technologies: ["React", "Node.js", "Python", "MongoDB", "LaTeX", "Local LLM"],
     highlights: [
@@ -159,7 +157,6 @@ export const projects: Project[] = [
     category: "Career",
     stage: "Open source",
     featured: false,
-    accent: "blue",
     monogram: "DK",
     technologies: ["Tauri", "React", "TypeScript", "Rust"],
     highlights: [
@@ -252,7 +249,6 @@ export const projects: Project[] = [
     category: "Career",
     stage: "In development",
     featured: false,
-    accent: "violet",
     monogram: "PA",
     technologies: ["Playwright", "TypeScript", "MongoDB"],
     highlights: [
@@ -274,7 +270,6 @@ export const projects: Project[] = [
     category: "Intelligence",
     stage: "Live",
     featured: true,
-    accent: "cyan",
     monogram: "CX",
     technologies: ["TypeScript", "React", "ScreenPipe", "Local AI"],
     highlights: [
@@ -332,7 +327,6 @@ export const projects: Project[] = [
     category: "Health",
     stage: "Live",
     featured: false,
-    accent: "green",
     monogram: "BI",
     technologies: ["TypeScript", "Wearables", "Data visualization", "Forecasting"],
     highlights: [
@@ -401,7 +395,6 @@ export const projects: Project[] = [
     category: "Research",
     stage: "Live",
     featured: true,
-    accent: "amber",
     monogram: "GS",
     technologies: ["TypeScript", "Cloudflare", "Public data", "Search"],
     highlights: [
@@ -430,7 +423,6 @@ export const projects: Project[] = [
     category: "Career",
     stage: "Live",
     featured: false,
-    accent: "rose",
     monogram: "H1",
     technologies: ["Web data", "Search", "Automation", "Cloudflare"],
     highlights: [
@@ -454,7 +446,6 @@ export const projects: Project[] = [
     category: "Creative",
     stage: "Live",
     featured: false,
-    accent: "rose",
     monogram: "DA",
     technologies: ["React", "TypeScript", "Cloudflare Workers", "Web Audio"],
     highlights: [
@@ -476,7 +467,6 @@ export const projects: Project[] = [
     category: "Creative",
     stage: "In development",
     featured: false,
-    accent: "green",
     monogram: "MP",
     technologies: ["Python", "OpenStreetMap", "Matplotlib"],
     highlights: [
@@ -498,7 +488,6 @@ export const projects: Project[] = [
     category: "Research",
     stage: "Open source",
     featured: false,
-    accent: "violet",
     monogram: "PT",
     technologies: ["TypeScript", "PDF", "Retrieval", "Presentations"],
     highlights: [
@@ -526,7 +515,6 @@ export const projects: Project[] = [
     category: "Intelligence",
     stage: "Open source",
     featured: false,
-    accent: "blue",
     monogram: "KN",
     technologies: ["TypeScript", "Retrieval", "Knowledge systems", "AI"],
     highlights: [
@@ -554,7 +542,6 @@ export const projects: Project[] = [
     category: "Creative",
     stage: "Open source",
     featured: true,
-    accent: "rose",
     monogram: "RL",
     technologies: ["TypeScript", "Video", "FFmpeg", "Self-hosted"],
     highlights: [
@@ -598,7 +585,6 @@ export const projects: Project[] = [
     category: "Creative",
     stage: "Open source",
     featured: false,
-    accent: "amber",
     monogram: "AU",
     technologies: ["Python", "Audio", "Automation", "Text processing"],
     highlights: [

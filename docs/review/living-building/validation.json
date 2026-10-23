@@ -1,0 +1,1027 @@
+{
+  "environment": "Local production Astro assets + native local workerd/SQLite Durable Object; Chrome with SwiftShader. No cloud deployment, physical-device or capacity claim.",
+  "checks": {
+    "desktop": {
+      "composition": {
+        "x": 0,
+        "y": 60,
+        "w": 1440,
+        "h": 980
+      },
+      "brand": {
+        "x": 0,
+        "y": 182.5,
+        "w": 432,
+        "h": 245
+      },
+      "invite": {
+        "x": 1008,
+        "y": 795,
+        "w": 432,
+        "h": 245
+      },
+      "visual": {
+        "x": 0,
+        "y": 60,
+        "w": 1440,
+        "h": 980
+      }
+    },
+    "geometry": {
+      "frames": 1,
+      "visibleRooms": 68,
+      "mainCalls": 3,
+      "triangles": 142853,
+      "excludedIds": [
+        "room_008",
+        "room_016",
+        "room_041",
+        "room_042",
+        "room_043",
+        "room_049",
+        "room_050",
+        "room_051",
+        "room_065",
+        "room_066",
+        "room_067",
+        "room_068"
+      ],
+      "geometryRoomIds": [
+        "room_001",
+        "room_002",
+        "room_003",
+        "room_004",
+        "room_005",
+        "room_006",
+        "room_007",
+        "room_009",
+        "room_010",
+        "room_011",
+        "room_012",
+        "room_013",
+        "room_014",
+        "room_015",
+        "room_017",
+        "room_018",
+        "room_019",
+        "room_020",
+        "room_021",
+        "room_022",
+        "room_023",
+        "room_024",
+        "room_025",
+        "room_026",
+        "room_027",
+        "room_028",
+        "room_029",
+        "room_030",
+        "room_031",
+        "room_032",
+        "room_033",
+        "room_034",
+        "room_035",
+        "room_036",
+        "room_037",
+        "room_038",
+        "room_039",
+        "room_040",
+        "room_044",
+        "room_045",
+        "room_046",
+        "room_047",
+        "room_048",
+        "room_052",
+        "room_053",
+        "room_054",
+        "room_055",
+        "room_056",
+        "room_057",
+        "room_058",
+        "room_059",
+        "room_060",
+        "room_061",
+        "room_062",
+        "room_063",
+        "room_064",
+        "room_069",
+        "room_070",
+        "room_071",
+        "room_072",
+        "room_073",
+        "room_074",
+        "room_075",
+        "room_076",
+        "room_077",
+        "room_078",
+        "room_079",
+        "room_080"
+      ],
+      "glassRoomIds": [
+        "room_001",
+        "room_002",
+        "room_003",
+        "room_004",
+        "room_005",
+        "room_006",
+        "room_007",
+        "room_009",
+        "room_010",
+        "room_011",
+        "room_012",
+        "room_013",
+        "room_014",
+        "room_015",
+        "room_017",
+        "room_018",
+        "room_019",
+        "room_020",
+        "room_021",
+        "room_022",
+        "room_023",
+        "room_024",
+        "room_025",
+        "room_026",
+        "room_027",
+        "room_028",
+        "room_029",
+        "room_030",
+        "room_031",
+        "room_032",
+        "room_033",
+        "room_034",
+        "room_035",
+        "room_036",
+        "room_037",
+        "room_038",
+        "room_039",
+        "room_040",
+        "room_044",
+        "room_045",
+        "room_046",
+        "room_047",
+        "room_048",
+        "room_052",
+        "room_053",
+        "room_054",
+        "room_055",
+        "room_056",
+        "room_057",
+        "room_058",
+        "room_059",
+        "room_060",
+        "room_061",
+        "room_062",
+        "room_063",
+        "room_064",
+        "room_069",
+        "room_070",
+        "room_071",
+        "room_072",
+        "room_073",
+        "room_074",
+        "room_075",
+        "room_076",
+        "room_077",
+        "room_078",
+        "room_079",
+        "room_080"
+      ]
+    },
+    "convergence": {
+      "sequence": 22,
+      "households": 80,
+      "skewedWallClockClient": true
+    },
+    "keyboardAndPause": true,
+    "offscreenStops": true,
+    "visibilityHandler": true,
+    "mobile": {
+      "composition": {
+        "x": 0,
+        "y": 60,
+        "w": 390,
+        "h": 647.5
+      },
+      "brand": {
+        "x": 0,
+        "y": 60,
+        "w": 390,
+        "h": 199.5
+      },
+      "invite": {
+        "x": 0,
+        "y": 532.5,
+        "w": 390,
+        "h": 175
+      },
+      "visual": {
+        "x": 0,
+        "y": 259.5,
+        "w": 390,
+        "h": 273
+      }
+    },
+    "navigationCleanup": true,
+    "no-js": true,
+    "reduced-motion": true,
+    "no-webgl": true,
+    "state-outage": true,
+    "asset-failure": true,
+    "activeTransitionResponsive": {
+      "timerMs": 101.29999999701977,
+      "fixture": "60-second committed transition; test interception only"
+    },
+    "nativeEndpoint": true
+  },
+  "pages": [
+    {
+      "label": "baseline desktop",
+      "url": "http://127.0.0.1:4457/",
+      "lcp": 8184,
+      "cls": 0,
+      "longTasks": 0,
+      "fcp": 8184,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 147.1000000089407
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9917,
+          "transfer": 10217,
+          "end": 165.79999999701977
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.DHlFb3y2.js",
+          "bytes": 27324,
+          "transfer": 27624,
+          "end": 166.1000000089407
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 258,
+          "transfer": 558,
+          "end": 216.79999999701977
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 3199.7999999970198
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 3201.9000000059605
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 3203.7999999970198
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 3204.4000000059605
+        }
+      ]
+    },
+    {
+      "label": "integrated desktop",
+      "url": "http://127.0.0.1:4455/",
+      "lcp": 568,
+      "cls": 0,
+      "longTasks": 4,
+      "fcp": 568,
+      "ready": 5320.29999999702,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 119.8999999910593
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9898,
+          "transfer": 10198,
+          "end": 147.79999999701977
+        },
+        {
+          "name": "/_astro/index.Bwywlg5y.css",
+          "bytes": 1813,
+          "transfer": 2113,
+          "end": 159.69999998807907
+        },
+        {
+          "name": "/building/poster.webp",
+          "bytes": 67904,
+          "transfer": 68204,
+          "end": 165.79999999701977
+        },
+        {
+          "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+          "bytes": 3968,
+          "transfer": 4268,
+          "end": 166
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+          "bytes": 451,
+          "transfer": 751,
+          "end": 170.59999999403954
+        },
+        {
+          "name": "/_astro/gsap.CvDoa17S.js",
+          "bytes": 27051,
+          "transfer": 27351,
+          "end": 181.5
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 243.59999999403954
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 251.29999999701977
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 251.69999998807907
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 253.09999999403954
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 213,
+          "transfer": 513,
+          "end": 258.59999999403954
+        },
+        {
+          "name": "/building/rooms.json",
+          "bytes": 10841,
+          "transfer": 11141,
+          "end": 1862
+        },
+        {
+          "name": "/building/state",
+          "bytes": 1053,
+          "transfer": 1353,
+          "end": 1894.3999999910593
+        },
+        {
+          "name": "/_astro/presentation.Dx3kWb8D.js",
+          "bytes": 144499,
+          "transfer": 144799,
+          "end": 1927.0999999940395
+        },
+        {
+          "name": "/building/models/original.glb",
+          "bytes": 138296,
+          "transfer": 138596,
+          "end": 3349.3999999910593
+        },
+        {
+          "name": "/building/models/neighbors.glb",
+          "bytes": 286040,
+          "transfer": 286340,
+          "end": 3356
+        },
+        {
+          "name": "/building/models/sixteen.glb",
+          "bytes": 1455184,
+          "transfer": 1455484,
+          "end": 3375.0999999940395
+        },
+        {
+          "name": "/building/atlases/128/ambient.png",
+          "bytes": 1218000,
+          "transfer": 1218300,
+          "end": 3358.8999999910593
+        },
+        {
+          "name": "/building/models/new-homes.glb",
+          "bytes": 9173784,
+          "transfer": 9174084,
+          "end": 3655.199999988079
+        },
+        {
+          "name": "/building/atlases/128/main.png",
+          "bytes": 1923651,
+          "transfer": 1923951,
+          "end": 3384.7999999970198
+        },
+        {
+          "name": "/building/atlases/128/accent.png",
+          "bytes": 1131234,
+          "transfer": 1131534,
+          "end": 3386.8999999910593
+        },
+        {
+          "name": "/building/atlases/128/screen.png",
+          "bytes": 265724,
+          "transfer": 266024,
+          "end": 3376.5
+        }
+      ]
+    },
+    {
+      "label": "no-js",
+      "url": "http://127.0.0.1:4455/",
+      "lcp": 0,
+      "cls": 0,
+      "longTasks": 0,
+      "fcp": 428,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 77.70000000298023
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9898,
+          "transfer": 10198,
+          "end": 126.79999999701977
+        },
+        {
+          "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 78
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 78
+        },
+        {
+          "name": "/_astro/index.Bwywlg5y.css",
+          "bytes": 1813,
+          "transfer": 2113,
+          "end": 145.8999999910593
+        },
+        {
+          "name": "/building/poster.webp",
+          "bytes": 67904,
+          "transfer": 68204,
+          "end": 145.8999999910593
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 143.79999999701977
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 144.5
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 145.70000000298023
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 146.59999999403954
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 213,
+          "transfer": 513,
+          "end": 205.29999999701977
+        }
+      ]
+    },
+    {
+      "label": "reduced-motion",
+      "url": "http://127.0.0.1:4455/",
+      "lcp": 480,
+      "cls": 0,
+      "longTasks": 0,
+      "fcp": 400,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 85.1000000089407
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9898,
+          "transfer": 10198,
+          "end": 133.70000000298023
+        },
+        {
+          "name": "/_astro/index.Bwywlg5y.css",
+          "bytes": 1813,
+          "transfer": 2113,
+          "end": 152
+        },
+        {
+          "name": "/building/poster.webp",
+          "bytes": 67904,
+          "transfer": 68204,
+          "end": 152.29999999701977
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+          "bytes": 451,
+          "transfer": 751,
+          "end": 152.1000000089407
+        },
+        {
+          "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+          "bytes": 3968,
+          "transfer": 4268,
+          "end": 152.40000000596046
+        },
+        {
+          "name": "/_astro/gsap.CvDoa17S.js",
+          "bytes": 27051,
+          "transfer": 27351,
+          "end": 204.90000000596046
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 256.79999999701977
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 254.90000000596046
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 262.1000000089407
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 263.1000000089407
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 213,
+          "transfer": 513,
+          "end": 263.29999999701977
+        },
+        {
+          "name": "/building/rooms.json",
+          "bytes": 10841,
+          "transfer": 11141,
+          "end": 1866.5
+        },
+        {
+          "name": "/building/state",
+          "bytes": 1053,
+          "transfer": 1353,
+          "end": 1889.5
+        }
+      ]
+    },
+    {
+      "label": "no-webgl",
+      "url": "http://127.0.0.1:4455/",
+      "lcp": 608,
+      "cls": 0,
+      "longTasks": 0,
+      "fcp": 608,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 101.20000000298023
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9898,
+          "transfer": 10198,
+          "end": 113.40000000596046
+        },
+        {
+          "name": "/_astro/index.Bwywlg5y.css",
+          "bytes": 1813,
+          "transfer": 2113,
+          "end": 121.20000000298023
+        },
+        {
+          "name": "/building/poster.webp",
+          "bytes": 67904,
+          "transfer": 68204,
+          "end": 121.40000000596046
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+          "bytes": 451,
+          "transfer": 751,
+          "end": 121.20000000298023
+        },
+        {
+          "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+          "bytes": 3968,
+          "transfer": 4268,
+          "end": 121.5
+        },
+        {
+          "name": "/_astro/gsap.CvDoa17S.js",
+          "bytes": 27051,
+          "transfer": 27351,
+          "end": 131.90000000596046
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 192.70000000298023
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 193.20000000298023
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 193.29999999701977
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 192.5
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 213,
+          "transfer": 513,
+          "end": 193.90000000596046
+        }
+      ]
+    },
+    {
+      "label": "state-outage",
+      "url": "http://127.0.0.1:4455/",
+      "lcp": 344,
+      "cls": 0,
+      "longTasks": 0,
+      "fcp": 344,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 94.59999999403954
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9898,
+          "transfer": 10198,
+          "end": 119.59999999403954
+        },
+        {
+          "name": "/_astro/index.Bwywlg5y.css",
+          "bytes": 1813,
+          "transfer": 2113,
+          "end": 158.5
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+          "bytes": 451,
+          "transfer": 751,
+          "end": 152.29999999701977
+        },
+        {
+          "name": "/building/poster.webp",
+          "bytes": 67904,
+          "transfer": 68204,
+          "end": 158.59999999403954
+        },
+        {
+          "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+          "bytes": 3968,
+          "transfer": 4268,
+          "end": 158.69999998807907
+        },
+        {
+          "name": "/_astro/gsap.CvDoa17S.js",
+          "bytes": 27051,
+          "transfer": 27351,
+          "end": 194.5
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 234.8999999910593
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 242.79999999701977
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 243.29999999701977
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 243.3999999910593
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 213,
+          "transfer": 513,
+          "end": 243
+        },
+        {
+          "name": "/building/rooms.json",
+          "bytes": 10841,
+          "transfer": 11141,
+          "end": 1839
+        },
+        {
+          "name": "/building/state",
+          "bytes": 11,
+          "transfer": 311,
+          "end": 1843.3999999910593
+        }
+      ]
+    },
+    {
+      "label": "asset-failure",
+      "url": "http://127.0.0.1:4455/",
+      "lcp": 416,
+      "cls": 0,
+      "longTasks": 2,
+      "fcp": 416,
+      "resources": [
+        {
+          "name": "/gtag/js",
+          "bytes": 0,
+          "transfer": 0,
+          "end": 92.20000000298023
+        },
+        {
+          "name": "/_astro/BaseLayout.DIzzE37F.css",
+          "bytes": 9898,
+          "transfer": 10198,
+          "end": 104.70000000298023
+        },
+        {
+          "name": "/building/poster.webp",
+          "bytes": 67904,
+          "transfer": 68204,
+          "end": 111.6000000089407
+        },
+        {
+          "name": "/_astro/index.Bwywlg5y.css",
+          "bytes": 1813,
+          "transfer": 2113,
+          "end": 112
+        },
+        {
+          "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+          "bytes": 451,
+          "transfer": 751,
+          "end": 120.70000000298023
+        },
+        {
+          "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+          "bytes": 3968,
+          "transfer": 4268,
+          "end": 120.80000001192093
+        },
+        {
+          "name": "/_astro/gsap.CvDoa17S.js",
+          "bytes": 27051,
+          "transfer": 27351,
+          "end": 133.90000000596046
+        },
+        {
+          "name": "/projects/applications/live-site-720.webp",
+          "bytes": 28476,
+          "transfer": 28776,
+          "end": 186.70000000298023
+        },
+        {
+          "name": "/projects/cortex/overview-720.webp",
+          "bytes": 19820,
+          "transfer": 20120,
+          "end": 187.1000000089407
+        },
+        {
+          "name": "/projects/reel/overview-720.webp",
+          "bytes": 12970,
+          "transfer": 13270,
+          "end": 211.30000001192093
+        },
+        {
+          "name": "/projects/bio/live-site-720.webp",
+          "bytes": 21598,
+          "transfer": 21898,
+          "end": 211.6000000089407
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 213,
+          "transfer": 513,
+          "end": 212.30000001192093
+        },
+        {
+          "name": "/building/rooms.json",
+          "bytes": 10841,
+          "transfer": 11141,
+          "end": 1792.6000000089407
+        },
+        {
+          "name": "/building/state",
+          "bytes": 1052,
+          "transfer": 1352,
+          "end": 1816.300000011921
+        },
+        {
+          "name": "/_astro/presentation.Dx3kWb8D.js",
+          "bytes": 144499,
+          "transfer": 144799,
+          "end": 1850.1000000089407
+        },
+        {
+          "name": "/building/models/original.glb",
+          "bytes": 138296,
+          "transfer": 138596,
+          "end": 2365
+        },
+        {
+          "name": "/building/models/neighbors.glb",
+          "bytes": 286040,
+          "transfer": 286340,
+          "end": 2391.800000011921
+        },
+        {
+          "name": "/building/models/sixteen.glb",
+          "bytes": 1455184,
+          "transfer": 1455484,
+          "end": 2406
+        },
+        {
+          "name": "/building/models/new-homes.glb",
+          "bytes": 11,
+          "transfer": 311,
+          "end": 2346.4000000059605
+        },
+        {
+          "name": "/building/atlases/128/ambient.png",
+          "bytes": 1218000,
+          "transfer": 1218300,
+          "end": 2404.9000000059605
+        },
+        {
+          "name": "/building/atlases/128/main.png",
+          "bytes": 1923651,
+          "transfer": 1923951,
+          "end": 2407.300000011921
+        },
+        {
+          "name": "/building/atlases/128/screen.png",
+          "bytes": 265724,
+          "transfer": 266024,
+          "end": 2395.800000011921
+        },
+        {
+          "name": "/building/atlases/128/accent.png",
+          "bytes": 1131234,
+          "transfer": 1131534,
+          "end": 2405
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "file": "public/building/models/neighbors.glb",
+      "bytes": 286040,
+      "gzipBytes": 96387
+    },
+    {
+      "file": "public/building/models/new-homes.glb",
+      "bytes": 9173784,
+      "gzipBytes": 3366516
+    },
+    {
+      "file": "public/building/models/original.glb",
+      "bytes": 138296,
+      "gzipBytes": 57139
+    },
+    {
+      "file": "public/building/models/sixteen.glb",
+      "bytes": 1455184,
+      "gzipBytes": 509113
+    },
+    {
+      "file": "public/building/atlases/128/accent.png",
+      "bytes": 1131234,
+      "gzipBytes": 1131597
+    },
+    {
+      "file": "public/building/atlases/128/ambient.png",
+      "bytes": 1218000,
+      "gzipBytes": 1218390
+    },
+    {
+      "file": "public/building/atlases/128/main.png",
+      "bytes": 1923651,
+      "gzipBytes": 1924254
+    },
+    {
+      "file": "public/building/atlases/128/screen.png",
+      "bytes": 265724,
+      "gzipBytes": 261303
+    },
+    {
+      "file": "public/building/poster-mobile.webp",
+      "bytes": 11398,
+      "gzipBytes": 11421
+    },
+    {
+      "file": "public/building/poster.webp",
+      "bytes": 67904,
+      "gzipBytes": 67739
+    },
+    {
+      "file": "public/building/rooms.json",
+      "bytes": 104236,
+      "gzipBytes": 10889
+    },
+    {
+      "file": "dist/_astro/BaseLayout.DIzzE37F.css",
+      "bytes": 45008,
+      "gzipBytes": 9917
+    },
+    {
+      "file": "dist/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+      "bytes": 9539,
+      "gzipBytes": 3978
+    },
+    {
+      "file": "dist/_astro/gsap.CvDoa17S.js",
+      "bytes": 69582,
+      "gzipBytes": 26965
+    },
+    {
+      "file": "dist/_astro/index.Bwywlg5y.css",
+      "bytes": 7228,
+      "gzipBytes": 1815
+    },
+    {
+      "file": "dist/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+      "bytes": 712,
+      "gzipBytes": 451
+    },
+    {
+      "file": "dist/_astro/presentation.Dx3kWb8D.js",
+      "bytes": 573817,
+      "gzipBytes": 143710
+    }
+  ]
+}

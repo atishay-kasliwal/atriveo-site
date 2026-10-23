@@ -1,0 +1,84 @@
+{
+  "lcp": 9956,
+  "cls": 0,
+  "fcp": 9956,
+  "enhanced": false,
+  "cta": {
+    "x": 24,
+    "y": 635.2850952148438,
+    "width": 199.6875,
+    "height": 48,
+    "top": 635.2850952148438,
+    "right": 223.6875,
+    "bottom": 683.2850952148438,
+    "left": 24
+  },
+  "resources": [
+    {
+      "name": "/gtag/js",
+      "bytes": 0,
+      "end": 279.79999999701977
+    },
+    {
+      "name": "/_astro/index.Bwywlg5y.css",
+      "bytes": 1813,
+      "end": 491.59999999403954
+    },
+    {
+      "name": "/_astro/BaseLayout.DIzzE37F.css",
+      "bytes": 9898,
+      "end": 566.5
+    },
+    {
+      "name": "/building/poster-mobile.webp",
+      "bytes": 11398,
+      "end": 589.0999999940395
+    },
+    {
+      "name": "/_astro/index.astro_astro_type_script_index_0_lang.C9vnfLDF.js",
+      "bytes": 451,
+      "end": 453.09999999403954
+    },
+    {
+      "name": "/_astro/LivingBuilding.astro_astro_type_script_index_0_lang.BmDH2dCW.js",
+      "bytes": 3968,
+      "end": 528.2000000029802
+    },
+    {
+      "name": "/_astro/gsap.CvDoa17S.js",
+      "bytes": 27051,
+      "end": 753.7999999970198
+    },
+    {
+      "name": "/favicon.svg",
+      "bytes": 213,
+      "end": 1045.3999999910593
+    },
+    {
+      "name": "/projects/applications/live-site-720.webp",
+      "bytes": 28476,
+      "end": 6520.399999991059
+    },
+    {
+      "name": "/projects/cortex/overview-720.webp",
+      "bytes": 19820,
+      "end": 6468.5999999940395
+    },
+    {
+      "name": "/building/rooms.json",
+      "bytes": 10841,
+      "end": 7961.899999991059
+    },
+    {
+      "name": "/building/state",
+      "bytes": 1046,
+      "end": 8188.20000000298
+    },
+    {
+      "name": "/_astro/presentation.Dx3kWb8D.js",
+      "bytes": 144499,
+      "end": 9101.39999999106
+    }
+  ],
+  "environment": "Local native Worker, Chrome CDP 4x CPU, 150ms latency, 200kB/s down, cold browser cache. Observed for ten seconds AFTER DOMContentLoaded; screenshot/compositor work can extend the sample. Not a physical-device result."
+}

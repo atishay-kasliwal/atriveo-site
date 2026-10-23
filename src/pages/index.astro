@@ -1,164 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import { categories, projects } from "../data/projects";
-import githubData from "../data/github.generated.json";
-import { createProjectCatalogSchema } from "../lib/seo";
-
-const liveCount = projects.filter((project) => project.links.some((link) => link.kind === "live")).length;
-const sourceCount = projects.filter((project) => project.links.some((link) => link.kind === "source")).length;
-const recentEvents = githubData.events.slice(0, 3);
-const dateFormat = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
-const catalogSchema = createProjectCatalogSchema(projects);
-const boardProjects = ["medscan", "cortex", "grant-scout", "dance", "bio", "applications"].map((slug) => projects.find((project) => project.slug === slug)!);
-const selectedProjects = ["applications", "cortex", "bio", "reel"].map((slug) => projects.find((project) => project.slug === slug)!);
+import LivingBuilding from "../components/LivingBuilding.astro";
+import ProjectDirectory from "../components/ProjectDirectory.astro";
+import { projects, categories } from '../data/projects';
+const selected = ['cortex', 'applications'].map(slug => projects.find(p => p.slug === slug)!);
 ---
-
-<BaseLayout pageSchemas={[catalogSchema]}>
-  <section class="hero section-shell">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-mark"></span> Independent builder hub</p>
-      <h1>Everything being built,<br /><em>under one roof.</em></h1>
-      <p class="hero-lede">
-        Atriveo is the public home for everything Atishay Kasliwal builds, including live products,
-        open-source experiments, useful ideas, and the work connecting them.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="/projects/">Explore the whole hub <span aria-hidden="true">→</span></a>
-        <a class="button button-secondary" href="https://github.com/atishay-kasliwal">Follow the builds <span aria-hidden="true">↗</span></a>
-      </div>
-      <dl class="hero-stats">
-        <div><dt>{projects.length}</dt><dd>Curated projects</dd></div>
-        <div><dt>{liveCount}</dt><dd>Live products</dd></div>
-        <div><dt>{sourceCount}</dt><dd>Open repositories</dd></div>
-      </dl>
-    </div>
-    <div class="build-board" aria-label="Explore the Atriveo ecosystem">
-      <div class="build-board-top"><span><i></i> The Atriveo ecosystem</span><span>{String(projects.length).padStart(2, "0")} projects ↗</span></div>
-      <p class="build-board-title">Different ideas.<br />One place to explore.</p>
-      <div class="build-board-grid">
-        {boardProjects.map((project) => (
-          <a class="build-tile" href={`/projects/${project.slug}/`}>
-            <span class={`build-tile-icon accent-${project.accent}`}>{project.monogram}</span>
-            <span class="build-tile-copy"><strong>{project.shortName}</strong><small>{project.category}</small></span>
-            <span class="build-tile-arrow" aria-hidden="true">↗</span>
-          </a>
-        ))}
-      </div>
-      <a class="build-board-footer" href="/projects/"><span>And {projects.length - boardProjects.length} more builds to discover</span><span aria-hidden="true">→</span></a>
+<BaseLayout immersiveHeader>
+  <LivingBuilding />
+  <section class="night-introduction section-shell" aria-labelledby="intro-heading">
+    <div class="night-section-label"><span class="night-window" aria-hidden="true"></span>Atriveo, beyond the windows</div>
+    <div class="night-intro-grid">
+      <h2 id="intro-heading">Different ideas.<br />One place to <span>build.</span></h2>
+      <div class="night-intro-copy"><p>Atriveo is the home for everything I’m building. Tools for finding work, making sense of information, and following an idea somewhere useful.</p><p>Some are live. Some are open source. All start with something that could work a little better.</p><a class="night-inline-link" href="/about/">Meet the builder <span aria-hidden="true">↗</span></a>
+      <dl class="night-counts"><div><dt>{String(projects.length).padStart(2, '0')}</dt><dd>builds under one roof</dd></div><div><dt>{String(categories.length).padStart(2, '0')}</dt><dd>areas of curiosity</dd></div></dl></div>
     </div>
   </section>
-
-  <div class="signal-strip" aria-label="Atriveo areas">
-    <div>
-      <span>Career systems</span><i></i><span>Local intelligence</span><i></i><span>Grounded research</span><i></i>
-      <span>Creative utilities</span><i></i><span>Human performance</span>
-    </div>
-  </div>
-
-  <section class="section-shell section-block featured-section" aria-labelledby="selected-heading">
-    <div class="section-heading align-end">
-      <div><p class="eyebrow">A look inside</p><h2 id="selected-heading">Real projects.<br />Different possibilities.</h2></div>
-      <a class="arrow-link" href="/projects/">Explore all {projects.length} projects <span aria-hidden="true">↗</span></a>
-    </div>
-    <div class="selected-project-grid">
-      {selectedProjects.map((project) => <ProjectCard project={project} featured />)}
-    </div>
-  </section>
-
-  <section class="section-shell section-block catalog-preview">
-    <div class="section-heading align-end">
-      <div>
-        <p class="eyebrow">The wider system</p>
-        <h2>The whole ecosystem.</h2>
-      </div>
-      <a class="arrow-link" href="/projects/">View all projects <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="hub-filters" role="group" aria-label="Filter projects by category">
-      <button type="button" class="hub-filter is-active" data-hub-filter="All" aria-pressed="true">All builds <span>{projects.length}</span></button>
-      {categories.map((category) => <button type="button" class="hub-filter" data-hub-filter={category} aria-pressed="false">{category} <span>{projects.filter((project) => project.category === category).length}</span></button>)}
-    </div>
-    <p class="sr-only" aria-live="polite" data-hub-count>{projects.length} projects</p>
-    <div class="compact-project-grid">
-      {projects.map((project) => (
-        <a class={`compact-project accent-${project.accent}`} data-hub-category={project.category} href={`/projects/${project.slug}/`}>
-          <span class="compact-monogram">{project.monogram}</span>
-          <div><strong>{project.shortName}</strong><small>{project.category} · {project.stage}</small></div>
-          <span aria-hidden="true">↗</span>
+  <section class="night-selected section-shell" aria-labelledby="selected-heading">
+    <div class="night-section-heading"><div><span class="night-section-label">A closer look</span><h2 id="selected-heading">A few lights on.</h2></div><a class="night-inline-link" href="/projects/">Explore all builds <span aria-hidden="true">↗</span></a></div>
+    <div class="night-selected-grid">
+      {selected.map((project, index) => <article class="night-feature">
+        <a class="night-feature-image" href={`/projects/${project.slug}/`} aria-label={`Explore ${project.name}`}>
+          {project.media?.images[0] && <img src={project.media.images[0].small[0]} width={project.media.images[0].width} height={project.media.images[0].height} alt={project.media.images[0].alt} loading="lazy" decoding="async" />}
+          <span class="night-feature-open" aria-hidden="true">↗</span>
         </a>
-      ))}
+        <div class="night-feature-meta"><span>{String(index + 1).padStart(2,'0')} / {project.category}</span><span class="night-build-state is-live"><i></i>{project.stage}</span></div>
+        <h3><a href={`/projects/${project.slug}/`}>{project.name}</a></h3><p>{project.shortDescription}</p>
+      </article>)}
     </div>
   </section>
-
-  <section class="activity-section section-shell section-block">
-    <div class="activity-intro">
-      <p class="eyebrow">Shipping log</p>
-      <h2>Work stays visible.</h2>
-      <p>Public repositories, real releases, and the useful changes between them.</p>
-      <a class="arrow-link" href="/open-source/">Explore open source <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="activity-list">
-      {recentEvents.length > 0 ? recentEvents.map((event) => (
-        <a href={event.url} class="activity-row">
-          <time datetime={event.createdAt}>{dateFormat.format(new Date(event.createdAt))}</time>
-          <span><strong>{event.label.replace(/\b1 changes\b/g, "1 change")}</strong><small>{event.repo.replace("atishay-kasliwal/", "")}</small></span>
-          <i aria-hidden="true">↗</i>
-        </a>
-      )) : (
-        <>
-          <a href="https://github.com/atishay-kasliwal/Atriveo-JD-Extractor" class="activity-row">
-            <time>Now</time><span><strong>Atriveo Applications</strong><small>Public source and release history</small></span><i>↗</i>
-          </a>
-          <a href="https://github.com/atishay-kasliwal/atriveo-cortex" class="activity-row">
-            <time>Now</time><span><strong>Atriveo Cortex</strong><small>Local-first intelligence experiments</small></span><i>↗</i>
-          </a>
-        </>
-      )}
-    </div>
+  <section class="night-catalog section-shell" id="builds" aria-labelledby="builds-heading">
+    <div class="night-section-heading"><div><span class="night-section-label">The complete collection</span><h2 id="builds-heading">Find your way in.</h2></div><p>Different problems. The same curiosity.<br />Pick something that speaks to yours.</p></div>
+    <ProjectDirectory />
   </section>
-
-  <section class="section-shell manifesto-section section-block">
-    <p class="eyebrow">Operating principles</p>
-    <div class="manifesto-grid">
-      <h2>Build what clarifies.<br />Show how it works.</h2>
-      <ol>
-        <li><span>01</span><div><strong>Useful by default</strong><p>A product should reduce cognitive load the first time it opens.</p></div></li>
-        <li><span>02</span><div><strong>Evidence over theater</strong><p>Grounded outputs, visible logic, and honest product states.</p></div></li>
-        <li><span>03</span><div><strong>Open when possible</strong><p>Source is part of the product when sharing it makes the work stronger.</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section-shell final-cta">
-    <div>
-      <p class="eyebrow">The whole hub</p>
-      <h2>Every project,<br />from first commit to live product.</h2>
-    </div>
-    <a class="button button-inverse" href="/projects/">Browse everything <span aria-hidden="true">→</span></a>
-    <div class="hub-constellation" aria-hidden="true"><span>A</span><i></i><i></i><i></i></div>
+  <section class="night-invitation section-shell" aria-labelledby="invitation-heading">
+    <span class="night-section-label"><span class="night-window" aria-hidden="true"></span>There’s room for you here</span>
+    <h2 id="invitation-heading">Good things grow<br />with the <span>door open.</span></h2>
+    <div class="night-invitation-bottom"><p>Read the code. Try a build. Bring a different perspective.<br />This is a place to make useful things, together.</p><a class="button button-primary" href="/open-source/">Come build with us <span aria-hidden="true">↗</span></a></div>
   </section>
 </BaseLayout>
-
-<script>
-  import { gsap } from "gsap";
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (!reducedMotion.matches) {
-    gsap.from(".build-board", { y: 14, duration: 0.65, ease: "power2.out", clearProps: "transform" });
-    gsap.from(".build-tile", { y: 8, duration: 0.45, stagger: 0.045, ease: "power2.out", clearProps: "transform" });
-  }
-  const filters = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-hub-filter]"));
-  const projectLinks = Array.from(document.querySelectorAll<HTMLElement>("[data-hub-category]"));
-  const count = document.querySelector<HTMLElement>("[data-hub-count]");
-  filters.forEach((button) => button.addEventListener("click", () => {
-    const category = button.dataset.hubFilter;
-    filters.forEach((filter) => {
-      const active = filter === button;
-      filter.classList.toggle("is-active", active);
-      filter.setAttribute("aria-pressed", String(active));
-    });
-    projectLinks.forEach((project) => { project.hidden = category !== "All" && project.dataset.hubCategory !== category; });
-    const visible = projectLinks.filter((project) => !project.hidden);
-    if (count) count.textContent = `${visible.length} ${category === "All" ? "" : category + " "}projects`;
-    if (!reducedMotion.matches) gsap.fromTo(visible, { opacity: 0.65, y: 4 }, { opacity: 1, y: 0, duration: 0.2, stagger: 0.015, clearProps: "opacity,transform" });
-  }));
-</script>

@@ -1,0 +1,46 @@
+---
+import { projects, categories } from '../data/projects';
+---
+<div class="night-directory" data-catalog>
+  <div class="night-directory-toolbar">
+    <div class="night-categories" role="group" aria-label="Filter builds by category">
+      {['All', ...categories].map(category => <button type="button" data-catalog-filter={category} class:list={['night-category', category === 'All' && 'is-active']} aria-pressed={category === 'All'}>{category}<span>{category === 'All' ? projects.length : projects.filter(p => p.category === category).length}</span></button>)}
+    </div>
+    <label class="night-search"><span class="sr-only">Search builds</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Find a build" data-catalog-search /></label>
+  </div>
+  <p class="night-result" data-catalog-count aria-live="polite">{projects.length} builds to explore</p>
+  <div class="night-directory-rows">
+    {projects.map((project, index) => <a href={`/projects/${project.slug}/`} class="night-build-row" data-catalog-item data-category={project.category} data-search={`${project.name} ${project.category} ${project.shortDescription} ${project.technologies.join(' ')}`.toLowerCase()}>
+      <span class="night-build-number">{String(index + 1).padStart(2, '0')}</span>
+      <span class="night-build-name"><strong>{project.shortName}</strong><small>{project.category}</small></span>
+      <span class="night-build-description">{project.shortDescription}</span>
+      <span class:list={['night-build-state', project.stage === 'Live' && 'is-live']}><i></i>{project.stage}</span>
+      <span class="night-build-arrow" aria-hidden="true">↗</span>
+    </a>)}
+  </div>
+  <div class="night-empty" data-catalog-empty hidden><h3>No builds found.</h3><p>Try a different search or category.</p><button type="button" data-catalog-reset>Reset filters <span aria-hidden="true">↗</span></button></div>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(catalog => {
+    const buttons = Array.from(catalog.querySelectorAll<HTMLButtonElement>('[data-catalog-filter]'));
+    const items = Array.from(catalog.querySelectorAll<HTMLElement>('[data-catalog-item]'));
+    const search = catalog.querySelector<HTMLInputElement>('[data-catalog-search]');
+    const count = catalog.querySelector<HTMLElement>('[data-catalog-count]');
+    const empty = catalog.querySelector<HTMLElement>('[data-catalog-empty]');
+    let category = 'All';
+    const update = () => {
+      const query = search?.value.trim().toLowerCase() || '';
+      let visible = 0;
+      for (const item of items) {
+        item.hidden = !((category === 'All' || category === item.dataset.category) && (!query || item.dataset.search?.includes(query)));
+        if (!item.hidden) visible++;
+      }
+      if (count) count.textContent = `${visible} build${visible === 1 ? '' : 's'} to explore`;
+      if (empty) empty.hidden = visible !== 0;
+      for (const button of buttons) { const active = button.dataset.catalogFilter === category; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); }
+    };
+    buttons.forEach(button => button.addEventListener('click', () => { category = button.dataset.catalogFilter || 'All'; update(); }));
+    search?.addEventListener('input', update);
+    catalog.querySelector('[data-catalog-reset]')?.addEventListener('click', () => { category = 'All'; if (search) search.value = ''; update(); search?.focus(); });
+  });
+</script>

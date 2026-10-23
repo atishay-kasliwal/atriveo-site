@@ -1,4 +1,8 @@
+import { LivingBuilding } from "./src/building/authority/worker.mjs";
+export { LivingBuilding };
+
 interface Env {
+  BUILDINGS: DurableObjectNamespace;
   ASSETS: {
     fetch(request: Request): Promise<Response>;
   };
@@ -45,6 +49,11 @@ export default {
 
     if (url.hostname === "www.atriveo.com") {
       return Response.redirect(`${BRAND_ORIGIN}${url.pathname}${url.search}`, 308);
+    }
+
+    if (url.pathname === "/building/state") {
+      const id = env.BUILDINGS.idFromName("atriveo-building-001");
+      return withSecurityHeaders(await env.BUILDINGS.get(id).fetch(request));
     }
 
     return withSecurityHeaders(await env.ASSETS.fetch(request));

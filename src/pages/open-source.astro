@@ -25,21 +25,21 @@ const repositorySchema = itemList({
   pageSchemas={[repositorySchema]}
 >
   <section class="page-hero open-source-hero section-shell">
-    <p class="eyebrow"><span class="eyebrow-mark"></span> Public work</p>
-    <h1>Source is part of<br /><em>the product.</em></h1>
-    <p>Inspect the implementation, reuse what helps, and follow the work as it moves.</p>
+    <p class="eyebrow"><span class="eyebrow-mark"></span> The door is open</p>
+    <h1>Made in the open.<br /><em>Better together.</em></h1>
+    <p>Go beyond the finished thing. Explore the code, follow an idea as it takes shape, or help make the next version better.</p>
     <a class="button button-primary" href="https://github.com/atishay-kasliwal">Open GitHub profile <span aria-hidden="true">↗</span></a>
   </section>
 
   <section class="oss-metrics section-shell">
     <div><strong>{repositories.length}</strong><span>Public project repositories</span></div>
-    <div><strong>{languages || 3}</strong><span>Primary languages</span></div>
-    <div><strong>{totalStars}</strong><span>Stars across this collection</span></div>
+    <div><strong>{languages}</strong><span>Primary languages</span></div>
+    {totalStars > 0 && <div><strong>{totalStars}</strong><span>Stars across this collection</span></div>}
   </section>
 
   <section class="section-shell section-block repo-section">
     <div class="section-heading">
-      <div><p class="eyebrow">Repository index</p><h2>Read the work directly.</h2></div>
+      <div><p class="eyebrow">Repository index</p><h2>Behind the builds.</h2></div>
       {githubData.generatedAt && <p>Synced {dateFormat.format(new Date(githubData.generatedAt))}</p>}
     </div>
     <div class="repo-table">
@@ -58,7 +58,7 @@ const repositorySchema = itemList({
   <section class="section-shell section-block contribution-section">
     <div class="section-heading">
       <div><p class="eyebrow">Recent public activity</p><h2>What is moving now.</h2></div>
-      <p>Only public activity is shown here. Private repository metadata stays private.</p>
+      <p>A few recent updates from the public repositories.</p>
     </div>
     <div class="contribution-grid">
       {githubData.events.slice(0, 6).map((event) => (

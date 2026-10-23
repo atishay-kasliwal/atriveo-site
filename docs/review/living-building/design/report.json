@@ -1,0 +1,182 @@
+{
+  "environment": "Local production build; desktop Chrome/SwiftShader, emulated viewports, axe WCAG2 A/AA. Not physical-device or deployed performance evidence.",
+  "runs": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "reducedMotion": "no-preference",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "width": 1440,
+          "height": 60
+        },
+        "brandFits": true,
+        "cta": {
+          "x": 1033.90625,
+          "y": 849.984375,
+          "width": 208.71875,
+          "height": 44,
+          "top": 849.984375,
+          "right": 1242.625,
+          "bottom": 893.984375,
+          "left": 1033.90625
+        }
+      },
+      "axe": []
+    },
+    {
+      "name": "wide",
+      "width": 1920,
+      "height": 1080,
+      "reducedMotion": "no-preference",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "width": 1920,
+          "height": 60
+        },
+        "brandFits": true,
+        "cta": {
+          "x": 1378.546875,
+          "y": 917.087646484375,
+          "width": 208.71875,
+          "height": 44,
+          "top": 917.087646484375,
+          "right": 1587.265625,
+          "bottom": 961.087646484375,
+          "left": 1378.546875
+        }
+      },
+      "axe": []
+    },
+    {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "reducedMotion": "no-preference",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "width": 1024,
+          "height": 60
+        },
+        "brandFits": true,
+        "cta": {
+          "x": 735.21875,
+          "y": 630.59375,
+          "width": 181.3125,
+          "height": 44,
+          "top": 630.59375,
+          "right": 916.53125,
+          "bottom": 674.59375,
+          "left": 735.21875
+        }
+      },
+      "axe": []
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "reducedMotion": "no-preference",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "width": 768,
+          "height": 60
+        },
+        "brandFits": true,
+        "cta": {
+          "x": 551.40625,
+          "y": 499.28125,
+          "width": 181.3125,
+          "height": 44,
+          "top": 499.28125,
+          "right": 732.71875,
+          "bottom": 543.28125,
+          "left": 551.40625
+        }
+      },
+      "axe": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": "no-preference",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "width": 390,
+          "height": 60
+        },
+        "brandFits": true,
+        "cta": {
+          "x": 24,
+          "y": 631.5,
+          "width": 199.6875,
+          "height": 48,
+          "top": 631.5,
+          "right": 223.6875,
+          "bottom": 679.5,
+          "left": 24
+        }
+      },
+      "axe": []
+    },
+    {
+      "name": "reduced",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": "reduce",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "width": 390,
+          "height": 60
+        },
+        "brandFits": true,
+        "cta": {
+          "x": 24,
+          "y": 631.5,
+          "width": 199.6875,
+          "height": 48,
+          "top": 631.5,
+          "right": 223.6875,
+          "bottom": 679.5,
+          "left": 24
+        }
+      },
+      "axe": []
+    },
+    {
+      "route": "/projects/",
+      "status": 200
+    },
+    {
+      "route": "/projects/cortex/",
+      "status": 200
+    },
+    {
+      "route": "/about/",
+      "status": 200
+    },
+    {
+      "route": "/open-source/",
+      "status": 200
+    },
+    {
+      "route": "/missing-building-check/",
+      "status": 404
+    }
+  ],
+  "errors": []
+}

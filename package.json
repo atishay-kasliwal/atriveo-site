@@ -13,7 +13,12 @@
     "deploy": "npm run build && wrangler deploy",
     "build:medscan": "astro build --root ./medscan",
     "check:medscan": "astro check --root ./medscan",
-    "deploy:medscan": "npm run build:medscan && wrangler deploy --config medscan/wrangler.toml"
+    "deploy:medscan": "npm run build:medscan && wrangler deploy --config medscan/wrangler.toml",
+    "test:building": "node --test tests/building/*.test.mjs",
+    "review:building": "node scripts/building-review.mjs",
+    "posters:building": "node scripts/building-posters.mjs",
+    "dev:building": "wrangler dev --local --ip 127.0.0.1 --port 4455",
+    "check:building-worker": "wrangler deploy --dry-run --outdir /tmp/atriveo-building-worker-check && node scripts/building-verify-worker.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -22,7 +27,8 @@
     "@power-seo/schema": "^1.0.19",
     "astro": "^7.2.6",
     "gsap": "^3.15.0",
-    "lenis": "^1.3.27"
+    "lenis": "^1.3.27",
+    "three": "0.180.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
