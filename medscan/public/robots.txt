@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://medscan.atriveo.com/sitemap-index.xml

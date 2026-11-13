@@ -5,3 +5,7 @@ dist/
 .DS_Store
 *.log
 .lighthouseci/
+
+medscan/dist/
+medscan/.astro/
+.shots/

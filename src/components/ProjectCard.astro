@@ -10,6 +10,7 @@ type Props = {
 const { project, featured = false } = Astro.props;
 const liveLink = project.links.find((link) => link.kind === "live");
 const sourceLink = project.links.find((link) => link.kind === "source");
+const leadImage = project.media?.images[0];
 ---
 
 <article
@@ -19,7 +20,12 @@ const sourceLink = project.links.find((link) => link.kind === "source");
   data-stage={project.stage}
   data-search={`${project.name} ${project.shortDescription} ${project.category} ${project.technologies.join(" ")}`.toLowerCase()}
 >
-  <ProjectVisual project={project} large={featured} />
+  {leadImage ? (
+    <a class="project-card-image" href={`/projects/${project.slug}/`} aria-label={`Explore ${project.name}`}>
+      <img src={leadImage.small[0]} width={leadImage.width} height={leadImage.height} alt={leadImage.alt} loading="lazy" decoding="async" />
+      <span class="project-image-link" aria-hidden="true">Explore project ↗</span>
+    </a>
+  ) : <ProjectVisual project={project} large={featured} />}
   <div class="project-card-body">
     <div class="project-card-meta">
       <span>{project.category}</span>

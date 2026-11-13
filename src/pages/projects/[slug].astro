@@ -13,6 +13,8 @@ type Props = { project: Project };
 const { project } = Astro.props;
 const related = projects.filter((candidate) => candidate.category === project.category && candidate.slug !== project.slug).slice(0, 2);
 const pageSchemas = createProjectSchemas(project);
+const projectIndex = projects.findIndex(candidate => candidate.slug === project.slug);
+const nextProject = projects[(projectIndex + 1) % projects.length];
 const media = project.media;
 const lead = media?.images[0];
 const gallery = media?.images.slice(1) ?? [];
@@ -31,6 +33,7 @@ const srcset = (image: NonNullable<typeof lead>) => `${image.small[0]} ${image.s
     <div class="project-detail-copy">
       <a class="back-link" href="/projects/"><span aria-hidden="true">←</span> All projects</a>
       <p class="eyebrow">{project.eyebrow}</p>
+      <div class="night-case-meta"><span>{project.category}</span><span class:list={["night-build-state", project.stage === "Live" && "is-live"]}><i></i>{project.stage}</span></div>
       <h1>{project.name}</h1>
       <p>{project.longDescription}</p>
       <div class="hero-actions">
@@ -124,4 +127,9 @@ const srcset = (image: NonNullable<typeof lead>) => `${image.small[0]} ${image.s
       <div class="project-grid">{related.map((candidate) => <ProjectCard project={candidate} />)}</div>
     </section>
   )}
+  <section class="night-next-build section-shell" aria-label="Next project">
+    <span class="night-section-label">Another door to open</span>
+    <a href={`/projects/${nextProject.slug}/`}><span>{nextProject.shortName}</span><span aria-hidden="true">↗</span></a>
+    <p>{nextProject.category} / {String((projectIndex + 1) % projects.length + 1).padStart(2, '0')} of {projects.length}</p>
+  </section>
 </BaseLayout>

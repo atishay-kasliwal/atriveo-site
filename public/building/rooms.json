@@ -1,0 +1,4922 @@
+{
+  "version": 1,
+  "scope": "Phase 6 / 10 \u00d7 8 landing-page grid / eighty permanent candidate identities / local only",
+  "rooms": [
+    {
+      "id": "room_001",
+      "floor": 1,
+      "column": 1,
+      "slot": [
+        0,
+        0
+      ],
+      "profile": "creative",
+      "title": "The drafting lamp",
+      "signature": "creative; left high shelf at 1.703m; 0.678m sill garden; 0.497 \u00d7 0.594 print; curtain [0.4475, 0.3228, 0.2555]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4475,
+        0.3228,
+        0.2555
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.771,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 859,
+        "minimumDwellSec": 286,
+        "cooldownSec": 358
+      },
+      "layout": "creative",
+      "variant": 4,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 43891,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.703,
+        "plantScale": 0.678,
+        "artWidth": 0.497,
+        "artHeight": 0.594,
+        "wallTone": [
+          0.324,
+          0.311,
+          0.293
+        ]
+      }
+    },
+    {
+      "id": "room_002",
+      "floor": 1,
+      "column": 2,
+      "slot": [
+        1,
+        0
+      ],
+      "profile": "traveler",
+      "title": "Before the early train",
+      "signature": "traveler; right high shelf at 2.201m; 0.926m sill garden; 0.473 \u00d7 0.304 print; curtain [0.2672, 0.2416, 0.2897]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2672,
+        0.2416,
+        0.2897
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.433,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4885,
+        "minimumDwellSec": 698,
+        "cooldownSec": 1047
+      },
+      "layout": "traveler",
+      "variant": 4,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 87782,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.201,
+        "plantScale": 0.926,
+        "artWidth": 0.473,
+        "artHeight": 0.304,
+        "wallTone": [
+          0.399,
+          0.304,
+          0.28
+        ]
+      }
+    },
+    {
+      "id": "room_003",
+      "floor": 1,
+      "column": 3,
+      "slot": [
+        2,
+        0
+      ],
+      "profile": "family",
+      "title": "The shared table",
+      "signature": "family; left high shelf at 2.245m; 1.172m sill garden; 0.276 \u00d7 0.358 print; curtain [0.4432, 0.3551, 0.2802]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4432,
+        0.3551,
+        0.2802
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.702,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 785,
+        "minimumDwellSec": 286,
+        "cooldownSec": 428
+      },
+      "layout": "family",
+      "variant": 4,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 131673,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.245,
+        "plantScale": 1.172,
+        "artWidth": 0.276,
+        "artHeight": 0.358,
+        "wallTone": [
+          0.326,
+          0.317,
+          0.27
+        ]
+      }
+    },
+    {
+      "id": "room_004",
+      "floor": 1,
+      "column": 4,
+      "slot": [
+        3,
+        0
+      ],
+      "profile": "older_couple",
+      "title": "The remembered song",
+      "signature": "older couple; right high shelf at 2.123m; 1.286m sill garden; 0.527 \u00d7 0.514 print; curtain [0.4872, 0.4355, 0.3665]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4872,
+        0.4355,
+        0.3665
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.957,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 1002,
+        "minimumDwellSec": 334,
+        "cooldownSec": 534
+      },
+      "layout": "older_couple",
+      "variant": 4,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 175564,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.123,
+        "plantScale": 1.286,
+        "artWidth": 0.527,
+        "artHeight": 0.514,
+        "wallTone": [
+          0.367,
+          0.352,
+          0.237
+        ]
+      }
+    },
+    {
+      "id": "room_005",
+      "floor": 1,
+      "column": 5,
+      "slot": [
+        4,
+        0
+      ],
+      "profile": "creative",
+      "title": "A room for drawing",
+      "signature": "creative; left high shelf at 2.232m; 1.088m sill garden; 0.484 \u00d7 0.578 print; curtain [0.3299, 0.2895, 0.1761]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3299,
+        0.2895,
+        0.1761
+      ],
+      "accentPosition": [
+        0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.83,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 797,
+        "minimumDwellSec": 265,
+        "cooldownSec": 332
+      },
+      "layout": "creative",
+      "variant": 5,
+      "preserved": false,
+      "household": "illustrator",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 219455,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.232,
+        "plantScale": 1.088,
+        "artWidth": 0.484,
+        "artHeight": 0.578,
+        "wallTone": [
+          0.341,
+          0.332,
+          0.238
+        ]
+      }
+    },
+    {
+      "id": "room_006",
+      "floor": 1,
+      "column": 6,
+      "slot": [
+        5,
+        0
+      ],
+      "profile": "traveler",
+      "title": "The waiting suitcase",
+      "signature": "traveler; right high shelf at 1.885m; 1.184m sill garden; 0.518 \u00d7 0.507 print; curtain [0.202, 0.2837, 0.3155]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.202,
+        0.2837,
+        0.3155
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.527,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 3634,
+        "minimumDwellSec": 519,
+        "cooldownSec": 779
+      },
+      "layout": "traveler",
+      "variant": 5,
+      "preserved": false,
+      "household": "cyclist",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 263346,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.885,
+        "plantScale": 1.184,
+        "artWidth": 0.518,
+        "artHeight": 0.507,
+        "wallTone": [
+          0.363,
+          0.312,
+          0.262
+        ]
+      }
+    },
+    {
+      "id": "room_007",
+      "floor": 1,
+      "column": 7,
+      "slot": [
+        6,
+        0
+      ],
+      "profile": "family",
+      "title": "After supper",
+      "signature": "family; left high shelf at 2.061m; 1.134m sill garden; 0.446 \u00d7 0.31 print; curtain [0.2847, 0.3148, 0.2326]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2847,
+        0.3148,
+        0.2326
+      ],
+      "accentPosition": [
+        -1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.809,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 584,
+        "minimumDwellSec": 212,
+        "cooldownSec": 318
+      },
+      "layout": "family",
+      "variant": 5,
+      "preserved": false,
+      "household": "roommates",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 307237,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.061,
+        "plantScale": 1.134,
+        "artWidth": 0.446,
+        "artHeight": 0.31,
+        "wallTone": [
+          0.362,
+          0.363,
+          0.275
+        ]
+      }
+    },
+    {
+      "id": "room_008",
+      "floor": 1,
+      "column": 8,
+      "slot": [
+        7,
+        0
+      ],
+      "profile": "older_couple",
+      "title": "A shelf of records",
+      "signature": "older couple; right high shelf at 1.863m; 0.677m sill garden; 0.38 \u00d7 0.438 print; curtain [0.2116, 0.3095, 0.2179]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2116,
+        0.3095,
+        0.2179
+      ],
+      "accentPosition": [
+        0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.713,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 946,
+        "minimumDwellSec": 315,
+        "cooldownSec": 504
+      },
+      "layout": "older_couple",
+      "variant": 5,
+      "preserved": false,
+      "household": "record_collector",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 351128,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.863,
+        "plantScale": 0.677,
+        "artWidth": 0.38,
+        "artHeight": 0.438,
+        "wallTone": [
+          0.321,
+          0.283,
+          0.299
+        ]
+      }
+    },
+    {
+      "id": "room_009",
+      "floor": 2,
+      "column": 1,
+      "slot": [
+        0,
+        1
+      ],
+      "profile": "older_couple",
+      "title": "The evening reader",
+      "signature": "older couple; left high shelf at 1.983m; 0.945m sill garden; 0.328 \u00d7 0.314 print; curtain [0.5147, 0.4196, 0.362]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.5147,
+        0.4196,
+        0.362
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.864,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 1045,
+        "minimumDwellSec": 348,
+        "cooldownSec": 557
+      },
+      "layout": "older_couple",
+      "variant": 6,
+      "preserved": false,
+      "household": "plant_lover",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 395019,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.983,
+        "plantScale": 0.945,
+        "artWidth": 0.328,
+        "artHeight": 0.314,
+        "wallTone": [
+          0.371,
+          0.345,
+          0.31
+        ]
+      }
+    },
+    {
+      "id": "room_010",
+      "floor": 2,
+      "column": 2,
+      "slot": [
+        1,
+        1
+      ],
+      "profile": "creative",
+      "title": "The paper studio",
+      "signature": "creative; right high shelf at 1.714m; 1.3m sill garden; 0.425 \u00d7 0.372 print; curtain [0.3091, 0.2816, 0.2031]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3091,
+        0.2816,
+        0.2031
+      ],
+      "accentPosition": [
+        -0.6099999999999999,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.868,
+        "occupancy": "home",
+        "activity": "working"
+      },
+      "timing": {
+        "meanDwellSec": 682,
+        "minimumDwellSec": 227,
+        "cooldownSec": 284
+      },
+      "layout": "creative",
+      "variant": 6,
+      "preserved": false,
+      "household": "music_editor",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 438910,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.714,
+        "plantScale": 1.3,
+        "artWidth": 0.425,
+        "artHeight": 0.372,
+        "wallTone": [
+          0.314,
+          0.345,
+          0.238
+        ]
+      }
+    },
+    {
+      "id": "room_011",
+      "floor": 2,
+      "column": 3,
+      "slot": [
+        2,
+        1
+      ],
+      "profile": "traveler",
+      "title": "One night at home",
+      "signature": "traveler; left high shelf at 1.958m; 1.232m sill garden; 0.403 \u00d7 0.405 print; curtain [0.2368, 0.2853, 0.2986]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2368,
+        0.2853,
+        0.2986
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.507,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 5244,
+        "minimumDwellSec": 749,
+        "cooldownSec": 1124
+      },
+      "layout": "traveler",
+      "variant": 6,
+      "preserved": false,
+      "household": "frequent_traveler",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 482801,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.958,
+        "plantScale": 1.232,
+        "artWidth": 0.403,
+        "artHeight": 0.405,
+        "wallTone": [
+          0.381,
+          0.346,
+          0.298
+        ]
+      }
+    },
+    {
+      "id": "room_012",
+      "floor": 2,
+      "column": 4,
+      "slot": [
+        3,
+        1
+      ],
+      "profile": "family",
+      "title": "The window seat",
+      "signature": "family; right high shelf at 1.977m; 1.093m sill garden; 0.321 \u00d7 0.534 print; curtain [0.3296, 0.3255, 0.225]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3296,
+        0.3255,
+        0.225
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.891,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 727,
+        "minimumDwellSec": 264,
+        "cooldownSec": 396
+      },
+      "layout": "family",
+      "variant": 6,
+      "preserved": false,
+      "household": "young_family",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 526692,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.977,
+        "plantScale": 1.093,
+        "artWidth": 0.321,
+        "artHeight": 0.534,
+        "wallTone": [
+          0.334,
+          0.306,
+          0.279
+        ]
+      }
+    },
+    {
+      "id": "room_013",
+      "floor": 2,
+      "column": 5,
+      "slot": [
+        4,
+        1
+      ],
+      "profile": "older_couple",
+      "title": "The Sunday armchair",
+      "signature": "older couple; left high shelf at 1.849m; 1.059m sill garden; 0.283 \u00d7 0.276 print; curtain [0.2287, 0.2885, 0.2233]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2287,
+        0.2885,
+        0.2233
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.762,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 1002,
+        "minimumDwellSec": 334,
+        "cooldownSec": 534
+      },
+      "layout": "older_couple",
+      "variant": 7,
+      "preserved": false,
+      "household": "retired_reader",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 570583,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.849,
+        "plantScale": 1.059,
+        "artWidth": 0.283,
+        "artHeight": 0.276,
+        "wallTone": [
+          0.383,
+          0.368,
+          0.28
+        ]
+      }
+    },
+    {
+      "id": "room_014",
+      "floor": 2,
+      "column": 6,
+      "slot": [
+        5,
+        1
+      ],
+      "profile": "creative",
+      "title": "The night editor",
+      "signature": "creative; right high shelf at 2.254m; 1.076m sill garden; 0.484 \u00d7 0.577 print; curtain [0.4006, 0.3098, 0.253]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4006,
+        0.3098,
+        0.253
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.699,
+        "occupancy": "home",
+        "activity": "working"
+      },
+      "timing": {
+        "meanDwellSec": 764,
+        "minimumDwellSec": 255,
+        "cooldownSec": 319
+      },
+      "layout": "creative",
+      "variant": 7,
+      "preserved": false,
+      "household": "architect",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 614474,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.254,
+        "plantScale": 1.076,
+        "artWidth": 0.484,
+        "artHeight": 0.577,
+        "wallTone": [
+          0.351,
+          0.317,
+          0.296
+        ]
+      }
+    },
+    {
+      "id": "room_015",
+      "floor": 2,
+      "column": 7,
+      "slot": [
+        6,
+        1
+      ],
+      "profile": "traveler",
+      "title": "The folded coat",
+      "signature": "traveler; left high shelf at 1.776m; 1.059m sill garden; 0.314 \u00d7 0.596 print; curtain [0.2847, 0.235, 0.3185]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2847,
+        0.235,
+        0.3185
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.708,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4612,
+        "minimumDwellSec": 659,
+        "cooldownSec": 988
+      },
+      "layout": "traveler",
+      "variant": 7,
+      "preserved": false,
+      "household": "rail_worker",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 658365,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.776,
+        "plantScale": 1.059,
+        "artWidth": 0.314,
+        "artHeight": 0.596,
+        "wallTone": [
+          0.358,
+          0.308,
+          0.298
+        ]
+      }
+    },
+    {
+      "id": "room_016",
+      "floor": 2,
+      "column": 8,
+      "slot": [
+        7,
+        1
+      ],
+      "profile": "family",
+      "title": "The drawing shelf",
+      "signature": "family; right high shelf at 1.9m; 0.754m sill garden; 0.527 \u00d7 0.434 print; curtain [0.4067, 0.3419, 0.3048]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4067,
+        0.3419,
+        0.3048
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.655,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 879,
+        "minimumDwellSec": 320,
+        "cooldownSec": 479
+      },
+      "layout": "family",
+      "variant": 7,
+      "preserved": false,
+      "household": "reader_with_child",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 702256,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.9,
+        "plantScale": 0.754,
+        "artWidth": 0.527,
+        "artHeight": 0.434,
+        "wallTone": [
+          0.35,
+          0.357,
+          0.243
+        ]
+      }
+    },
+    {
+      "id": "room_017",
+      "floor": 3,
+      "column": 1,
+      "slot": [
+        0,
+        2
+      ],
+      "profile": "family",
+      "title": "A table for three",
+      "signature": "family; left high shelf at 2.041m; 0.946m sill garden; 0.458 \u00d7 0.249 print; curtain [0.3078, 0.3438, 0.2279]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3078,
+        0.3438,
+        0.2279
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.798,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 610,
+        "minimumDwellSec": 222,
+        "cooldownSec": 333
+      },
+      "layout": "family",
+      "variant": 8,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 746147,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.041,
+        "plantScale": 0.946,
+        "artWidth": 0.458,
+        "artHeight": 0.249,
+        "wallTone": [
+          0.347,
+          0.281,
+          0.277
+        ]
+      }
+    },
+    {
+      "id": "room_018",
+      "floor": 3,
+      "column": 2,
+      "slot": [
+        1,
+        2
+      ],
+      "profile": "creative",
+      "title": "The right-hand desk",
+      "signature": "Right desk, left climbing plant, narrow blue curtain",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.22,
+        0.28,
+        0.3
+      ],
+      "accentPosition": [
+        0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 1,
+        "curtainOpen": 0.86,
+        "activity": "screen_only",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 691,
+        "minimumDwellSec": 230,
+        "cooldownSec": 288
+      },
+      "layout": "creative",
+      "variant": 1,
+      "preserved": true,
+      "household": "illustrator",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_019",
+      "floor": 3,
+      "column": 3,
+      "slot": [
+        2,
+        2
+      ],
+      "profile": "older_couple",
+      "title": "The music shelf",
+      "signature": "Left television, right lamp, rust curtain, record shelf",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.34,
+        0.19,
+        0.12
+      ],
+      "accentPosition": [
+        0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 1,
+        "curtainOpen": 0.86,
+        "activity": "watching",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 864,
+        "minimumDwellSec": 288,
+        "cooldownSec": 460
+      },
+      "layout": "older_couple",
+      "variant": 1,
+      "preserved": true,
+      "household": "record_collector",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_020",
+      "floor": 3,
+      "column": 4,
+      "slot": [
+        3,
+        2
+      ],
+      "profile": "family",
+      "title": "A table by the window",
+      "signature": "Left dining table, right sofa, low pale folds",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.52,
+        0.46,
+        0.36
+      ],
+      "accentPosition": [
+        -1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 1,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.86,
+        "activity": "quiet",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 633,
+        "minimumDwellSec": 230,
+        "cooldownSec": 345
+      },
+      "layout": "family",
+      "variant": 1,
+      "preserved": true,
+      "household": "roommates",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_021",
+      "floor": 3,
+      "column": 5,
+      "slot": [
+        4,
+        2
+      ],
+      "profile": "traveler",
+      "title": "The folded bicycle",
+      "signature": "Right bicycle, left low bed, deep horizontal blinds",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.25,
+        0.29,
+        0.24
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.86,
+        "activity": "away",
+        "occupancy": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4032,
+        "minimumDwellSec": 576,
+        "cooldownSec": 864
+      },
+      "layout": "traveler",
+      "variant": 1,
+      "preserved": true,
+      "household": "cyclist",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_022",
+      "floor": 3,
+      "column": 6,
+      "slot": [
+        5,
+        2
+      ],
+      "profile": "older_couple",
+      "title": "The warm corner",
+      "signature": "older couple; right high shelf at 1.821m; 0.796m sill garden; 0.399 \u00d7 0.267 print; curtain [0.4532, 0.4746, 0.3367]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4532,
+        0.4746,
+        0.3367
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.816,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 869,
+        "minimumDwellSec": 290,
+        "cooldownSec": 463
+      },
+      "layout": "older_couple",
+      "variant": 8,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 965602,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.821,
+        "plantScale": 0.796,
+        "artWidth": 0.399,
+        "artHeight": 0.267,
+        "wallTone": [
+          0.31,
+          0.308,
+          0.286
+        ]
+      }
+    },
+    {
+      "id": "room_023",
+      "floor": 3,
+      "column": 7,
+      "slot": [
+        6,
+        2
+      ],
+      "profile": "creative",
+      "title": "The corner worktable",
+      "signature": "creative; left high shelf at 1.979m; 0.805m sill garden; 0.455 \u00d7 0.361 print; curtain [0.3308, 0.267, 0.1934]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3308,
+        0.267,
+        0.1934
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.927,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 644,
+        "minimumDwellSec": 215,
+        "cooldownSec": 269
+      },
+      "layout": "creative",
+      "variant": 8,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 1009493,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.979,
+        "plantScale": 0.805,
+        "artWidth": 0.455,
+        "artHeight": 0.361,
+        "wallTone": [
+          0.327,
+          0.363,
+          0.243
+        ]
+      }
+    },
+    {
+      "id": "room_024",
+      "floor": 3,
+      "column": 8,
+      "slot": [
+        7,
+        2
+      ],
+      "profile": "traveler",
+      "title": "The bicycle mechanic",
+      "signature": "traveler; right high shelf at 1.824m; 1.028m sill garden; 0.484 \u00d7 0.527 print; curtain [0.2419, 0.2524, 0.305]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2419,
+        0.2524,
+        0.305
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.756,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 4260,
+        "minimumDwellSec": 609,
+        "cooldownSec": 913
+      },
+      "layout": "traveler",
+      "variant": 8,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 1053384,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.824,
+        "plantScale": 1.028,
+        "artWidth": 0.484,
+        "artHeight": 0.527,
+        "wallTone": [
+          0.377,
+          0.332,
+          0.293
+        ]
+      }
+    },
+    {
+      "id": "room_025",
+      "floor": 4,
+      "column": 1,
+      "slot": [
+        0,
+        3
+      ],
+      "profile": "traveler",
+      "title": "The unmade journey",
+      "signature": "traveler; left high shelf at 1.925m; 1.126m sill garden; 0.49 \u00d7 0.449 print; curtain [0.2538, 0.2501, 0.2901]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2538,
+        0.2501,
+        0.2901
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.942,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 3973,
+        "minimumDwellSec": 568,
+        "cooldownSec": 851
+      },
+      "layout": "traveler",
+      "variant": 9,
+      "preserved": false,
+      "household": "cyclist",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 1097275,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.925,
+        "plantScale": 1.126,
+        "artWidth": 0.49,
+        "artHeight": 0.449,
+        "wallTone": [
+          0.333,
+          0.291,
+          0.297
+        ]
+      }
+    },
+    {
+      "id": "room_026",
+      "floor": 4,
+      "column": 2,
+      "slot": [
+        1,
+        3
+      ],
+      "profile": "family",
+      "title": "The broad bookcase",
+      "signature": "Broad left bookcase, low central sofa, green curtain",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.22,
+        0.29,
+        0.2
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 1,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.65,
+        "activity": "quiet",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 706,
+        "minimumDwellSec": 256,
+        "cooldownSec": 385
+      },
+      "layout": "family",
+      "variant": 2,
+      "preserved": true,
+      "household": "young_family",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_027",
+      "floor": 4,
+      "column": 3,
+      "slot": [
+        2,
+        3
+      ],
+      "profile": "creative",
+      "title": "The late desk",
+      "signature": "Left desk, ochre folds, asymmetric transom, tall right plant",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.37,
+        0.225,
+        0.105
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 1,
+        "screen": 1,
+        "curtainOpen": 1,
+        "activity": "working",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 720,
+        "minimumDwellSec": 240,
+        "cooldownSec": 300
+      },
+      "layout": "creative",
+      "variant": 0,
+      "preserved": true,
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_028",
+      "floor": 4,
+      "column": 4,
+      "slot": [
+        3,
+        3
+      ],
+      "profile": "traveler",
+      "title": "Between journeys",
+      "signature": "Half-lowered horizontal blinds, bicycle wheels, quiet empty bed, suitcase",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.32,
+        0.35,
+        0.32
+      ],
+      "accentPosition": [
+        0.95,
+        1.05,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.38,
+        "activity": "away",
+        "occupancy": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4200,
+        "minimumDwellSec": 600,
+        "cooldownSec": 900
+      },
+      "layout": "traveler",
+      "variant": 0,
+      "preserved": true,
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_029",
+      "floor": 4,
+      "column": 5,
+      "slot": [
+        4,
+        3
+      ],
+      "profile": "creative",
+      "title": "The small instrument",
+      "signature": "Centre desk, guitar on the right, asymmetric linen",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.46,
+        0.4,
+        0.29
+      ],
+      "accentPosition": [
+        -0.6099999999999999,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 1,
+        "curtainOpen": 0.65,
+        "activity": "working",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 770,
+        "minimumDwellSec": 256,
+        "cooldownSec": 321
+      },
+      "layout": "creative",
+      "variant": 2,
+      "preserved": true,
+      "household": "music_editor",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_030",
+      "floor": 4,
+      "column": 6,
+      "slot": [
+        5,
+        3
+      ],
+      "profile": "family",
+      "title": "The bedtime book",
+      "signature": "family; right high shelf at 1.79m; 1.158m sill garden; 0.4 \u00d7 0.503 print; curtain [0.3071, 0.3371, 0.2626]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3071,
+        0.3371,
+        0.2626
+      ],
+      "accentPosition": [
+        -1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.592,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 733,
+        "minimumDwellSec": 266,
+        "cooldownSec": 399
+      },
+      "layout": "family",
+      "variant": 9,
+      "preserved": false,
+      "household": "roommates",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 1316730,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.79,
+        "plantScale": 1.158,
+        "artWidth": 0.4,
+        "artHeight": 0.503,
+        "wallTone": [
+          0.325,
+          0.353,
+          0.31
+        ]
+      }
+    },
+    {
+      "id": "room_031",
+      "floor": 4,
+      "column": 7,
+      "slot": [
+        6,
+        3
+      ],
+      "profile": "older_couple",
+      "title": "The old radio",
+      "signature": "older couple; left high shelf at 2.032m; 1.288m sill garden; 0.451 \u00d7 0.477 print; curtain [0.2076, 0.3153, 0.2289]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2076,
+        0.3153,
+        0.2289
+      ],
+      "accentPosition": [
+        0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.898,
+        "occupancy": "home",
+        "activity": "watching"
+      },
+      "timing": {
+        "meanDwellSec": 807,
+        "minimumDwellSec": 269,
+        "cooldownSec": 430
+      },
+      "layout": "older_couple",
+      "variant": 9,
+      "preserved": false,
+      "household": "record_collector",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 1360621,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.032,
+        "plantScale": 1.288,
+        "artWidth": 0.451,
+        "artHeight": 0.477,
+        "wallTone": [
+          0.319,
+          0.363,
+          0.282
+        ]
+      }
+    },
+    {
+      "id": "room_032",
+      "floor": 4,
+      "column": 8,
+      "slot": [
+        7,
+        3
+      ],
+      "profile": "creative",
+      "title": "The open sketchbook",
+      "signature": "creative; right high shelf at 2.071m; 1.289m sill garden; 0.503 \u00d7 0.323 print; curtain [0.4565, 0.3004, 0.2569]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4565,
+        0.3004,
+        0.2569
+      ],
+      "accentPosition": [
+        0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.445,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 790,
+        "minimumDwellSec": 263,
+        "cooldownSec": 329
+      },
+      "layout": "creative",
+      "variant": 9,
+      "preserved": false,
+      "household": "illustrator",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 1404512,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.071,
+        "plantScale": 1.289,
+        "artWidth": 0.503,
+        "artHeight": 0.323,
+        "wallTone": [
+          0.33,
+          0.321,
+          0.282
+        ]
+      }
+    },
+    {
+      "id": "room_033",
+      "floor": 5,
+      "column": 1,
+      "slot": [
+        0,
+        4
+      ],
+      "profile": "creative",
+      "title": "The potter\u2019s shelves",
+      "signature": "creative; left high shelf at 2.02m; 0.75m sill garden; 0.268 \u00d7 0.504 print; curtain [0.3486, 0.2595, 0.1772]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3486,
+        0.2595,
+        0.1772
+      ],
+      "accentPosition": [
+        -0.6099999999999999,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.686,
+        "occupancy": "home",
+        "activity": "working"
+      },
+      "timing": {
+        "meanDwellSec": 713,
+        "minimumDwellSec": 237,
+        "cooldownSec": 297
+      },
+      "layout": "creative",
+      "variant": 10,
+      "preserved": false,
+      "household": "music_editor",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 1448403,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.02,
+        "plantScale": 0.75,
+        "artWidth": 0.268,
+        "artHeight": 0.504,
+        "wallTone": [
+          0.343,
+          0.318,
+          0.249
+        ]
+      }
+    },
+    {
+      "id": "room_034",
+      "floor": 5,
+      "column": 2,
+      "slot": [
+        1,
+        4
+      ],
+      "profile": "traveler",
+      "title": "Packed for morning",
+      "signature": "Low right blinds, stacked cases, narrow left shelf",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.37,
+        0.35,
+        0.29
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 1,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.65,
+        "activity": "quiet",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 4494,
+        "minimumDwellSec": 642,
+        "cooldownSec": 963
+      },
+      "layout": "traveler",
+      "variant": 2,
+      "preserved": true,
+      "household": "frequent_traveler",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_035",
+      "floor": 5,
+      "column": 3,
+      "slot": [
+        2,
+        4
+      ],
+      "profile": "older_couple",
+      "title": "The evening programme",
+      "signature": "Low right television, left reading lamp, heavier green curtain, armchair",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.19,
+        0.25,
+        0.18
+      ],
+      "accentPosition": [
+        -0.93,
+        1.78,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.8,
+        "screen": 0.85,
+        "curtainOpen": 0.85,
+        "activity": "watching",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 900,
+        "minimumDwellSec": 300,
+        "cooldownSec": 480
+      },
+      "layout": "older_couple",
+      "variant": 0,
+      "preserved": true,
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_036",
+      "floor": 5,
+      "column": 4,
+      "slot": [
+        3,
+        4
+      ],
+      "profile": "family",
+      "title": "After the children sleep",
+      "signature": "Wide low sofa, pale curtain, tilted family artwork, toys and small dining table",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.55,
+        0.46,
+        0.34
+      ],
+      "accentPosition": [
+        1.1,
+        1.58,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.82,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.92,
+        "activity": "quiet",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 660,
+        "minimumDwellSec": 240,
+        "cooldownSec": 360
+      },
+      "layout": "family",
+      "variant": 0,
+      "preserved": true,
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_037",
+      "floor": 5,
+      "column": 5,
+      "slot": [
+        4,
+        4
+      ],
+      "profile": "older_couple",
+      "title": "The window garden",
+      "signature": "Right television, broad left plants, narrow curtain",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.32,
+        0.35,
+        0.26
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.65,
+        "activity": "quiet",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 963,
+        "minimumDwellSec": 321,
+        "cooldownSec": 513
+      },
+      "layout": "older_couple",
+      "variant": 2,
+      "preserved": true,
+      "household": "plant_lover",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_038",
+      "floor": 5,
+      "column": 6,
+      "slot": [
+        5,
+        4
+      ],
+      "profile": "traveler",
+      "title": "The overnight bag",
+      "signature": "traveler; right high shelf at 1.979m; 0.711m sill garden; 0.351 \u00d7 0.257 print; curtain [0.2879, 0.2452, 0.2698]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2879,
+        0.2452,
+        0.2698
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.756,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4335,
+        "minimumDwellSec": 619,
+        "cooldownSec": 929
+      },
+      "layout": "traveler",
+      "variant": 10,
+      "preserved": false,
+      "household": "frequent_traveler",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 1667858,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.979,
+        "plantScale": 0.711,
+        "artWidth": 0.351,
+        "artHeight": 0.257,
+        "wallTone": [
+          0.336,
+          0.346,
+          0.28
+        ]
+      }
+    },
+    {
+      "id": "room_039",
+      "floor": 5,
+      "column": 7,
+      "slot": [
+        6,
+        4
+      ],
+      "profile": "family",
+      "title": "The soft green sofa",
+      "signature": "family; left high shelf at 2.077m; 0.806m sill garden; 0.317 \u00d7 0.386 print; curtain [0.3962, 0.3626, 0.2623]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3962,
+        0.3626,
+        0.2623
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.711,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 679,
+        "minimumDwellSec": 246,
+        "cooldownSec": 370
+      },
+      "layout": "family",
+      "variant": 10,
+      "preserved": false,
+      "household": "young_family",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 1711749,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.077,
+        "plantScale": 0.806,
+        "artWidth": 0.317,
+        "artHeight": 0.386,
+        "wallTone": [
+          0.396,
+          0.353,
+          0.291
+        ]
+      }
+    },
+    {
+      "id": "room_040",
+      "floor": 5,
+      "column": 8,
+      "slot": [
+        7,
+        4
+      ],
+      "profile": "older_couple",
+      "title": "The chess table",
+      "signature": "older couple; right high shelf at 1.921m; 1.244m sill garden; 0.345 \u00d7 0.529 print; curtain [0.5021, 0.4515, 0.3283]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.5021,
+        0.4515,
+        0.3283
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.952,
+        "occupancy": "home",
+        "activity": "watching"
+      },
+      "timing": {
+        "meanDwellSec": 1096,
+        "minimumDwellSec": 365,
+        "cooldownSec": 584
+      },
+      "layout": "older_couple",
+      "variant": 10,
+      "preserved": false,
+      "household": "plant_lover",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 1755640,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.921,
+        "plantScale": 1.244,
+        "artWidth": 0.345,
+        "artHeight": 0.529,
+        "wallTone": [
+          0.386,
+          0.307,
+          0.305
+        ]
+      }
+    },
+    {
+      "id": "room_041",
+      "floor": 6,
+      "column": 1,
+      "slot": [
+        0,
+        5
+      ],
+      "profile": "older_couple",
+      "title": "A lamp for two",
+      "signature": "older couple; left high shelf at 2.189m; 1.12m sill garden; 0.402 \u00d7 0.329 print; curtain [0.2259, 0.3021, 0.2336]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2259,
+        0.3021,
+        0.2336
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.862,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 1104,
+        "minimumDwellSec": 368,
+        "cooldownSec": 588
+      },
+      "layout": "older_couple",
+      "variant": 11,
+      "preserved": false,
+      "household": "retired_reader",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 1799531,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.189,
+        "plantScale": 1.12,
+        "artWidth": 0.402,
+        "artHeight": 0.329,
+        "wallTone": [
+          0.398,
+          0.325,
+          0.235
+        ]
+      }
+    },
+    {
+      "id": "room_042",
+      "floor": 6,
+      "column": 2,
+      "slot": [
+        1,
+        5
+      ],
+      "profile": "older_couple",
+      "title": "The reading corner",
+      "signature": "Left reading chair, tall right books, single lamp",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.33,
+        0.27,
+        0.2
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.92,
+        "activity": "reading",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 1062,
+        "minimumDwellSec": 354,
+        "cooldownSec": 566
+      },
+      "layout": "older_couple",
+      "variant": 3,
+      "preserved": true,
+      "household": "retired_reader",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_043",
+      "floor": 6,
+      "column": 3,
+      "slot": [
+        2,
+        5
+      ],
+      "profile": "traveler",
+      "title": "A room between trains",
+      "signature": "Left bed, hanging coat, right bicycle, short blinds",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.26,
+        0.31,
+        0.29
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.92,
+        "activity": "away",
+        "occupancy": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4956,
+        "minimumDwellSec": 708,
+        "cooldownSec": 1062
+      },
+      "layout": "traveler",
+      "variant": 3,
+      "preserved": true,
+      "household": "rail_worker",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_044",
+      "floor": 6,
+      "column": 4,
+      "slot": [
+        3,
+        5
+      ],
+      "profile": "creative",
+      "title": "The long workbench",
+      "signature": "Long left desk, low right plant, heavy green folds",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2,
+        0.25,
+        0.18
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 1,
+        "curtainOpen": 0.92,
+        "activity": "screen_only",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 849,
+        "minimumDwellSec": 283,
+        "cooldownSec": 354
+      },
+      "layout": "creative",
+      "variant": 3,
+      "preserved": true,
+      "household": "architect",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_045",
+      "floor": 6,
+      "column": 5,
+      "slot": [
+        4,
+        5
+      ],
+      "profile": "family",
+      "title": "The unfinished puzzle",
+      "signature": "Low right sofa, central table, uneven toy shelf",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.44,
+        0.35,
+        0.27
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.92,
+        "activity": "reading",
+        "occupancy": "home"
+      },
+      "timing": {
+        "meanDwellSec": 778,
+        "minimumDwellSec": 283,
+        "cooldownSec": 424
+      },
+      "layout": "family",
+      "variant": 3,
+      "preserved": true,
+      "household": "reader_with_child",
+      "sourcePhase": 5
+    },
+    {
+      "id": "room_046",
+      "floor": 6,
+      "column": 6,
+      "slot": [
+        5,
+        5
+      ],
+      "profile": "creative",
+      "title": "An unfinished canvas",
+      "signature": "creative; right high shelf at 2.129m; 1.074m sill garden; 0.515 \u00d7 0.354 print; curtain [0.3076, 0.2489, 0.1804]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3076,
+        0.2489,
+        0.1804
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.569,
+        "occupancy": "home",
+        "activity": "working"
+      },
+      "timing": {
+        "meanDwellSec": 862,
+        "minimumDwellSec": 287,
+        "cooldownSec": 360
+      },
+      "layout": "creative",
+      "variant": 11,
+      "preserved": false,
+      "household": "architect",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2018986,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.129,
+        "plantScale": 1.074,
+        "artWidth": 0.515,
+        "artHeight": 0.354,
+        "wallTone": [
+          0.393,
+          0.354,
+          0.271
+        ]
+      }
+    },
+    {
+      "id": "room_047",
+      "floor": 6,
+      "column": 7,
+      "slot": [
+        6,
+        5
+      ],
+      "profile": "traveler",
+      "title": "A key on the shelf",
+      "signature": "traveler; left high shelf at 2.212m; 0.948m sill garden; 0.484 \u00d7 0.321 print; curtain [0.2349, 0.2624, 0.3336]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2349,
+        0.2624,
+        0.3336
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.476,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4884,
+        "minimumDwellSec": 698,
+        "cooldownSec": 1047
+      },
+      "layout": "traveler",
+      "variant": 11,
+      "preserved": false,
+      "household": "rail_worker",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2062877,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.212,
+        "plantScale": 0.948,
+        "artWidth": 0.484,
+        "artHeight": 0.321,
+        "wallTone": [
+          0.344,
+          0.303,
+          0.303
+        ]
+      }
+    },
+    {
+      "id": "room_048",
+      "floor": 6,
+      "column": 8,
+      "slot": [
+        7,
+        5
+      ],
+      "profile": "family",
+      "title": "The breakfast corner",
+      "signature": "family; right high shelf at 2.296m; 1.21m sill garden; 0.524 \u00d7 0.397 print; curtain [0.2888, 0.3187, 0.2657]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2888,
+        0.3187,
+        0.2657
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.506,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 853,
+        "minimumDwellSec": 310,
+        "cooldownSec": 465
+      },
+      "layout": "family",
+      "variant": 11,
+      "preserved": false,
+      "household": "reader_with_child",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2106768,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.296,
+        "plantScale": 1.21,
+        "artWidth": 0.524,
+        "artHeight": 0.397,
+        "wallTone": [
+          0.386,
+          0.285,
+          0.236
+        ]
+      }
+    },
+    {
+      "id": "room_049",
+      "floor": 7,
+      "column": 1,
+      "slot": [
+        0,
+        6
+      ],
+      "profile": "family",
+      "title": "An empty toy box",
+      "signature": "family; left high shelf at 2.122m; 1.197m sill garden; 0.349 \u00d7 0.377 print; curtain [0.4321, 0.3934, 0.2876]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4321,
+        0.3934,
+        0.2876
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.748,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 616,
+        "minimumDwellSec": 224,
+        "cooldownSec": 336
+      },
+      "layout": "family",
+      "variant": 12,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2150659,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.122,
+        "plantScale": 1.197,
+        "artWidth": 0.349,
+        "artHeight": 0.377,
+        "wallTone": [
+          0.314,
+          0.325,
+          0.254
+        ]
+      }
+    },
+    {
+      "id": "room_050",
+      "floor": 7,
+      "column": 2,
+      "slot": [
+        1,
+        6
+      ],
+      "profile": "older_couple",
+      "title": "The fern collection",
+      "signature": "older couple; right high shelf at 2.3m; 1.009m sill garden; 0.397 \u00d7 0.472 print; curtain [0.4994, 0.4806, 0.3793]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4994,
+        0.4806,
+        0.3793
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.848,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 973,
+        "minimumDwellSec": 324,
+        "cooldownSec": 519
+      },
+      "layout": "older_couple",
+      "variant": 12,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2194550,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.3,
+        "plantScale": 1.009,
+        "artWidth": 0.397,
+        "artHeight": 0.472,
+        "wallTone": [
+          0.325,
+          0.305,
+          0.254
+        ]
+      }
+    },
+    {
+      "id": "room_051",
+      "floor": 7,
+      "column": 3,
+      "slot": [
+        2,
+        6
+      ],
+      "profile": "creative",
+      "title": "The writing desk",
+      "signature": "creative; left high shelf at 1.992m; 0.725m sill garden; 0.336 \u00d7 0.502 print; curtain [0.3609, 0.2831, 0.2033]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3609,
+        0.2831,
+        0.2033
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.601,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 861,
+        "minimumDwellSec": 287,
+        "cooldownSec": 359
+      },
+      "layout": "creative",
+      "variant": 12,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2238441,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.992,
+        "plantScale": 0.725,
+        "artWidth": 0.336,
+        "artHeight": 0.502,
+        "wallTone": [
+          0.374,
+          0.365,
+          0.305
+        ]
+      }
+    },
+    {
+      "id": "room_052",
+      "floor": 7,
+      "column": 4,
+      "slot": [
+        3,
+        6
+      ],
+      "profile": "traveler",
+      "title": "The quiet return",
+      "signature": "traveler; right high shelf at 2.025m; 1.182m sill garden; 0.41 \u00d7 0.509 print; curtain [0.1994, 0.2686, 0.2798]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.1994,
+        0.2686,
+        0.2798
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.913,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 3785,
+        "minimumDwellSec": 541,
+        "cooldownSec": 811
+      },
+      "layout": "traveler",
+      "variant": 12,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2282332,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.025,
+        "plantScale": 1.182,
+        "artWidth": 0.41,
+        "artHeight": 0.509,
+        "wallTone": [
+          0.4,
+          0.337,
+          0.27
+        ]
+      }
+    },
+    {
+      "id": "room_053",
+      "floor": 7,
+      "column": 5,
+      "slot": [
+        4,
+        6
+      ],
+      "profile": "family",
+      "title": "The woven blanket",
+      "signature": "family; left high shelf at 2.06m; 1.153m sill garden; 0.277 \u00d7 0.548 print; curtain [0.2804, 0.3165, 0.2376]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2804,
+        0.3165,
+        0.2376
+      ],
+      "accentPosition": [
+        -1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.944,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 676,
+        "minimumDwellSec": 245,
+        "cooldownSec": 368
+      },
+      "layout": "family",
+      "variant": 13,
+      "preserved": false,
+      "household": "roommates",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 2326223,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.06,
+        "plantScale": 1.153,
+        "artWidth": 0.277,
+        "artHeight": 0.548,
+        "wallTone": [
+          0.401,
+          0.348,
+          0.253
+        ]
+      }
+    },
+    {
+      "id": "room_054",
+      "floor": 7,
+      "column": 6,
+      "slot": [
+        5,
+        6
+      ],
+      "profile": "older_couple",
+      "title": "The stitched cushion",
+      "signature": "older couple; right high shelf at 1.94m; 1.085m sill garden; 0.301 \u00d7 0.437 print; curtain [0.2354, 0.3097, 0.2312]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2354,
+        0.3097,
+        0.2312
+      ],
+      "accentPosition": [
+        0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.502,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 908,
+        "minimumDwellSec": 303,
+        "cooldownSec": 483
+      },
+      "layout": "older_couple",
+      "variant": 13,
+      "preserved": false,
+      "household": "record_collector",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 2370114,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.94,
+        "plantScale": 1.085,
+        "artWidth": 0.301,
+        "artHeight": 0.437,
+        "wallTone": [
+          0.338,
+          0.294,
+          0.304
+        ]
+      }
+    },
+    {
+      "id": "room_055",
+      "floor": 7,
+      "column": 7,
+      "slot": [
+        6,
+        6
+      ],
+      "profile": "creative",
+      "title": "The small workshop",
+      "signature": "creative; left high shelf at 2.274m; 0.659m sill garden; 0.496 \u00d7 0.598 print; curtain [0.4002, 0.2872, 0.2738]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4002,
+        0.2872,
+        0.2738
+      ],
+      "accentPosition": [
+        0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.695,
+        "occupancy": "home",
+        "activity": "working"
+      },
+      "timing": {
+        "meanDwellSec": 737,
+        "minimumDwellSec": 245,
+        "cooldownSec": 307
+      },
+      "layout": "creative",
+      "variant": 13,
+      "preserved": false,
+      "household": "illustrator",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 2414005,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.274,
+        "plantScale": 0.659,
+        "artWidth": 0.496,
+        "artHeight": 0.598,
+        "wallTone": [
+          0.32,
+          0.368,
+          0.241
+        ]
+      }
+    },
+    {
+      "id": "room_056",
+      "floor": 7,
+      "column": 8,
+      "slot": [
+        7,
+        6
+      ],
+      "profile": "traveler",
+      "title": "The rolled blanket",
+      "signature": "traveler; right high shelf at 2.01m; 0.989m sill garden; 0.426 \u00d7 0.53 print; curtain [0.2446, 0.2303, 0.2768]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2446,
+        0.2303,
+        0.2768
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.941,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 3804,
+        "minimumDwellSec": 543,
+        "cooldownSec": 815
+      },
+      "layout": "traveler",
+      "variant": 13,
+      "preserved": false,
+      "household": "cyclist",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 2457896,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.01,
+        "plantScale": 0.989,
+        "artWidth": 0.426,
+        "artHeight": 0.53,
+        "wallTone": [
+          0.313,
+          0.319,
+          0.26
+        ]
+      }
+    },
+    {
+      "id": "room_057",
+      "floor": 8,
+      "column": 1,
+      "slot": [
+        0,
+        7
+      ],
+      "profile": "traveler",
+      "title": "The open timetable",
+      "signature": "traveler; left high shelf at 2.083m; 1.234m sill garden; 0.454 \u00d7 0.544 print; curtain [0.2153, 0.2822, 0.3143]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2153,
+        0.2822,
+        0.3143
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.951,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4432,
+        "minimumDwellSec": 633,
+        "cooldownSec": 950
+      },
+      "layout": "traveler",
+      "variant": 14,
+      "preserved": false,
+      "household": "frequent_traveler",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 2501787,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.083,
+        "plantScale": 1.234,
+        "artWidth": 0.454,
+        "artHeight": 0.544,
+        "wallTone": [
+          0.305,
+          0.317,
+          0.245
+        ]
+      }
+    },
+    {
+      "id": "room_058",
+      "floor": 8,
+      "column": 2,
+      "slot": [
+        1,
+        7
+      ],
+      "profile": "family",
+      "title": "A half-built model",
+      "signature": "family; right high shelf at 1.728m; 0.999m sill garden; 0.494 \u00d7 0.466 print; curtain [0.2722, 0.3408, 0.2513]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2722,
+        0.3408,
+        0.2513
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.836,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 804,
+        "minimumDwellSec": 291,
+        "cooldownSec": 438
+      },
+      "layout": "family",
+      "variant": 14,
+      "preserved": false,
+      "household": "young_family",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 2545678,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.728,
+        "plantScale": 0.999,
+        "artWidth": 0.494,
+        "artHeight": 0.466,
+        "wallTone": [
+          0.369,
+          0.366,
+          0.236
+        ]
+      }
+    },
+    {
+      "id": "room_059",
+      "floor": 8,
+      "column": 3,
+      "slot": [
+        2,
+        7
+      ],
+      "profile": "older_couple",
+      "title": "The late programme",
+      "signature": "older couple; left high shelf at 1.682m; 0.802m sill garden; 0.328 \u00d7 0.535 print; curtain [0.2487, 0.3129, 0.2173]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2487,
+        0.3129,
+        0.2173
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.411,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 1002,
+        "minimumDwellSec": 334,
+        "cooldownSec": 534
+      },
+      "layout": "older_couple",
+      "variant": 14,
+      "preserved": false,
+      "household": "plant_lover",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 2589569,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.682,
+        "plantScale": 0.802,
+        "artWidth": 0.328,
+        "artHeight": 0.535,
+        "wallTone": [
+          0.392,
+          0.311,
+          0.265
+        ]
+      }
+    },
+    {
+      "id": "room_060",
+      "floor": 8,
+      "column": 4,
+      "slot": [
+        3,
+        7
+      ],
+      "profile": "creative",
+      "title": "The printmaker",
+      "signature": "creative; right high shelf at 1.935m; 1.054m sill garden; 0.476 \u00d7 0.297 print; curtain [0.4555, 0.3099, 0.2599]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4555,
+        0.3099,
+        0.2599
+      ],
+      "accentPosition": [
+        -0.6099999999999999,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.669,
+        "occupancy": "home",
+        "activity": "working"
+      },
+      "timing": {
+        "meanDwellSec": 822,
+        "minimumDwellSec": 273,
+        "cooldownSec": 343
+      },
+      "layout": "creative",
+      "variant": 14,
+      "preserved": false,
+      "household": "music_editor",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 2633460,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.935,
+        "plantScale": 1.054,
+        "artWidth": 0.476,
+        "artHeight": 0.297,
+        "wallTone": [
+          0.374,
+          0.332,
+          0.289
+        ]
+      }
+    },
+    {
+      "id": "room_061",
+      "floor": 8,
+      "column": 5,
+      "slot": [
+        4,
+        7
+      ],
+      "profile": "traveler",
+      "title": "The pair of boots",
+      "signature": "traveler; left high shelf at 2.152m; 1.229m sill garden; 0.285 \u00d7 0.523 print; curtain [0.2498, 0.252, 0.313]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2498,
+        0.252,
+        0.313
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.578,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4915,
+        "minimumDwellSec": 702,
+        "cooldownSec": 1053
+      },
+      "layout": "traveler",
+      "variant": 15,
+      "preserved": false,
+      "household": "rail_worker",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2677351,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.152,
+        "plantScale": 1.229,
+        "artWidth": 0.285,
+        "artHeight": 0.523,
+        "wallTone": [
+          0.367,
+          0.327,
+          0.238
+        ]
+      }
+    },
+    {
+      "id": "room_062",
+      "floor": 8,
+      "column": 6,
+      "slot": [
+        5,
+        7
+      ],
+      "profile": "family",
+      "title": "The long dining bench",
+      "signature": "family; right high shelf at 1.703m; 1.14m sill garden; 0.309 \u00d7 0.303 print; curtain [0.4128, 0.3433, 0.285]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4128,
+        0.3433,
+        0.285
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.721,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 702,
+        "minimumDwellSec": 255,
+        "cooldownSec": 383
+      },
+      "layout": "family",
+      "variant": 15,
+      "preserved": false,
+      "household": "reader_with_child",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2721242,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.703,
+        "plantScale": 1.14,
+        "artWidth": 0.309,
+        "artHeight": 0.303,
+        "wallTone": [
+          0.32,
+          0.363,
+          0.291
+        ]
+      }
+    },
+    {
+      "id": "room_063",
+      "floor": 8,
+      "column": 7,
+      "slot": [
+        6,
+        7
+      ],
+      "profile": "older_couple",
+      "title": "The walnut cabinet",
+      "signature": "older couple; left high shelf at 2.252m; 1.093m sill garden; 0.416 \u00d7 0.376 print; curtain [0.4791, 0.4782, 0.34]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4791,
+        0.4782,
+        0.34
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.896,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 1009,
+        "minimumDwellSec": 336,
+        "cooldownSec": 538
+      },
+      "layout": "older_couple",
+      "variant": 15,
+      "preserved": false,
+      "household": "retired_reader",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2765133,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.252,
+        "plantScale": 1.093,
+        "artWidth": 0.416,
+        "artHeight": 0.376,
+        "wallTone": [
+          0.374,
+          0.283,
+          0.269
+        ]
+      }
+    },
+    {
+      "id": "room_064",
+      "floor": 8,
+      "column": 8,
+      "slot": [
+        7,
+        7
+      ],
+      "profile": "creative",
+      "title": "The evening lesson",
+      "signature": "creative; right high shelf at 2.033m; 0.977m sill garden; 0.47 \u00d7 0.506 print; curtain [0.3207, 0.2535, 0.1901]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3207,
+        0.2535,
+        0.1901
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.902,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 784,
+        "minimumDwellSec": 261,
+        "cooldownSec": 327
+      },
+      "layout": "creative",
+      "variant": 15,
+      "preserved": false,
+      "household": "architect",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 2809024,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.033,
+        "plantScale": 0.977,
+        "artWidth": 0.47,
+        "artHeight": 0.506,
+        "wallTone": [
+          0.314,
+          0.339,
+          0.275
+        ]
+      }
+    },
+    {
+      "id": "room_065",
+      "floor": 1,
+      "column": 9,
+      "slot": [
+        8,
+        0
+      ],
+      "profile": "creative",
+      "title": "The blue notebook",
+      "signature": "creative; left high shelf at 1.827m; 1.217m sill garden; 0.441 \u00d7 0.344 print; curtain [0.4347, 0.3272, 0.2259]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4347,
+        0.3272,
+        0.2259
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.842,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 862,
+        "minimumDwellSec": 287,
+        "cooldownSec": 359
+      },
+      "layout": "creative",
+      "variant": 16,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2852915,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.827,
+        "plantScale": 1.217,
+        "artWidth": 0.441,
+        "artHeight": 0.344,
+        "wallTone": [
+          0.318,
+          0.324,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "room_066",
+      "floor": 1,
+      "column": 10,
+      "slot": [
+        9,
+        0
+      ],
+      "profile": "traveler",
+      "title": "The spare room",
+      "signature": "traveler; right high shelf at 2.087m; 1.295m sill garden; 0.353 \u00d7 0.334 print; curtain [0.2816, 0.259, 0.3087]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2816,
+        0.259,
+        0.3087
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.657,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 3771,
+        "minimumDwellSec": 539,
+        "cooldownSec": 808
+      },
+      "layout": "traveler",
+      "variant": 16,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2896806,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.087,
+        "plantScale": 1.295,
+        "artWidth": 0.353,
+        "artHeight": 0.334,
+        "wallTone": [
+          0.382,
+          0.302,
+          0.273
+        ]
+      }
+    },
+    {
+      "id": "room_067",
+      "floor": 2,
+      "column": 9,
+      "slot": [
+        8,
+        1
+      ],
+      "profile": "family",
+      "title": "The spare chair",
+      "signature": "family; left high shelf at 1.99m; 0.734m sill garden; 0.294 \u00d7 0.269 print; curtain [0.4119, 0.3486, 0.2536]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4119,
+        0.3486,
+        0.2536
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.563,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 568,
+        "minimumDwellSec": 207,
+        "cooldownSec": 310
+      },
+      "layout": "family",
+      "variant": 16,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2940697,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.99,
+        "plantScale": 0.734,
+        "artWidth": 0.294,
+        "artHeight": 0.269,
+        "wallTone": [
+          0.342,
+          0.362,
+          0.245
+        ]
+      }
+    },
+    {
+      "id": "room_068",
+      "floor": 2,
+      "column": 10,
+      "slot": [
+        9,
+        1
+      ],
+      "profile": "older_couple",
+      "title": "The poetry shelf",
+      "signature": "older couple; right high shelf at 1.972m; 1.096m sill garden; 0.446 \u00d7 0.385 print; curtain [0.4878, 0.4064, 0.33]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4878,
+        0.4064,
+        0.33
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.718,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 956,
+        "minimumDwellSec": 319,
+        "cooldownSec": 510
+      },
+      "layout": "older_couple",
+      "variant": 16,
+      "preserved": false,
+      "layoutVariant": 0,
+      "sourcePhase": 6,
+      "identitySeed": 2984588,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.972,
+        "plantScale": 1.096,
+        "artWidth": 0.446,
+        "artHeight": 0.385,
+        "wallTone": [
+          0.355,
+          0.351,
+          0.236
+        ]
+      }
+    },
+    {
+      "id": "room_069",
+      "floor": 3,
+      "column": 9,
+      "slot": [
+        8,
+        2
+      ],
+      "profile": "creative",
+      "title": "A quiet practice",
+      "signature": "creative; left high shelf at 2.098m; 1.162m sill garden; 0.487 \u00d7 0.385 print; curtain [0.3145, 0.2481, 0.2015]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3145,
+        0.2481,
+        0.2015
+      ],
+      "accentPosition": [
+        0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.733,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 711,
+        "minimumDwellSec": 237,
+        "cooldownSec": 296
+      },
+      "layout": "creative",
+      "variant": 17,
+      "preserved": false,
+      "household": "illustrator",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 3028479,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.098,
+        "plantScale": 1.162,
+        "artWidth": 0.487,
+        "artHeight": 0.385,
+        "wallTone": [
+          0.324,
+          0.317,
+          0.307
+        ]
+      }
+    },
+    {
+      "id": "room_070",
+      "floor": 3,
+      "column": 10,
+      "slot": [
+        9,
+        2
+      ],
+      "profile": "traveler",
+      "title": "The travelling reader",
+      "signature": "traveler; right high shelf at 2.018m; 0.977m sill garden; 0.413 \u00d7 0.395 print; curtain [0.2279, 0.2721, 0.3078]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2279,
+        0.2721,
+        0.3078
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.386,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 3577,
+        "minimumDwellSec": 511,
+        "cooldownSec": 766
+      },
+      "layout": "traveler",
+      "variant": 17,
+      "preserved": false,
+      "household": "cyclist",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 3072370,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.018,
+        "plantScale": 0.977,
+        "artWidth": 0.413,
+        "artHeight": 0.395,
+        "wallTone": [
+          0.352,
+          0.282,
+          0.25
+        ]
+      }
+    },
+    {
+      "id": "room_071",
+      "floor": 4,
+      "column": 9,
+      "slot": [
+        8,
+        3
+      ],
+      "profile": "family",
+      "title": "The little paper house",
+      "signature": "family; left high shelf at 1.737m; 0.836m sill garden; 0.254 \u00d7 0.541 print; curtain [0.2959, 0.3347, 0.2336]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2959,
+        0.3347,
+        0.2336
+      ],
+      "accentPosition": [
+        -1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.943,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 606,
+        "minimumDwellSec": 220,
+        "cooldownSec": 330
+      },
+      "layout": "family",
+      "variant": 17,
+      "preserved": false,
+      "household": "roommates",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 3116261,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.737,
+        "plantScale": 0.836,
+        "artWidth": 0.254,
+        "artHeight": 0.541,
+        "wallTone": [
+          0.384,
+          0.282,
+          0.282
+        ]
+      }
+    },
+    {
+      "id": "room_072",
+      "floor": 4,
+      "column": 10,
+      "slot": [
+        9,
+        3
+      ],
+      "profile": "older_couple",
+      "title": "The reading glasses",
+      "signature": "older couple; right high shelf at 1.703m; 0.766m sill garden; 0.375 \u00d7 0.485 print; curtain [0.2267, 0.3176, 0.2462]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.2267,
+        0.3176,
+        0.2462
+      ],
+      "accentPosition": [
+        0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.932,
+        "occupancy": "home",
+        "activity": "watching"
+      },
+      "timing": {
+        "meanDwellSec": 882,
+        "minimumDwellSec": 294,
+        "cooldownSec": 469
+      },
+      "layout": "older_couple",
+      "variant": 17,
+      "preserved": false,
+      "household": "record_collector",
+      "layoutVariant": 1,
+      "sourcePhase": 6,
+      "identitySeed": 3160152,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.703,
+        "plantScale": 0.766,
+        "artWidth": 0.375,
+        "artHeight": 0.485,
+        "wallTone": [
+          0.317,
+          0.331,
+          0.268
+        ]
+      }
+    },
+    {
+      "id": "room_073",
+      "floor": 5,
+      "column": 9,
+      "slot": [
+        8,
+        4
+      ],
+      "profile": "older_couple",
+      "title": "The amber shade",
+      "signature": "older couple; left high shelf at 2.027m; 1.255m sill garden; 0.43 \u00d7 0.395 print; curtain [0.4972, 0.4178, 0.3649]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4972,
+        0.4178,
+        0.3649
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.75,
+        "screen": 0.9,
+        "curtainOpen": 0.392,
+        "occupancy": "home",
+        "activity": "watching"
+      },
+      "timing": {
+        "meanDwellSec": 973,
+        "minimumDwellSec": 324,
+        "cooldownSec": 518
+      },
+      "layout": "older_couple",
+      "variant": 18,
+      "preserved": false,
+      "household": "plant_lover",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 3204043,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.027,
+        "plantScale": 1.255,
+        "artWidth": 0.43,
+        "artHeight": 0.395,
+        "wallTone": [
+          0.316,
+          0.312,
+          0.291
+        ]
+      }
+    },
+    {
+      "id": "room_074",
+      "floor": 5,
+      "column": 10,
+      "slot": [
+        9,
+        4
+      ],
+      "profile": "creative",
+      "title": "The long manuscript",
+      "signature": "creative; right high shelf at 1.76m; 0.894m sill garden; 0.26 \u00d7 0.309 print; curtain [0.3311, 0.295, 0.1988]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.3311,
+        0.295,
+        0.1988
+      ],
+      "accentPosition": [
+        -0.6099999999999999,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.818,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 770,
+        "minimumDwellSec": 256,
+        "cooldownSec": 321
+      },
+      "layout": "creative",
+      "variant": 18,
+      "preserved": false,
+      "household": "music_editor",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 3247934,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.76,
+        "plantScale": 0.894,
+        "artWidth": 0.26,
+        "artHeight": 0.309,
+        "wallTone": [
+          0.328,
+          0.355,
+          0.286
+        ]
+      }
+    },
+    {
+      "id": "room_075",
+      "floor": 6,
+      "column": 9,
+      "slot": [
+        8,
+        5
+      ],
+      "profile": "traveler",
+      "title": "The packed satchel",
+      "signature": "traveler; left high shelf at 1.653m; 0.863m sill garden; 0.305 \u00d7 0.551 print; curtain [0.2013, 0.2489, 0.3136]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2013,
+        0.2489,
+        0.3136
+      ],
+      "accentPosition": [
+        0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.901,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 4025,
+        "minimumDwellSec": 575,
+        "cooldownSec": 863
+      },
+      "layout": "traveler",
+      "variant": 18,
+      "preserved": false,
+      "household": "frequent_traveler",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 3291825,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.653,
+        "plantScale": 0.863,
+        "artWidth": 0.305,
+        "artHeight": 0.551,
+        "wallTone": [
+          0.316,
+          0.338,
+          0.293
+        ]
+      }
+    },
+    {
+      "id": "room_076",
+      "floor": 6,
+      "column": 10,
+      "slot": [
+        9,
+        5
+      ],
+      "profile": "family",
+      "title": "The puzzle shelf",
+      "signature": "family; right high shelf at 1.807m; 1.275m sill garden; 0.303 \u00d7 0.593 print; curtain [0.326, 0.3139, 0.2432]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.326,
+        0.3139,
+        0.2432
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.719,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 643,
+        "minimumDwellSec": 233,
+        "cooldownSec": 351
+      },
+      "layout": "family",
+      "variant": 18,
+      "preserved": false,
+      "household": "young_family",
+      "layoutVariant": 2,
+      "sourcePhase": 6,
+      "identitySeed": 3335716,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.807,
+        "plantScale": 1.275,
+        "artWidth": 0.303,
+        "artHeight": 0.593,
+        "wallTone": [
+          0.336,
+          0.366,
+          0.282
+        ]
+      }
+    },
+    {
+      "id": "room_077",
+      "floor": 7,
+      "column": 9,
+      "slot": [
+        8,
+        6
+      ],
+      "profile": "older_couple",
+      "title": "The little library",
+      "signature": "older couple; left high shelf at 1.677m; 1.25m sill garden; 0.43 \u00d7 0.52 print; curtain [0.233, 0.3006, 0.2553]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.233,
+        0.3006,
+        0.2553
+      ],
+      "accentPosition": [
+        -0.93,
+        1.7,
+        -1.3
+      ],
+      "screenColor": [
+        0.18,
+        0.24,
+        0.29
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.886,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 1156,
+        "minimumDwellSec": 385,
+        "cooldownSec": 616
+      },
+      "layout": "older_couple",
+      "variant": 19,
+      "preserved": false,
+      "household": "retired_reader",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 3379607,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 1.677,
+        "plantScale": 1.25,
+        "artWidth": 0.43,
+        "artHeight": 0.52,
+        "wallTone": [
+          0.312,
+          0.303,
+          0.281
+        ]
+      }
+    },
+    {
+      "id": "room_078",
+      "floor": 7,
+      "column": 10,
+      "slot": [
+        9,
+        6
+      ],
+      "profile": "creative",
+      "title": "The window easel",
+      "signature": "creative; right high shelf at 2.086m; 1.079m sill garden; 0.538 \u00d7 0.272 print; curtain [0.4401, 0.2903, 0.2336]",
+      "capabilities": [
+        "main",
+        "accent",
+        "screen",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4401,
+        0.2903,
+        0.2336
+      ],
+      "accentPosition": [
+        -0.95,
+        1.56,
+        -1.09
+      ],
+      "screenColor": [
+        0.13,
+        0.31,
+        0.4
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0.85,
+        "screen": 0,
+        "curtainOpen": 0.577,
+        "occupancy": "home",
+        "activity": "reading"
+      },
+      "timing": {
+        "meanDwellSec": 976,
+        "minimumDwellSec": 325,
+        "cooldownSec": 407
+      },
+      "layout": "creative",
+      "variant": 19,
+      "preserved": false,
+      "household": "architect",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 3423498,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 2.086,
+        "plantScale": 1.079,
+        "artWidth": 0.538,
+        "artHeight": 0.272,
+        "wallTone": [
+          0.394,
+          0.365,
+          0.237
+        ]
+      }
+    },
+    {
+      "id": "room_079",
+      "floor": 8,
+      "column": 9,
+      "slot": [
+        8,
+        7
+      ],
+      "profile": "traveler",
+      "title": "Between two mornings",
+      "signature": "traveler; left high shelf at 2.246m; 0.667m sill garden; 0.339 \u00d7 0.395 print; curtain [0.2734, 0.238, 0.3101]",
+      "capabilities": [
+        "main",
+        "accent",
+        "blinds"
+      ],
+      "curtainColor": [
+        0.2734,
+        0.238,
+        0.3101
+      ],
+      "accentPosition": [
+        -0.95,
+        1.42,
+        -2.3
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.488,
+        "occupancy": "away",
+        "activity": "away"
+      },
+      "timing": {
+        "meanDwellSec": 4878,
+        "minimumDwellSec": 697,
+        "cooldownSec": 1045
+      },
+      "layout": "traveler",
+      "variant": 19,
+      "preserved": false,
+      "household": "rail_worker",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 3467389,
+      "decor": {
+        "shelfSide": -1,
+        "shelfHeight": 2.246,
+        "plantScale": 0.667,
+        "artWidth": 0.339,
+        "artHeight": 0.395,
+        "wallTone": [
+          0.343,
+          0.323,
+          0.278
+        ]
+      }
+    },
+    {
+      "id": "room_080",
+      "floor": 8,
+      "column": 10,
+      "slot": [
+        9,
+        7
+      ],
+      "profile": "family",
+      "title": "The kitchen garden",
+      "signature": "family; right high shelf at 1.766m; 1.122m sill garden; 0.299 \u00d7 0.417 print; curtain [0.4135, 0.3765, 0.2969]",
+      "capabilities": [
+        "main",
+        "accent",
+        "curtains"
+      ],
+      "curtainColor": [
+        0.4135,
+        0.3765,
+        0.2969
+      ],
+      "accentPosition": [
+        1.1,
+        1.54,
+        -2.4
+      ],
+      "screenColor": [
+        0,
+        0,
+        0
+      ],
+      "initial": {
+        "mainLight": 0.88,
+        "accentLight": 0,
+        "screen": 0,
+        "curtainOpen": 0.947,
+        "occupancy": "home",
+        "activity": "quiet"
+      },
+      "timing": {
+        "meanDwellSec": 672,
+        "minimumDwellSec": 245,
+        "cooldownSec": 366
+      },
+      "layout": "family",
+      "variant": 19,
+      "preserved": false,
+      "household": "reader_with_child",
+      "layoutVariant": 3,
+      "sourcePhase": 6,
+      "identitySeed": 3511280,
+      "decor": {
+        "shelfSide": 1,
+        "shelfHeight": 1.766,
+        "plantScale": 1.122,
+        "artWidth": 0.299,
+        "artHeight": 0.417,
+        "wallTone": [
+          0.341,
+          0.319,
+          0.294
+        ]
+      }
+    }
+  ]
+}

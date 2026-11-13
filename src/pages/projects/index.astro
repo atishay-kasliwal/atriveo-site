@@ -14,17 +14,17 @@ const catalogSchema = createProjectCatalogSchema(projects);
 >
   <section class="page-hero section-shell">
     <p class="eyebrow"><span class="eyebrow-mark"></span> Project index / {String(projects.length).padStart(2, "0")}</p>
-    <h1>Tools for work that<br /><em>deserves more clarity.</em></h1>
-    <p>Browse the complete public Atriveo catalog. Open the live product, inspect the source, or do both.</p>
+    <h1>Many ideas.<br /><em>One shared home.</em></h1>
+    <p>Every build has a story. Find a tool for your next step, or an idea you want to take further.</p>
   </section>
 
   <section class="section-shell project-directory">
     <h2 class="sr-only">Atriveo project catalog</h2>
     <div class="filter-bar" aria-label="Project filters">
       <div class="filter-buttons" role="group" aria-label="Filter by category">
-        <button class="filter-button is-active" type="button" data-filter="All">All <span>{projects.length}</span></button>
+        <button class="filter-button is-active" type="button" data-filter="All" aria-pressed="true">All <span>{projects.length}</span></button>
         {categories.map((category) => (
-          <button class="filter-button" type="button" data-filter={category}>
+          <button class="filter-button" type="button" data-filter={category} aria-pressed="false">
             {category} <span>{projects.filter((project) => project.category === category).length}</span>
           </button>
         ))}
@@ -71,7 +71,10 @@ const catalogSchema = createProjectCatalogSchema(projects);
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         activeFilter = button.dataset.filter || "All";
-        buttons.forEach((candidate) => candidate.classList.toggle("is-active", candidate === button));
+        buttons.forEach((candidate) => {
+          candidate.classList.toggle("is-active", candidate === button);
+          candidate.setAttribute("aria-pressed", String(candidate === button));
+        });
         updateProjects();
       });
     });

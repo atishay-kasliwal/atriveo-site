@@ -1,0 +1,84 @@
+---
+import "../styles/living-building-home.css";
+---
+<living-building class="living-building" aria-label="The Atriveo living building">
+  <div class="building-composition">
+    <div class="building-brand">
+      <h1>Atriveo<span>.</span></h1>
+    </div>
+    <div class="building-visual" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 700px)" srcset="/building/poster-mobile.webp" />
+        <img class="building-poster" src="/building/poster.webp" alt="An apartment building at night with a few windows lit" width="1500" height="960" loading="eager" fetchpriority="high" decoding="async" />
+      </picture>
+      <canvas class="building-light-layer" aria-hidden="true"></canvas>
+      <canvas class="building-canvas"></canvas>
+      <span class="building-arrival-wash"></span>
+    </div>
+    <div class="building-invitation">
+      <p>Building something? There’s<br />room for you here.</p>
+      <a class="building-community-link" href="/open-source/">Contribute <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <span class="building-status sr-only" role="status" aria-live="polite"></span>
+</living-building>
+
+<script>
+  import "../building/hero-client.mjs";
+</script>
+
+<style>
+  .living-building { display: block; width: 100%; padding: 0; }
+  .building-composition { position: relative; isolation: isolate; height: calc(100svh - 60px); min-height: 560px; background: var(--background); overflow: hidden; color: var(--brand-primary); container-type: inline-size; }
+  .building-visual { position: absolute; inset: 0; z-index: -1; }
+  .building-poster, .building-canvas, .building-light-layer { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: fill; }
+  /* Grade the still and live render together so enhancement keeps the same exposure. */
+  .building-visual { filter: brightness(1.2) contrast(1.045) saturate(.86); }
+  .building-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 48% 38%, transparent 35%, rgba(3, 7, 11, .27) 100%),
+      linear-gradient(180deg, rgba(6, 12, 18, .10), transparent 22%, transparent 75%, rgba(3, 7, 11, .18));
+  }
+  .building-poster { z-index: 0; }
+  .building-canvas { z-index: 1; visibility: hidden; }
+  .building-light-layer { z-index: 2; pointer-events: none; }
+  .building-arrival-wash { position: absolute; inset: 0; background: var(--background); opacity: 0; pointer-events: none; }
+  .living-building[data-ready] .building-canvas { visibility: visible; }
+  .living-building[data-ready] .building-poster { visibility: hidden; }
+  .living-building[data-ready] .building-light-layer { visibility: hidden; }
+  .building-brand, .building-invitation { position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; background: var(--surface-transparent); }
+  .building-brand { left: 0; top: 25%; width: 20%; height: 12.5%; align-items: center; padding: 2px 8px; text-align: center; background: rgba(11, 15, 18, .25); }
+  .building-brand h1 { margin: 0; font-family: inherit; font-size: clamp(30px, 4.3cqw, 64px); line-height: .9; font-weight: 700; letter-spacing: -.065em; color: var(--brand-primary); white-space: nowrap; }
+  .building-brand h1 span { color: inherit; }
+  .building-community-link span { display: inline-block; transition: translate 180ms ease; }
+  .building-community-link:hover span { translate: 3px -3px; }
+  .building-community-link:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 5px; }
+  .building-invitation { left: 80%; top: 87.5%; width: 20%; height: 12.5%; gap: 14px; padding: 12px clamp(16px, 1.7cqw, 26px); }
+  .building-invitation p { margin: 0; max-width: 24ch; font-size: clamp(12px, 1.05cqw, 15px); line-height: 1.4; color: var(--secondary); }
+  .building-community-link { display: inline-flex; align-items: center; gap: 8px; color: var(--brand-primary); font-size: 12px; font-weight: 600; text-decoration: none; transition: opacity 180ms ease; }
+  .building-community-link:hover { opacity: .72; }
+  @media (prefers-reduced-motion: reduce) { .building-community-link span { transition: none; translate: none !important; } }
+  @media (min-width: 701px) and (max-width: 1000px) {
+    .building-composition { height: auto; min-height: 0; aspect-ratio: 25 / 16; }
+    .building-brand { top: 25%; height: 12.5%; padding: 4px 8px; }
+    .building-brand h1 { font-size: clamp(26px, 4.3cqw, 46px); }
+    .building-invitation { left: 76%; top: 87.5%; width: 24%; padding: 5px 12px; gap: 5px; }
+    .building-invitation p { font-size: 10px; line-height: 1.12; }
+    .building-community-link { font-size: 10px; }
+  }
+  @media (max-width: 700px) {
+    .building-composition { display: flex; flex-direction: column; height: auto; min-height: 0; container-type: normal; }
+    .building-brand, .building-invitation { position: static; width: auto; height: auto; padding: 28px 24px; background: var(--surface-transparent); }
+    .building-brand { order: 0; }
+    .building-brand h1 { font-size: clamp(52px, 14vw, 72px); }
+    .building-visual { order: 1; position: relative; inset: auto; z-index: 0; width: 100%; aspect-ratio: 10 / 7; }
+    .building-invitation { order: 2; gap: 14px; padding-block: 24px 30px; }
+    .building-invitation p { font-size: 16px; }
+    .building-community-link { font-size: 13px; min-height: 36px; }
+  }
+</style>

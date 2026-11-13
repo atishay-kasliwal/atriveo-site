@@ -1,17 +1,6 @@
 {
-  "generatedAt": "2026-10-20T01:10:08.815Z",
+  "generatedAt": "2026-11-13T15:13:56.283Z",
   "repositories": [
-    {
-      "name": "Atriaa",
-      "fullName": "atishay-kasliwal/Atriaa",
-      "description": "Real time multi agent hospital intelligence and attention prioritization command center.",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "homepage": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "pushedAt": "2026-10-20T01:02:21Z"
-    },
     {
       "name": "atriveo-app",
       "fullName": "atishay-kasliwal/atriveo-app",
@@ -21,18 +10,29 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-10-19T17:40:49Z"
+      "pushedAt": "2026-11-12T19:02:40Z"
     },
     {
       "name": "job-pipeline",
       "fullName": "atishay-kasliwal/job-pipeline",
       "description": "LinkedIn job aggregation, filtering & ranking pipeline for SWE roles: built on JobSpy",
       "url": "https://github.com/atishay-kasliwal/job-pipeline",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-10-08T16:44:08Z"
+      "pushedAt": "2026-10-28T21:39:38Z"
+    },
+    {
+      "name": "Atriaa",
+      "fullName": "atishay-kasliwal/Atriaa",
+      "description": "Real time multi agent hospital intelligence and attention prioritization command center.",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
+      "homepage": "https://atishaykasliwal.com/projects/atriaa/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-20T12:20:46Z"
     },
     {
       "name": "atriveo-job-dock",
@@ -50,7 +50,7 @@
       "fullName": "atishay-kasliwal/atriveo-reel",
       "description": "Paste two videos, pick two moments, get a vertical comparison reel. Self-hosted on a Mac behind a Cloudflare Tunnel.",
       "url": "https://github.com/atishay-kasliwal/atriveo-reel",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/projects/atriveo-reel/",
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
@@ -61,7 +61,7 @@
       "fullName": "atishay-kasliwal/atriveo-patent",
       "description": "Patent Atriveo: turns patent PDFs into grounded summaries and presentation decks",
       "url": "https://github.com/atishay-kasliwal/atriveo-patent",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
@@ -72,7 +72,7 @@
       "fullName": "atishay-kasliwal/audiobook-atriveo",
       "description": null,
       "url": "https://github.com/atishay-kasliwal/audiobook-atriveo",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "Python",
       "stars": 0,
       "forks": 0,
@@ -83,7 +83,7 @@
       "fullName": "atishay-kasliwal/grants-gov-ai-finder",
       "description": null,
       "url": "https://github.com/atishay-kasliwal/grants-gov-ai-finder",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
@@ -105,7 +105,7 @@
       "fullName": "atishay-kasliwal/atriveo-knowledge",
       "description": null,
       "url": "https://github.com/atishay-kasliwal/atriveo-knowledge",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
@@ -136,66 +136,10 @@
   ],
   "events": [
     {
-      "id": "17662862889",
-      "type": "PullRequestEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-20T01:02:39Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Opened a pull request"
-    },
-    {
-      "id": "24577365324",
-      "type": "CreateEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-20T01:02:22Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Created branch"
-    },
-    {
-      "id": "17658175054",
-      "type": "PullRequestEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-19T19:05:16Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Merged a pull request"
-    },
-    {
-      "id": "24555869333",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-19T19:21:40Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24554854087",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-19T19:05:15Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24552121532",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-19T18:23:38Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24552037076",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/Atriaa",
-      "createdAt": "2026-10-19T18:22:32Z",
-      "url": "https://github.com/atishay-kasliwal/Atriaa",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24549167131",
+      "id": "27009763975",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-19T17:40:50Z",
+      "createdAt": "2026-11-12T19:02:40Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     }
