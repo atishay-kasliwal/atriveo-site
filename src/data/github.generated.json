@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:31:00.839Z",
+  "generatedAt": "2026-11-13T15:13:56.283Z",
   "repositories": [
     {
       "name": "atriveo-app",
@@ -10,18 +10,29 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-10-22T20:15:34Z"
+      "pushedAt": "2026-11-12T19:02:40Z"
     },
     {
       "name": "job-pipeline",
       "fullName": "atishay-kasliwal/job-pipeline",
       "description": "LinkedIn job aggregation, filtering & ranking pipeline for SWE roles: built on JobSpy",
       "url": "https://github.com/atishay-kasliwal/job-pipeline",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-10-08T16:44:08Z"
+      "pushedAt": "2026-10-28T21:39:38Z"
+    },
+    {
+      "name": "Atriaa",
+      "fullName": "atishay-kasliwal/Atriaa",
+      "description": "Real time multi agent hospital intelligence and attention prioritization command center.",
+      "url": "https://github.com/atishay-kasliwal/Atriaa",
+      "homepage": "https://atishaykasliwal.com/projects/atriaa/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-20T12:20:46Z"
     },
     {
       "name": "atriveo-job-dock",
@@ -39,7 +50,7 @@
       "fullName": "atishay-kasliwal/atriveo-reel",
       "description": "Paste two videos, pick two moments, get a vertical comparison reel. Self-hosted on a Mac behind a Cloudflare Tunnel.",
       "url": "https://github.com/atishay-kasliwal/atriveo-reel",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/projects/atriveo-reel/",
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
@@ -50,7 +61,7 @@
       "fullName": "atishay-kasliwal/atriveo-patent",
       "description": "Patent Atriveo: turns patent PDFs into grounded summaries and presentation decks",
       "url": "https://github.com/atishay-kasliwal/atriveo-patent",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
@@ -61,7 +72,7 @@
       "fullName": "atishay-kasliwal/audiobook-atriveo",
       "description": null,
       "url": "https://github.com/atishay-kasliwal/audiobook-atriveo",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "Python",
       "stars": 0,
       "forks": 0,
@@ -72,7 +83,7 @@
       "fullName": "atishay-kasliwal/grants-gov-ai-finder",
       "description": null,
       "url": "https://github.com/atishay-kasliwal/grants-gov-ai-finder",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
@@ -94,7 +105,7 @@
       "fullName": "atishay-kasliwal/atriveo-knowledge",
       "description": null,
       "url": "https://github.com/atishay-kasliwal/atriveo-knowledge",
-      "homepage": null,
+      "homepage": "https://atishaykasliwal.com/",
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
@@ -125,58 +136,10 @@
   ],
   "events": [
     {
-      "id": "24837235015",
+      "id": "27009763975",
       "type": "PushEvent",
       "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-20T20:05:58Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24751727502",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-21T20:19:56Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24727530761",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-21T16:04:32Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24633590228",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-20T15:45:58Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24626191374",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-18T14:45:56Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24549167131",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-19T17:40:50Z",
-      "url": "https://github.com/atishay-kasliwal/atriveo-app",
-      "label": "Pushed 1 changes"
-    },
-    {
-      "id": "24520414339",
-      "type": "PushEvent",
-      "repo": "atishay-kasliwal/atriveo-app",
-      "createdAt": "2026-10-17T17:27:34Z",
+      "createdAt": "2026-11-12T19:02:40Z",
       "url": "https://github.com/atishay-kasliwal/atriveo-app",
       "label": "Pushed 1 changes"
     }
